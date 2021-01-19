@@ -20,22 +20,22 @@
 
 ### (영문판) 온라인으로 보기 - 한글판은 나중에 제공
 
-For a best reading experience, [read it online via Gitbook](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/).
+[Gitbook](https://mostly-adequate.gitbooks.io/mostly-adequate-guide/)은 최적의 읽기 환경을 제공한다.
 
-- Quick-access side-bar
-- In-browser exercises
-- In-depth examples
+- 사이드바 바로가기
+- 브라우저 안에서 연습문제 풀기
+- 깊이있는 연습문제
 
-## Play Around with Code
+## 코드랑 놀기
 
-To make the training efficient and not get too bored while I am telling you another story, make sure to play around with the concepts introduced in this book. Some can be tricky to catch at first and are better understood by getting your hands dirty.
-All functions and algebraic data-structures presented in the book are gathered in the appendixes. The corresponding code is also available as an npm module:
+다른 이야기를 하는 동안 효율적으로 훈련하고 지루해지지 않도록 책에 나온 여러가지 개념들과 놀아보도록 하라. 어떤 것들은 처음에는 이해하기 힘들겠지만 코드랑 놀면서 점점 더 이해하게 될 것이다.
+이 책에 나온 모든 함수와 대수적 자료 구조들은 부록에 나와있고 npm 모듈로도 있다.
 
 ```bash
 $ npm i @mostly-adequate/support
 ```
 
-Alternatively, exercises of each chapter are runnable and can be completed in your editor! For example, complete the `exercise_*.js` in `exercises/ch04` and then run:
+각 장의 연습문제 또한 실행 가능하고 당신의 에디터 안에서 풀 수 있다! 예를들어, `exercises/ch04`의 `exercise_*.js`를 푼 후 다음 명령어를 실행시켜라.
 
 ```bash
 $ npm run ch04
@@ -43,12 +43,9 @@ $ npm run ch04
 
 ## (영문판) 다운로드
 
-- [Download PDF](https://www.gitbook.com/download/pdf/book/mostly-adequate/mostly-adequate-guide)
-- [Download EPUB](https://www.gitbook.com/download/epub/book/mostly-adequate/mostly-adequate-guide)
-- [Download Mobi (Kindle)](https://www.gitbook.com/download/mobi/book/mostly-adequate/mostly-adequate-guide)
-- [온라인에서 읽기](https://drboolean.gitbooks.io/mostly-adequate-guide/content/)
-- [EPUB 다운로드](https://www.gitbook.com/download/epub/book/drboolean/mostly-adequate-guide)
-- [Mobi(킨들Kindle) 다운로드](https://www.gitbook.com/download/mobi/book/drboolean/mostly-adequate-guide)
+- [PDF 다운로드](https://www.gitbook.com/download/pdf/book/mostly-adequate/mostly-adequate-guide)
+- [EPUB 다운로드](https://www.gitbook.com/download/epub/book/mostly-adequate/mostly-adequate-guide)
+- [Mobi (킨들) 다운로드](https://www.gitbook.com/download/mobi/book/mostly-adequate/mostly-adequate-guide)
 
 ### (영문판) 직접 만드는 방법
 
@@ -61,7 +58,7 @@ npm run generate-pdf
 npm run generate-epub
 ```
 
-> Note! To generate the ebook version you will need to install `ebook-convert`. [Installation instructions](https://toolchain.gitbook.com/ebook.html#installing-ebook-convert).
+> 주의! ebook 버전을 만들기 위해서는 `ebook-convert`을 설치해야한다. [설치 가이드](https://toolchain.gitbook.com/ebook.html#installing-ebook-convert).
 
 한글판을 직접 만드는 방법은 다음과 같다.
 
