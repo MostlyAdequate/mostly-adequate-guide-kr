@@ -29,7 +29,7 @@
   - [A Flickr of Functional Programming](ch06.md#a-flickr-of-functional-programming)
   - [A Principled Refactor](ch06.md#a-principled-refactor)
   - [In Summary](ch06.md#in-summary)
-- [Chapter 07: Hindley-Milner and Me](ch07.md)
+- [07 장: 힌들리-밀너와 나](ch07-kr.md)
   - [What's Your Type?](ch07.md#whats-your-type)
   - [Tales from the Cryptic](ch07.md#tales-from-the-cryptic)
   - [Narrowing the Possibility](ch07.md#narrowing-the-possibility)
