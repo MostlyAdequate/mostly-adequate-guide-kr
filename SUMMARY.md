@@ -1,8 +1,8 @@
 # Summary
 
 - [01 장: 우리는 무엇을 하고 있나?](ch01-kr.md)
-  - [Introductions](ch01-kr.md#소개)
-  - [A Brief Encounter](ch01-kr.md#a-brief-encounter)
+  - [소개](ch01-kr.md#소개)
+  - [짧은 만남](ch01-kr.md#짧은-만남)
 - [02 장: 일급 함수](ch02-kr.md)
   - [A Quick Review](ch02.md#a-quick-review)
   - [Why Favor First Class?](ch02.md#why-favor-first-class)
