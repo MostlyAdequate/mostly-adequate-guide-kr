@@ -1,0 +1,2213 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>07 장: 힌들리-밀너와 나 · Professor Frisby's Mostly Adequate Guide to Functional Programming</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch07-kr.html" />
+    
+    
+    <link rel="prev" href="ch06.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html">
+            
+                    
+                    01 장: 우리는 무엇을 하고 있나?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#소개">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#짧은-만남">
+            
+                    
+                    짧은 만남
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html">
+            
+                    
+                    02 장: 일급 함수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#복습-시간">
+            
+                    
+                    복습 시간
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#일급-함수의-장점">
+            
+                    
+                    일급 함수의 장점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html">
+            
+                    
+                    03 장: 순수 함수와 순수한 기쁨을
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#한번-더-순수함에-대하여">
+            
+                    
+                    한번 더 순수함에 대하여
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#부수효과는-를-포함할-수-있어요">
+            
+                    
+                    부수효과는 ...를 포함할 수 있어요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#중학교-2학년-수학">
+            
+                    
+                    중학교 2학년 수학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#순수성의-예">
+            
+                    
+                    순수성의 예
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html">
+            
+                    
+                    04 장: 커링
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#cant-live-if-livin-is-without-you">
+            
+                    
+                    Can't Live If Livin' Is without You
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#말장난-조금-더--특별한-소스">
+            
+                    
+                    말장난 조금 더 / 특별한 소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    연습문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch05.html">
+            
+                <a href="ch05.html">
+            
+                    
+                    Chapter 05: Coding by Composing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="ch05.html">
+            
+                <a href="ch05.html#functional-husbandry">
+            
+                    
+                    Functional Husbandry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="ch05.html">
+            
+                <a href="ch05.html#pointfree">
+            
+                    
+                    Pointfree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="ch05.html">
+            
+                <a href="ch05.html#debugging">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="ch05.html">
+            
+                <a href="ch05.html#category-theory">
+            
+                    
+                    Category Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="ch05.html">
+            
+                <a href="ch05.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="ch05.html">
+            
+                <a href="ch05.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    Chapter 06: Example Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ch06.html">
+            
+                <a href="ch06.html#declarative-coding">
+            
+                    
+                    Declarative Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ch06.html">
+            
+                <a href="ch06.html#a-flickr-of-functional-programming">
+            
+                    
+                    A Flickr of Functional Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="ch06.html">
+            
+                <a href="ch06.html#a-principled-refactor">
+            
+                    
+                    A Principled Refactor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="ch06.html">
+            
+                <a href="ch06.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html">
+            
+                    
+                    07 장: 힌들리-밀너와 나
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#당신은-무슨-타입인가요">
+            
+                    
+                    당신은 무슨 타입인가요?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#비밀-이야기">
+            
+                    
+                    비밀 이야기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#가능성을-높이기">
+            
+                    
+                    가능성을 높이기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#공짜로-정리-얻기">
+            
+                    
+                    공짜로 정리 얻기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#제약">
+            
+                    
+                    제약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    Chapter 08: Tupperware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="ch08.html">
+            
+                <a href="ch08.html#the-mighty-container">
+            
+                    
+                    The Mighty Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ch08.html">
+            
+                <a href="ch08.html#my-first-functor">
+            
+                    
+                    My First Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ch08.html">
+            
+                <a href="ch08.html#schrödingers-maybe">
+            
+                    
+                    Schrödinger's Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ch08.html">
+            
+                <a href="ch08.html#use-cases">
+            
+                    
+                    Use Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ch08.html">
+            
+                <a href="ch08.html#releasing-the-value">
+            
+                    
+                    Releasing the Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ch08.html">
+            
+                <a href="ch08.html#pure-error-handling">
+            
+                    
+                    Pure Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ch08.html">
+            
+                <a href="ch08.html#old-mcdonald-had-effects">
+            
+                    
+                    Old McDonald Had Effects...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ch08.html">
+            
+                <a href="ch08.html#asynchronous-tasks">
+            
+                    
+                    Asynchronous Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ch08.html">
+            
+                <a href="ch08.html#a-spot-of-theory">
+            
+                    
+                    A Spot of Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ch08.html">
+            
+                <a href="ch08.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ch08.html">
+            
+                <a href="ch08.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    Chapter 09: Monadic Onions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="ch09.html">
+            
+                <a href="ch09.html#pointy-functor-factory">
+            
+                    
+                    Pointy Functor Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="ch09.html">
+            
+                <a href="ch09.html#mixing-metaphors">
+            
+                    
+                    Mixing Metaphors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="ch09.html">
+            
+                <a href="ch09.html#my-chain-hits-my-chest">
+            
+                    
+                    My Chain Hits My Chest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="ch09.html">
+            
+                <a href="ch09.html#power-trip">
+            
+                    
+                    Power Trip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="ch09.html">
+            
+                <a href="ch09.html#theory">
+            
+                    
+                    Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="ch09.html">
+            
+                <a href="ch09.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="ch09.html">
+            
+                <a href="ch09.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    Chapter 10: Applicative Functors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="ch10.html">
+            
+                <a href="ch10.html#applying-applicatives">
+            
+                    
+                    Applying Applicatives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ch10.html">
+            
+                <a href="ch10.html#ships-in-bottles">
+            
+                    
+                    Ships in Bottles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="ch10.html">
+            
+                <a href="ch10.html#coordination-motivation">
+            
+                    
+                    Coordination Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="ch10.html">
+            
+                <a href="ch10.html#bro-do-you-even-lift">
+            
+                    
+                    Bro, Do You Even Lift?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="ch10.html">
+            
+                <a href="ch10.html#operators">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="ch10.html">
+            
+                <a href="ch10.html#free-can-openers">
+            
+                    
+                    Free Can Openers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="ch10.html">
+            
+                <a href="ch10.html#laws">
+            
+                    
+                    Laws
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="ch10.html">
+            
+                <a href="ch10.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="ch10.html">
+            
+                <a href="ch10.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    Chapter 11: Transform Again, Naturally
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="ch11.html">
+            
+                <a href="ch11.html#curse-this-nest">
+            
+                    
+                    Curse This Nest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="ch11.html">
+            
+                <a href="ch11.html#a-situational-comedy">
+            
+                    
+                    A Situational Comedy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="ch11.html">
+            
+                <a href="ch11.html#all-natural">
+            
+                    
+                    All Natural
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="ch11.html">
+            
+                <a href="ch11.html#principled-type-conversions">
+            
+                    
+                    Principled Type Conversions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="ch11.html">
+            
+                <a href="ch11.html#feature-envy">
+            
+                    
+                    Feature Envy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="ch11.html">
+            
+                <a href="ch11.html#isomorphic-javascript">
+            
+                    
+                    Isomorphic JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="ch11.html">
+            
+                <a href="ch11.html#a-broader-definition">
+            
+                    
+                    A Broader Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="ch11.html">
+            
+                <a href="ch11.html#one-nesting-solution">
+            
+                    
+                    One Nesting Solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="ch11.html">
+            
+                <a href="ch11.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="ch11.html">
+            
+                <a href="ch11.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    Chapter 12: Traversing the Stone
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="ch12.html">
+            
+                <a href="ch12.html#types-n-types">
+            
+                    
+                    Types n' Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="ch12.html">
+            
+                <a href="ch12.html#type-feng-shui">
+            
+                    
+                    Type Feng Shui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="ch12.html">
+            
+                <a href="ch12.html#effect-assortment">
+            
+                    
+                    Effect Assortment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="ch12.html">
+            
+                <a href="ch12.html#waltz-of-the-types">
+            
+                    
+                    Waltz of the Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="ch12.html">
+            
+                <a href="ch12.html#no-law-and-order">
+            
+                    
+                    No Law and Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="ch12.html">
+            
+                <a href="ch12.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="ch12.html">
+            
+                <a href="ch12.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html">
+            
+                    
+                    Appendix A: Essential Functions Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#always">
+            
+                    
+                    always
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#compose">
+            
+                    
+                    compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#curry">
+            
+                    
+                    curry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#either">
+            
+                    
+                    either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#identity">
+            
+                    
+                    identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#inspect">
+            
+                    
+                    inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#left">
+            
+                    
+                    left
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#lifta">
+            
+                    
+                    liftA*
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#maybe">
+            
+                    
+                    maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#nothing">
+            
+                    
+                    nothing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#reject">
+            
+                    
+                    reject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html">
+            
+                    
+                    Appendix B: Algebraic Structures Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#compose">
+            
+                    
+                    Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#either">
+            
+                    
+                    Either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#identity">
+            
+                    
+                    Identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#io">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#list">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#map">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#maybe">
+            
+                    
+                    Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#task">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html">
+            
+                    
+                    Appendix C: Pointfree Utilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#add">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#append">
+            
+                    
+                    append
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#chain">
+            
+                    
+                    chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#concat">
+            
+                    
+                    concat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#eq">
+            
+                    
+                    eq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#filter">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#flip">
+            
+                    
+                    flip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#foreach">
+            
+                    
+                    forEach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#head">
+            
+                    
+                    head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#intercalate">
+            
+                    
+                    intercalate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#join">
+            
+                    
+                    join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#last">
+            
+                    
+                    last
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#map">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#match">
+            
+                    
+                    match
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#prop">
+            
+                    
+                    prop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#reduce">
+            
+                    
+                    reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#replace">
+            
+                    
+                    replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.18" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safehead">
+            
+                    
+                    safeHead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.19" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safelast">
+            
+                    
+                    safeLast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.20" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safeprop">
+            
+                    
+                    safeProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.21" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sequence">
+            
+                    
+                    sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.22" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sortby">
+            
+                    
+                    sortBy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.23" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#split">
+            
+                    
+                    split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.24" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#take">
+            
+                    
+                    take
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.25" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tolowercase">
+            
+                    
+                    toLowerCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.26" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tostring">
+            
+                    
+                    toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.27" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#touppercase">
+            
+                    
+                    toUpperCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.28" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#traverse">
+            
+                    
+                    traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.29" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#unsafeperformio">
+            
+                    
+                    unsafePerformIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >07 장: 힌들리-밀너와 나</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="07-&#xC7A5;-&#xD78C;&#xB4E4;&#xB9AC;-&#xBC00;&#xB108;&#xC640;-&#xB098;">07 &#xC7A5;: &#xD78C;&#xB4E4;&#xB9AC;-&#xBC00;&#xB108;&#xC640; &#xB098;</h1>
+<h2 id="&#xB2F9;&#xC2E0;&#xC740;-&#xBB34;&#xC2A8;-&#xD0C0;&#xC785;&#xC778;&#xAC00;&#xC694;">&#xB2F9;&#xC2E0;&#xC740; &#xBB34;&#xC2A8; &#xD0C0;&#xC785;&#xC778;&#xAC00;&#xC694;?</h2>
+<p>&#xB2F9;&#xC2E0;&#xC774; &#xD568;&#xC218;&#xD615; &#xC138;&#xC0C1;&#xC5D0; &#xCC98;&#xC74C; &#xC654;&#xB2E4;&#xBA74; &#xBA38;&#xC9C0;&#xC54A;&#xC544; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xC5D0; &#xAE4A;&#xC774; &#xBE60;&#xC9C0;&#xAC8C; &#xB420; &#xAC70;&#xC5D0;&#xC694;. &#xD0C0;&#xC785;&#xC740; &#xC11C;&#xB85C; &#xB2E4;&#xB978; &#xBC30;&#xACBD;&#xC744; &#xAC00;&#xC9C4; &#xC0AC;&#xB78C;&#xB4E4;&#xC774; &#xAC04;&#xB2E8;&#xBA85;&#xB8CC;&#xD558;&#xACE0; &#xD6A8;&#xACFC;&#xC801;&#xC73C;&#xB85C; &#xC18C;&#xD1B5;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC8FC;&#xB294; &#xBA54;&#xD0C0; &#xC5B8;&#xC5B4;&#xC785;&#xB2C8;&#xB2E4;. &#xB300;&#xBD80;&#xBD84;&#xC758; &#xACBD;&#xC6B0; &#xC774; &#xC7A5;&#xC5D0;&#xC11C; &#xB2E4;&#xB8E8;&#xB294; &quot;&#xD78C;&#xB4E4;&#xB9AC;-&#xBC00;&#xB108;(Hindley-Milner, HM)&quot; &#xCCB4;&#xACC4;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xD0C0;&#xC785;&#xC744; &#xD45C;&#xD604;&#xD560; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC21C;&#xC218; &#xD568;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xB54C; &#xD55C;&#xAD6D;&#xC5B4;&#xB85C;&#xB294; &#xC804;&#xD600; &#xB2E4;&#xB8E8;&#xC9C0; &#xBABB;&#xD560; &#xAC83;&#xC744; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB97C; &#xD1B5;&#xD574; &#xD45C;&#xD604;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC694;. &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB294; &#xD568;&#xC218;&#xC758; &#xB0B4;&#xBC00;&#xD55C; &#xBE44;&#xBC00;&#xC744; &#xB2F9;&#xC2E0; &#xADC0;&#xC5D0; &#xC18D;&#xC0AD;&#xC5EC; &#xC904; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xAC04;&#xACB0;&#xD55C; &#xD55C; &#xC904;&#xB9CC;&#xC73C;&#xB85C; &#xD589;&#xB3D9;&#xACFC; &#xC758;&#xB3C4;&#xB97C; &#xC54C;&#xB824;&#xC904; &#xAC70;&#xC5D0;&#xC694;. &quot;&#xACF5;&#xC9DC; &#xC815;&#xB9AC;&quot;&#xB97C; &#xB3C4;&#xCD9C; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB610; &#xD0C0;&#xC785;&#xC740; &#xCD94;&#xB860;&#xB420; &#xC218;&#xB3C4; &#xC788;&#xC5B4;&#xC11C; &#xBA85;&#xC2DC;&#xC801;&#xC73C;&#xB85C; &#xC801;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xC791;&#xB3D9;&#xD569;&#xB2C8;&#xB2E4;. &#xC544;&#xC8FC; &#xC138;&#xBC00;&#xD558;&#xAC8C; &#xC870;&#xC808;&#xB420; &#xC218;&#xB3C4; &#xC788;&#xACE0; &#xC77C;&#xBC18;&#xC801;&#xC774;&#xACE0; &#xCD94;&#xC0C1;&#xC801;&#xC73C;&#xB85C; &#xB0A8;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC5B4;&#xC694;. &#xCEF4;&#xD30C;&#xC77C; &#xD0C0;&#xC784; &#xCCB4;&#xD06C;&#xC5D0; &#xC720;&#xC6A9;&#xD560; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xBB38;&#xC11C;&#xD654;&#xC5D0;&#xB3C4; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xACE0;&#xC694;. &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB294; &#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC5D0;&#xC11C; &#xB2F9;&#xC2E0;&#xC774; &#xCC98;&#xC74C;&#xC5D0; &#xC0DD;&#xAC01;&#xD558;&#xB294; &#xAC83;&#xBCF4;&#xB2E4; &#xB354; &#xC911;&#xC694;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; &#xB3D9;&#xC801; &#xC5B8;&#xC5B4;&#xC9C0;&#xB9CC; &#xC774;&#xAC83;&#xC774; &#xD0C0;&#xC785;&#xC744; &#xC804;&#xD600; &#xACE0;&#xB824;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xB294; &#xB9D0;&#xC740; &#xC544;&#xB2D9;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xBB38;&#xC790;&#xC5F4;&#xACFC; &#xC22B;&#xC790;, &#xBD88;&#xB9AC;&#xC5B8;&#xC744; &#xC0AC;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xC800; &#xC5B8;&#xC5B4; &#xCC28;&#xC6D0;&#xC5D0;&#xC11C; &#xC9C0;&#xC6D0;&#xD574;&#xC8FC;&#xC9C0; &#xC54A;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xC774; &#xC815;&#xBCF4;&#xB4E4;&#xC744; &#xC6B0;&#xB9AC;&#xAC00; &#xAE30;&#xC5B5;&#xD558;&#xACE0; &#xC788;&#xC5B4;&#xC57C; &#xB41C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;. &#xADF8;&#xB7EC;&#xB098; &#xAC71;&#xC815;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;. &#xC774;&#xBBF8; &#xBB38;&#xC11C;&#xD654;&#xB97C; &#xC704;&#xD574; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xCC98;&#xB7FC; &#xC8FC;&#xC11D;&#xC744; &#xD1B5;&#xD574; &#xC124;&#xBA85;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p><a href="https://flow.org/" target="_blank">Flow</a>&#xB098; <a href="https://www.typescriptlang.org/" target="_blank">TypeScript</a> &#xAC19;&#xC774; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C; &#xC774;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xD0C0;&#xC785; &#xAC80;&#xC0AC; &#xB3C4;&#xAD6C;&#xB4E4;&#xB3C4; &#xC788;&#xC5B4;&#xC694;. &#xC774; &#xCC45;&#xC758; &#xBAA9;&#xC801;&#xC740; &#xC5EC;&#xB7EC; FP &#xC5B8;&#xC5B4;&#xC5D0; &#xAC78;&#xCCD0; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB294; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xD0C0;&#xC785; &#xCCB4;&#xACC4;&#xB97C; &#xAC16;&#xCD94;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xBE44;&#xBC00;-&#xC774;&#xC57C;&#xAE30;">&#xBE44;&#xBC00; &#xC774;&#xC57C;&#xAE30;</h2>
+<p>&#xB0A1;&#xC740; &#xC218;&#xD559; &#xCC45;&#xC5D0;&#xC11C;, &#xD590;&#xC580; &#xB17C;&#xBB38;&#xC758; &#xAD11;&#xD65C;&#xD55C; &#xBC14;&#xB2E4;&#xC5D0;&#xC11C;, &#xD1A0;&#xC694;&#xC77C; &#xC544;&#xCE68;&#xC758; &#xC77C;&#xC0C1;&#xC801;&#xC778; &#xBE14;&#xB85C;&#xADF8; &#xAE00;&#xC5D0;&#xC11C;, &#xADF8;&#xB9AC;&#xACE0; &#xC18C;&#xC2A4; &#xCF54;&#xB4DC;&#xC758; &#xBC11;&#xBC14;&#xB2E5;&#xC5D0;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xD78C;&#xB4E4;&#xB9AC;-&#xBC00;&#xB108; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB97C; &#xBCFC; &#xC218; &#xC788;&#xC5B4;&#xC694;. &#xC774; &#xCCB4;&#xACC4;&#xC740; &#xB9E4;&#xC6B0; &#xB2E8;&#xC21C;&#xD558;&#xC9C0;&#xB9CC; &#xBE60;&#xB974;&#xAC8C; &#xC124;&#xBA85;&#xD560; &#xC218; &#xC788;&#xACE0; &#xC774; &#xC791;&#xC740; &#xC5B8;&#xC5B4;&#xB97C; &#xBC30;&#xC6B0;&#xAE30; &#xC704;&#xD55C; &#xC5F0;&#xC2B5;&#xB4E4;&#xB3C4; &#xB9CE;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// capitalize :: String -&gt; String</span>
+<span class="hljs-keyword">const</span> capitalize = (s) =&gt; toUpperCase(head(s)) + toLowerCase(tail(s));
+
+capitalize(<span class="hljs-string">&quot;smurf&quot;</span>); <span class="hljs-comment">// &apos;Smurf&apos;</span>
+</code></pre>
+<p>&#xC704;&#xC758; <code>capitalize</code>&#xB294; <code>String</code>&#xC744; &#xBC1B;&#xC544;&#xC11C; <code>String</code>&#xC744; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;. &#xAD6C;&#xD604;&#xC740; &#xC2E0;&#xACBD;&#xC4F0;&#xC9C0; &#xB9C8;&#xC138;&#xC694;. &#xC6B0;&#xB9AC;&#xAC00; &#xAD00;&#xC2EC;&#xC788;&#xB294; &#xAC83;&#xC740; &#xD0C0;&#xC785;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>HM&#xC5D0;&#xC11C; &#xD568;&#xC218;&#xB294; <code>a -&gt; b</code>&#xB85C; &#xC4F0;&#xC5EC;&#xC9D1;&#xB2C8;&#xB2E4;. &#xC5EC;&#xAE30;&#xC11C; <code>a</code>&#xC640; <code>b</code>&#xB294; &#xC5B4;&#xB5A4; &#xD0C0;&#xC785;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xBCC0;&#xC218;&#xC785;&#xB2C8;&#xB2E4;. &#xB530;&#xB77C;&#xC11C; <code>capitalize</code>&#xC758; &#xBA85;&#xC138;&#xB294; &quot;<code>String</code>&#xC5D0;&#xC11C; <code>String</code>&#xC73C;&#xB85C; &#xAC00;&#xB294; &#xD568;&#xC218;&quot;&#xB77C;&#xACE0; &#xC77D;&#xC744; &#xC218; &#xC788;&#xC5B4;&#xC694;. &#xB610;&#xB294; <code>String</code>&#xC744; &#xC785;&#xB825;&#xC73C;&#xB85C; &#xBC1B;&#xACE0; <code>String</code>&#xC744; &#xCD9C;&#xB825;&#xC73C;&#xB85C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;&#xACE0; &#xBCFC; &#xC218;&#xB3C4; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB610; &#xB2E4;&#xB978; &#xD568;&#xC218;&#xC758; &#xBA85;&#xC138;&#xB3C4; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// strLength :: String -&gt; Number</span>
+<span class="hljs-keyword">const</span> strLength = (s) =&gt; s.length;
+
+<span class="hljs-comment">// join :: String -&gt; [String] -&gt; String</span>
+<span class="hljs-keyword">const</span> join = curry((what, xs) =&gt; xs.join(what));
+
+<span class="hljs-comment">// match :: Regex -&gt; String -&gt; [String]</span>
+<span class="hljs-keyword">const</span> match = curry((reg, s) =&gt; s.match(reg));
+
+<span class="hljs-comment">// replace :: Regex -&gt; String -&gt; String -&gt; String</span>
+<span class="hljs-keyword">const</span> replace = curry((reg, sub, s) =&gt; s.replace(reg, sub));
+</code></pre>
+<p><code>strLength</code>&#xB3C4; &#xC55E;&#xC758; &#xC608;&#xC81C;&#xC640; &#xBE44;&#xC2B7;&#xD569;&#xB2C8;&#xB2E4;. <code>String</code>&#xC744; &#xBC1B;&#xC544;&#xC11C; <code>Number</code>&#xB97C; &#xBC18;&#xD658;&#xD574;&#xC694;.</p>
+<p>&#xB2E4;&#xB978; &#xAC83;&#xB4E4;&#xC740; &#xCC98;&#xC74C; &#xBCFC; &#xB54C; &#xD5F7;&#xAC08;&#xB9B4; &#xC218; &#xC788;&#xC5B4;&#xC694;. &#xC644;&#xC804;&#xD788; &#xC774;&#xD574;&#xD558;&#xC9C0; &#xC54A;&#xC544;&#xB3C4; &#xB9C8;&#xC9C0;&#xB9C9; &#xD0C0;&#xC785;&#xC744; &#xC5B8;&#xC81C;&#xB098; &#xBC18;&#xD658; &#xD0C0;&#xC785;&#xC73C;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xC5B4;&#xC694;. <code>match</code>&#xB294; <code>Regex</code>&#xACFC; <code>String</code>&#xC744; &#xBC1B;&#xC544;&#xC11C; <code>[String]</code>&#xC744; &#xBC18;&#xD658;&#xD55C;&#xB2E4;&#xACE0; &#xD574;&#xC11D;&#xD560; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC81C;&#xAC00; &#xB530;&#xB85C; &#xC124;&#xBA85;&#xD558;&#xACE0; &#xC2F6;&#xC740; &#xC7AC;&#xBBF8;&#xC788;&#xB294; &#xD604;&#xC0C1;&#xB3C4; &#xC788;&#xC5B4;&#xC694;.</p>
+<p><code>match</code>&#xC758; &#xBA85;&#xC138;&#xB97C; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC774; &#xC9DD;&#xC9C0;&#xC744; &#xC218;&#xB3C4; &#xC788;&#xC5B4;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// match :: Regex -&gt; (String -&gt; [String])</span>
+<span class="hljs-keyword">const</span> match = curry((reg, s) =&gt; s.match(reg));
+</code></pre>
+<p>&#xB4B7;&#xBD80;&#xBD84;&#xC744; &#xAD04;&#xD638;&#xB85C; &#xBB36;&#xB294;&#xAC83;&#xC740; &#xB354; &#xB9CE;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xB4DC;&#xB7EC;&#xB0B4; &#xC90D;&#xB2C8;&#xB2E4;. &#xC774;&#xC81C; &#xC774; &#xD568;&#xC218;&#xB294; <code>Regex</code>&#xB97C; &#xBC1B;&#xC544;&#xC11C; <code>String</code>&#xC5D0;&#xC11C; <code>[String]</code>&#xC73C;&#xB85C; &#xAC00;&#xB294; &#xD568;&#xC218;&#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xBCF4;&#xC785;&#xB2C8;&#xB2E4;. &#xCEE4;&#xB9C1; &#xB355;&#xBD84;&#xC5D0; &#xC0AC;&#xC2E4; &#xC774; &#xD568;&#xC218;&#xC5D0;&#xAC8C; <code>Regex</code>&#xB97C; &#xC8FC;&#xBA74; &#xC6B0;&#xB9AC;&#xB294; <code>String</code>&#xC744; &#xBC1B;&#xAE30;&#xB97C; &#xAE30;&#xB2E4;&#xB9AC;&#xB294; &#xD568;&#xC218;&#xB97C; &#xC5BB;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB2F9;&#xC5F0;&#xD788; &#xC774;&#xB7F0;&#xC2DD;&#xC73C;&#xB85C; &#xC0DD;&#xAC01;&#xD560; &#xD544;&#xC694;&#xB294; &#xC5C6;&#xC5B4;&#xC694;. &#xD558;&#xC9C0;&#xB9CC; &#xC65C; &#xB9C8;&#xC9C0;&#xB9C9; &#xD0C0;&#xC785;&#xC744; &#xBC18;&#xD658; &#xD0C0;&#xC785;&#xC73C;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xB294;&#xC9C0; &#xC774;&#xD574;&#xD558;&#xACE0; &#xC788;&#xC73C;&#xBA74; &#xC88B;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// match :: Regex -&gt; (String -&gt; [String])</span>
+<span class="hljs-comment">// onHoliday :: String -&gt; [String]</span>
+<span class="hljs-keyword">const</span> onHoliday = match(<span class="hljs-regexp">/holiday/gi</span>);
+</code></pre>
+<p>&#xAC01;&#xAC01;&#xC758; &#xC778;&#xC790;&#xB4E4;&#xC774; &#xD0C0;&#xC785; &#xAC00;&#xC7A5; &#xC55E;&#xC758; &#xD558;&#xB098;&#xB97C; &#xCC28;&#xC9C0;&#xD569;&#xB2C8;&#xB2E4;. <code>onHoliday</code>&#xB294; <code>Regex</code>&#xB97C; &#xBC1B;&#xC740; <code>match</code>&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// replace :: Regex -&gt; (String -&gt; (String -&gt; String))</span>
+<span class="hljs-keyword">const</span> replace = curry((reg, sub, s) =&gt; s.replace(reg, sub));
+</code></pre>
+<p><code>replace</code>&#xC758; &#xBAA8;&#xB4E0; &#xAD04;&#xD638;&#xCC98;&#xB7FC; &#xCD94;&#xAC00;&#xC801;&#xC73C;&#xB85C; &#xBA85;&#xC2DC;&#xD558;&#xBA74; &#xC57D;&#xAC04; &#xC9C0;&#xC800;&#xBD84;&#xD558;&#xACE0; &#xBD88;&#xD544;&#xC694;&#xD558;&#xAC8C; &#xBCF4;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xADF8;&#xB0E5; &#xC0DD;&#xB7B5;&#xD558;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. &#xBAA8;&#xB4E0; &#xC778;&#xC790;&#xB4E4;&#xC744; &#xD55C;&#xBC88;&#xC5D0; &#xC8FC;&#xAE30;&#xB85C; &#xC0DD;&#xAC01;&#xD55C;&#xB2E4;&#xBA74; <code>replace</code>&#xB97C; &#xB2E8;&#xC21C;&#xD788; <code>Regex</code>&#xC640; &#xB450;&#xAC1C;&#xC758; <code>String</code>&#xC744; &#xBC1B;&#xC544;&#xC11C; <code>String</code>&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xB2F5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC608;&#xC81C;&#xB97C; &#xBA87;&#xAC00;&#xC9C0; &#xB354; &#xBCFC;&#xAE4C;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// id :: a -&gt; a</span>
+<span class="hljs-keyword">const</span> id = (x) =&gt; x;
+
+<span class="hljs-comment">// map :: (a -&gt; b) -&gt; [a] -&gt; [b]</span>
+<span class="hljs-keyword">const</span> map = curry((f, xs) =&gt; xs.map(f));
+</code></pre>
+<p><code>id</code> &#xD568;&#xC218;&#xB294; <code>a</code> &#xD0C0;&#xC785;&#xC744; &#xBC1B;&#xC544;&#xC11C; &#xAC19;&#xC740; &#xD0C0;&#xC785; <code>a</code>&#xC758; &#xC5B4;&#xB5A4; &#xAC83;&#xC744; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xCF54;&#xB4DC; &#xC548;&#xC5D0;&#xC11C; &#xCC98;&#xB7FC; &#xD0C0;&#xC785;&#xC744; &#xB098;&#xD0C0;&#xB0B4;&#xB294; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC694;. <code>a</code>&#xB098; <code>b</code> &#xAC19;&#xC740; &#xBCC0;&#xC218;&#xBA85;&#xC740; &#xAD00;&#xC2B5;&#xC774;&#xC9C0;&#xB9CC; &#xB2F9;&#xC2E0;&#xC774; &#xC6D0;&#xD558;&#xB294; &#xB2E4;&#xB978; &#xC784;&#xC758;&#xC758; &#xC774;&#xB984;&#xC73C;&#xB85C; &#xBC14;&#xAFC0; &#xC218; &#xC788;&#xC5B4;&#xC694;. &#xB9CC;&#xC57D; &#xAC19;&#xC740; &#xBCC0;&#xC218;&#xB77C;&#xBA74; &#xAC19;&#xC740; &#xD0C0;&#xC785;&#xC785;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC740; &#xC911;&#xC694;&#xD55C; &#xADDC;&#xCE59;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &#xC0B4;&#xD3B4;&#xBCF4;&#xACA0;&#xC2B5;&#xB2C8;&#xB2E4;. <code>a -&gt; b</code>&#xB294; &#xC5B4;&#xB5A4; &#xD0C0;&#xC785; <code>a</code>&#xB97C; &#xC5B4;&#xB5A4; &#xD0C0;&#xC785; <code>b</code>&#xB85C; &#xBCF4;&#xB0B4;&#xC9C0;&#xB9CC; <code>a -&gt; a</code>&#xB294; &#xC11C;&#xB85C; &#xAC19;&#xC740; &#xD0C0;&#xC785;&#xC784;&#xC744; &#xB73B;&#xD569;&#xB2C8;&#xB2E4;. &#xC608;&#xB97C;&#xB4E4;&#xC5B4; <code>id</code>&#xB294; <code>String -&gt; String</code>&#xC774;&#xB098; <code>Number -&gt; Number</code>&#xAC00; &#xB420; &#xC218; &#xC788;&#xC9C0;&#xB9CC; <code>String -&gt; Bool</code>&#xC740; &#xB420; &#xC218; &#xC5C6;&#xC5B4;&#xC694;.</p>
+<p><code>map</code>&#xB3C4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xD0C0;&#xC785; &#xBCC0;&#xC218;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0;&#xB9CC; &#xC774;&#xBC88;&#xC5D0;&#xB294; <code>a</code>&#xC640; &#xAC19;&#xC740; &#xD0C0;&#xC785;&#xC77C;&#xC218;&#xB3C4;, &#xB2E4;&#xB978; &#xD0C0;&#xC785;&#xC77C; &#xC218;&#xB3C4; &#xC788;&#xB294; <code>b</code>&#xB97C; &#xB3C4;&#xC785;&#xD569;&#xB2C8;&#xB2E4;. <code>map</code>&#xC744; &#xC5B4;&#xB5A4; &#xD0C0;&#xC785; <code>a</code>&#xB97C; &#xBC1B;&#xC544;&#xC11C; &#xAC19;&#xAC70;&#xB098; &#xB2E4;&#xB97C; &#xC218; &#xC788;&#xB294; &#xD0C0;&#xC785; <code>b</code>&#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xB97C; &#xBC1B;&#xC740; &#xB2E4;&#xC74C;&#xC5D0; <code>a</code>&#xC758; &#xBC30;&#xC5F4;&#xC744; &#xBC1B;&#xC544;&#xC11C; <code>b</code>&#xC758; &#xBC30;&#xC5F4;&#xC744; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
+<p>&#xC774;&#xB7F0; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xC758; &#xD48D;&#xBD80;&#xD55C; &#xD45C;&#xD604;&#xB825;&#xC758; &#xC544;&#xB984;&#xB2E4;&#xC6C0;&#xC5D0; &#xC555;&#xB3C4;&#xB2F9;&#xD588;&#xAE30;&#xB97C; &#xBC14;&#xB78D;&#xB2C8;&#xB2E4;. &#xD568;&#xC218;&#xAC00; &#xBB34;&#xC5C7;&#xC744; &#xD558;&#xB294;&#xC9C0; &#xC815;&#xD655;&#xD788; &#xB098;&#xD0DC;&#xB0B4; &#xC788;&#xC5B4;&#xC694;. &#xC774;&#xAC83;&#xC740; <code>a</code>&#xC5D0;&#xC11C; <code>b</code>&#xB85C; &#xAC00;&#xB294; &#xD568;&#xC218;&#xC640; <code>a</code>&#xC758; &#xBC30;&#xC5F4;&#xC744; &#xBC1B;&#xC544;&#xC11C; <code>b</code>&#xC758; &#xBC30;&#xC5F4;&#xC744; &#xC8FC;&#xC9C0;&#xC694;. &#xC720;&#xC77C;&#xD558;&#xAC8C; &#xD569;&#xB9AC;&#xC801;&#xC778; &#xC791;&#xB3D9; &#xBC29;&#xC2DD;&#xC740; &#xC774; &#xD568;&#xC218;&#xB97C; <code>a</code>&#xC5D0; &#xAC01;&#xAC01; &#xC801;&#xC6A9;&#xD558;&#xB294; &#xAC70;&#xC9C0;&#xC694;. &#xB098;&#xBA38;&#xC9C0;&#xB294; &#xC5B4;&#xBD88;&#xC131;&#xC124;&#xC77C; &#xAC70;&#xC5D0;&#xC694;.</p>
+<p>&#xD0C0;&#xC785;&#xACFC; &#xADF8; &#xAD6C;&#xD604;&#xC5D0; &#xB300;&#xD574; &#xC0DD;&#xAC01;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xB418;&#xBA74; &#xD568;&#xC218;&#xD615; &#xC138;&#xC0C1; &#xAE4A;&#xC774; &#xAC08; &#xC218; &#xC788;&#xAC8C; &#xB420;&#xAC70;&#xC5D0;&#xC694;. &#xB17C;&#xBB38;, &#xBE14;&#xB85C;&#xADF8;, &#xBB38;&#xC11C; &#xB4F1;&#xC744; &#xC880; &#xB354; &#xC27D;&#xAC8C; &#xC774;&#xD574;&#xD558;&#xAC8C; &#xB420; &#xBFD0;&#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xD0C0;&#xC785; &#xADF8; &#xC790;&#xCCB4;&#xB9CC;&#xC73C;&#xB85C; &#xAE30;&#xB2A5;&#xC5D0; &#xB300;&#xD574; &#xC54C; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xC218;&#xC6D4;&#xD558;&#xAC8C; &#xC77D;&#xC73C;&#xB824;&#xBA74; &#xC5F0;&#xC2B5;&#xC744; &#xD574;&#xC57C;&#xACA0;&#xC9C0;&#xB9CC; &#xD3EC;&#xAE30;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xBA74; &#xBCF5;&#xC7A1;&#xD55C; &#xB9E4;&#xB274;&#xC5BC;&#xC744; &#xC77D;&#xC9C0; &#xC54A;&#xACE0;&#xB3C4; &#xB9CE;&#xC740; &#xC815;&#xBCF4;&#xB97C; &#xC54C; &#xC218; &#xC788;&#xC744; &#xAC70;&#xC5D0;&#xC694;.</p>
+<p>&#xB2E4;&#xC74C; &#xC608;&#xC81C;&#xB97C; &#xC2A4;&#xC2A4;&#xB85C; &#xD574;&#xC11D;&#xD560; &#xC218; &#xC788;&#xB294;&#xC9C0; &#xD55C; &#xBC88; &#xC5F0;&#xC2B5;&#xD574; &#xBCF4;&#xC138;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// head :: [a] -&gt; a</span>
+<span class="hljs-keyword">const</span> head = (xs) =&gt; xs[<span class="hljs-number">0</span>];
+
+<span class="hljs-comment">// filter :: (a -&gt; Bool) -&gt; [a] -&gt; [a]</span>
+<span class="hljs-keyword">const</span> filter = curry((f, xs) =&gt; xs.filter(f));
+
+<span class="hljs-comment">// reduce :: ((b, a) -&gt; b) -&gt; b -&gt; [a] -&gt; b</span>
+<span class="hljs-keyword">const</span> reduce = curry((f, x, xs) =&gt; xs.reduce(f, x));
+</code></pre>
+<p>&#xC544;&#xB9C8; &#xC774; &#xC911;&#xC5D0;&#xC11C; <code>reduce</code>&#xAC00; &#xAC00;&#xC7A5; &#xD45C;&#xD604;&#xB825;&#xC774; &#xC788;&#xC744; &#xAC70;&#xC5D0;&#xC694;. &#xC57D;&#xAC04; &#xC5B4;&#xB824;&#xC6B0;&#xB2C8;&#xAE4C; &#xC774;&#xD574;&#xD558;&#xAE30; &#xC5B4;&#xB835;&#xB354;&#xB77C;&#xB3C4; &#xB2F9;&#xC2E0;&#xC774; &#xBA4D;&#xCCAD;&#xD558;&#xB2E4;&#xACE0; &#xC0DD;&#xAC01;&#xD558;&#xC9C0; &#xB9C8;&#xC138;&#xC694;. &#xAD81;&#xAE08;&#xD558;&#xC2E0; &#xBD84;&#xB4E4;&#xC744; &#xC704;&#xD574; &#xC81C;&#xAC00; &#xC124;&#xBA85;&#xD574; &#xBCF4;&#xACA0;&#xC9C0;&#xB9CC; &#xB2F9;&#xC2E0; &#xC2A4;&#xC2A4;&#xB85C; &#xD574;&#xBCF4;&#xB294; &#xAC83;&#xC774; &#xB354; &#xB3C4;&#xC6C0;&#xC774; &#xB420;&#xAC81;&#xB2C8;&#xB2E4;.</p>
+<p>&#xD760;.. &#xD574; &#xBCFC; &#xC218; &#xC788;&#xB294; &#xACF3;&#xAE4C;&#xC9C0; &#xD574;&#xBCFC;&#xAE4C;&#xC694;. &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB97C; &#xBCF4;&#xBA74; &#xCCAB;&#xBC88;&#xC9F8; &#xC778;&#xC790;&#xB294; <code>b</code>&#xC640; <code>a</code>&#xB97C; &#xBC1B;&#xB294; &#xD568;&#xC218;&#xC785;&#xB2C8;&#xB2E4;. &#xC774; <code>a</code>&#xC640; <code>b</code>&#xB294; &#xC5B4;&#xB514;&#xC11C; &#xAC00;&#xC838;&#xC62C;&#xAE4C;&#xC694;? &#xBA85;&#xC138;&#xC758; &#xB2E4;&#xC74C; &#xC778;&#xC790;&#xB294; <code>b</code>&#xC640; <code>a</code>&#xC758; &#xBC30;&#xC5F4;&#xC774;&#xB124;&#xC694;. <code>b</code>&#xC640; &#xAC01;&#xAC01;&#xC758; <code>a</code>&#xAC00; &#xC785;&#xB825;&#xB41C;&#xB2E4;&#xACE0; &#xC0DD;&#xAC01;&#xD574; &#xBCFC; &#xC218; &#xC788;&#xC744; &#xAC70;&#xC5D0;&#xC694;. &#xADF8;&#xB9AC;&#xACE0; &#xD568;&#xC218;&#xC758; &#xBC18;&#xD658;&#xAC12;&#xC774; <code>b</code>&#xB2C8;&#xAE4C; &#xD568;&#xC218;&#xB85C; &#xC785;&#xB825;&#xB41C; &#xB9C8;&#xC9C0;&#xB9C9; &#xAC12;&#xC774; &#xACB0;&#xACFC;&#xAC12;&#xC774;&#xB77C;&#xACE0; &#xC0DD;&#xAC01;&#xD560; &#xC218; &#xC788;&#xC744; &#xAC70;&#xC5D0;&#xC694;. <code>reduce</code>&#xAC00; &#xBB34;&#xC5C7;&#xC744; &#xD558;&#xB294;&#xC9C0; &#xC54C;&#xAC8C;&#xB418;&#xBA74; &#xC704;&#xC758; &#xC124;&#xBA85;&#xC774; &#xC815;&#xD655;&#xD558;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC54C; &#xC218; &#xC788;&#xC744; &#xAC70;&#xC5D0;&#xC694;.</p>
+<h2 id="&#xAC00;&#xB2A5;&#xC131;&#xC744;-&#xB192;&#xC774;&#xAE30;">&#xAC00;&#xB2A5;&#xC131;&#xC744; &#xB192;&#xC774;&#xAE30;</h2>
+<p>&#xD0C0;&#xC785; &#xBCC0;&#xC218;&#xAC00; &#xB3C4;&#xC785;&#xB418;&#xBA74; <strong><a href="https://en.wikipedia.org/wiki/Parametricity" target="_blank">parametricity</a></strong>&#xB77C;&#xACE0; &#xBD88;&#xB9AC;&#xB294; &#xD2B9;&#xC774;&#xD55C; &#xC18D;&#xC131;&#xC774; &#xB4F1;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;. &#xC774; &#xC18D;&#xC131;&#xC740; &#xD568;&#xC218;&#xAC00; <strong>&#xBAA8;&#xB4E0; &#xD0C0;&#xC785;&#xC5D0; &#xAC78;&#xCCD0; &#xC77C;&#xAD00;&#xB41C; &#xBC29;&#xC2DD;&#xC73C;&#xB85C; &#xC791;&#xB3D9;&#xD55C;&#xB2E4;&#xACE0;</strong> &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;. &#xD55C;&#xBC88; &#xC54C;&#xC544;&#xBCFC;&#xAE4C;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// head :: [a] -&gt; a</span>
+</code></pre>
+<p><code>head</code>&#xB97C; &#xBCF4;&#xBA74; <code>[a]</code>&#xB97C; &#xBC1B;&#xC544;&#xC11C; <code>a</code>&#xB97C; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;. &#xAD6C;&#xCCB4;&#xC801; &#xD0C0;&#xC785;&#xC778; <code>array</code>&#xC678;&#xC758; &#xB2E4;&#xB978; &#xC815;&#xBCF4;&#xAC00; &#xC5C6;&#xC5B4;&#xC11C; &#xD568;&#xC218;&#xAC00; &#xBC30;&#xC5F4;&#xC5D0; &#xC801;&#xC6A9;&#xB41C;&#xB2E4;&#xB294; &#xAC83; &#xB9D0;&#xACE0; &#xB2E4;&#xB978; &#xB9D0;&#xC740; &#xBABB;&#xD569;&#xB2C8;&#xB2E4;. <code>a</code>&#xC5D0; &#xB300;&#xD574; &#xC544;&#xBB34;&#xAC83;&#xB3C4; &#xBAA8;&#xB974;&#xB294;&#xB370; <code>a</code>&#xB97C; &#xAC00;&#xC9C0;&#xACE0; &#xBB34;&#xC5C7;&#xC744; &#xD560; &#xC218; &#xC788;&#xACA0;&#xC5B4;&#xC694;? &#xB2E4;&#xB978; &#xB9D0;&#xB85C;&#xB294; <code>a</code>&#xAC00; <strong>&#xD2B9;&#xC815;&#xD55C;</strong> &#xD0C0;&#xC785;&#xC774; &#xB420; &#xC218; &#xC5C6;&#xACE0; &#xB530;&#xB77C;&#xC11C; <strong>&#xC5B4;&#xB5A4;</strong> &#xD0C0;&#xC785;&#xB3C4; &#xB420; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0; &#xC774;&#xAC83;&#xC740; &#xD568;&#xC218;&#xAC00; &#xC0DD;&#xAC01;&#xD560; &#xC218; &#xC788;&#xB294; <strong>&#xBAA8;&#xB4E0;</strong> &#xD0C0;&#xC785;&#xC5D0; &#xB300;&#xD574; &#xC77C;&#xAD00;&#xC801;&#xC73C;&#xB85C; &#xC791;&#xB3D9;&#xD55C;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC774; <strong>parametricity</strong>&#xAC00; &#xB9D0;&#xD558;&#xB294; &#xC804;&#xBD80;&#xC785;&#xB2C8;&#xB2E4;. &#xAD6C;&#xD604;&#xC744; &#xCD94;&#xCE21;&#xD574;&#xBCFC; &#xB54C; &#xD569;&#xB9AC;&#xC801;&#xC778; &#xAC00;&#xC815;&#xC740; &#xBC30;&#xC5F4;&#xC758; &#xCCAB;&#xBC88;&#xC9F8; &#xB610;&#xB294; &#xB9C8;&#xC9C0;&#xB9C9; &#xB610;&#xB294; &#xC784;&#xC758;&#xC758; &#xC6D0;&#xC18C;&#xB97C; &#xBC18;&#xD658;&#xD55C;&#xB2E4;&#xB294; &#xAC83; &#xBC16;&#xC5D0; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xADF8;&#xB9AC;&#xACE0;  <code>head</code>&#xB77C;&#xB294; &#xC774;&#xB984;&#xC774; &#xADC0;&#xB738;&#xD574;&#xC8FC;&#xB124;&#xC694;.</p>
+<p>&#xB2E4;&#xB978; &#xAC83;&#xC744; &#xD55C;&#xBC88; &#xBD05;&#xC2DC;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// reverse :: [a] -&gt; [a]</span>
+</code></pre>
+<p>&#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB9CC;&#xC73C;&#xB85C; <code>reverse</code>&#xAC00; &#xBB34;&#xC5C7;&#xC744; &#xD560; &#xC218; &#xC788;&#xC744;&#xAE4C;&#xC694;? &#xB2E4;&#xC2DC; &#xD55C;&#xBC88; &#xD2B9;&#xC815;&#xD55C; <code>a</code>&#xC5D0; &#xB300;&#xD574;&#xC11C;&#xB9CC; &#xC801;&#xC6A9;&#xB418;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB610;  <code>a</code>&#xB97C; &#xB2E4;&#xB978; &#xD0C0;&#xC785;&#xC73C;&#xB85C; &#xBC14;&#xAFC0; &#xAFB8;&#xAC70;&#xB098; &#xC0C8;&#xB85C;&#xC6B4; &#xD0C0;&#xC785;  <code>b</code>&#xB97C; &#xB3C4;&#xC785;&#xD560; &#xC218;&#xB3C4; &#xC5C6;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC815;&#xB82C;&#xD560; &#xC218; &#xC788;&#xC744;&#xAE4C;&#xC694;? &#xD760;.. &#xAC00;&#xB2A5;&#xD55C; &#xBAA8;&#xB4E0; &#xD0C0;&#xC785;&#xC5D0; &#xB300;&#xD574; &#xC5B4;&#xB5BB;&#xAC8C; &#xC815;&#xB82C;&#xD558;&#xB294;&#xC9C0; &#xCDA9;&#xBD84;&#xD55C; &#xC54C; &#xC218; &#xC5C6;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xD558;&#xC9C0; &#xBABB;&#xD569;&#xB2C8;&#xB2E4;. &#xC7AC;&#xBC30;&#xC5F4;&#xC744; &#xD560; &#xC218; &#xC788;&#xC744;&#xAE4C;&#xC694;? &#xD560; &#xC218; &#xC788;&#xC744; &#xAC83; &#xAC19;&#xAD70;&#xC694;. &#xD558;&#xC9C0;&#xB9CC; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; &#xC608;&#xC0C1; &#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xC791;&#xB3D9;&#xD574;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;. &#xC911;&#xC694;&#xD55C; &#xC810;&#xC740; &#xD568;&#xC218;&#xC758; &#xD589;&#xB3D9;&#xC774; polymorphic type&#xC5D0; &#xC758;&#xD574; &#xB9CE;&#xC774; &#xC81C;&#xC57D;&#xB41C;&#xB2E4;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC774;&#xB807;&#xAC8C; &#xAC00;&#xB2A5;&#xC131;&#xC744; &#xC904;&#xC774;&#xB294; &#xAC83;&#xC740; <a href="https://hoogle.haskell.org/" target="_blank">Hoogle</a> &#xAC19;&#xC774; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB85C; &#xD568;&#xC218;&#xB97C; &#xAC80;&#xC0C9;&#xD558;&#xB294; &#xAC80;&#xC0C9; &#xC5D4;&#xC9C4;&#xC774; &#xAC00;&#xB2A5;&#xD558;&#xAC8C; &#xD569;&#xB2C8;&#xB2E4;. &#xC2E4;&#xC81C;&#xB85C; &#xD0C0;&#xC785;&#xC774; &#xB0B4;&#xD3EC;&#xD558;&#xB294; &#xC815;&#xBCF4;&#xB294; &#xB9E4;&#xC6B0; &#xAC15;&#xB825;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<h2 id="&#xACF5;&#xC9DC;&#xB85C;-&#xC815;&#xB9AC;-&#xC5BB;&#xAE30;">&#xACF5;&#xC9DC;&#xB85C; &#xC815;&#xB9AC; &#xC5BB;&#xAE30;</h2>
+<p>&#xC774;&#xB7F0; &#xC885;&#xB958;&#xC758; &#xC0AC;&#xACE0; &#xBC29;&#xC2DD;&#xC740; &#xAC00;&#xB2A5;&#xD55C; &#xAE30;&#xB2A5;&#xC744; &#xCD94;&#xCE21;&#xD558;&#xB294; &#xAC83; &#xC774;&#xC678;&#xC5D0;&#xB3C4; <strong>&#xACF5;&#xC9DC; &#xC815;&#xB9AC;</strong>&#xB97C; &#xC904; &#xC218; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. <a href="http://ttic.uchicago.edu/~dreyer/course/papers/wadler.pdf" target="_blank">Wadler&#xC758; &#xAD00;&#xB828; &#xB17C;&#xBB38;</a>&#xC5D0; &#xB098;&#xC624;&#xB294; &#xBA87;&#xAC00;&#xC9C0; &#xC608;&#xC81C;&#xB97C; &#xBCFC;&#xAE4C;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// head :: [a] -&gt; a</span>
+compose(f, head) === compose(head, map(f));
+
+<span class="hljs-comment">// filter :: (a -&gt; Bool) -&gt; [a] -&gt; [a]</span>
+compose(map(f), filter(compose(p, f))) === compose(filter(p), map(f));
+</code></pre>
+<p>&#xC774; &#xC815;&#xB9AC;&#xB294; &#xC5B4;&#xB5A4; &#xCF54;&#xB4DC;&#xB3C4; &#xC5C6;&#xC774; &#xD0C0;&#xC785;&#xC5D0;&#xC11C; &#xBC14;&#xB85C; &#xB3C4;&#xCD9C;&#xB429;&#xB2C8;&#xB2E4;. &#xCCAB;&#xBC88;&#xC9F8; &#xAC83;&#xC740; &#xBC30;&#xC5F4;&#xC5D0;&#xC11C; <code>head</code>&#xB97C; &#xC5BB;&#xACE0; &#xD568;&#xC218; <code>f</code>&#xB97C; &#xC801;&#xC6A9;&#xD55C; &#xAC83;&#xC774; &#xBA3C;&#xC800; <code>map(f)</code>&#xB97C; &#xBAA8;&#xB4E0; &#xC6D0;&#xC18C;&#xC5D0; &#xC801;&#xC6A9;&#xD55C; &#xD6C4;&#xC5D0; <code>head</code>&#xB97C; &#xC5BB;&#xB294; &#xAC83; &#xACFC; &#xAC19;&#xACE0; &#xC6B0;&#xC5F0;&#xD558;&#xC9C0;&#xB9CC; &#xD6E8;&#xC2E0; &#xB354; &#xBE60;&#xB974;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xC758;&#xBBF8;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC544;&#xB9C8; &#xB2E8;&#xC9C0; &#xC0C1;&#xC2DD;&#xC774; &#xC544;&#xB2C8;&#xB0D0;&#xACE0; &#xC0DD;&#xAC01;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xACA0;&#xC9C0;&#xC694;. &#xADF8;&#xB7EC;&#xB098; &#xC81C;&#xAC00; &#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xD655;&#xC778;&#xD588;&#xC744; &#xB54C; &#xCEF4;&#xD4E8;&#xD130;&#xB294; &#xC0C1;&#xC2DD;&#xC774; &#xC5C6;&#xB354;&#xAD70;&#xC694;. &#xC0AC;&#xC2E4; &#xCEF4;&#xD4E8;&#xD130;&#xB294; &#xC774;&#xB7F0; &#xC885;&#xB958;&#xC758; &#xCF54;&#xB4DC; &#xCD5C;&#xC801;&#xD654;&#xB97C; &#xC790;&#xB3D9;&#xC73C;&#xB85C; &#xD560; &#xC218; &#xC788;&#xB294; &#xD615;&#xC2DD;&#xC801;&#xC778; &#xBC29;&#xBC95;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xC5B4;&#xC694;. &#xC218;&#xD559;&#xC740; &#xC9C1;&#xAD00;&#xC744; &#xD615;&#xC2DD;&#xC744; &#xAC16;&#xCD94;&#xC5B4; &#xD45C;&#xD604;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC8FC;&#xACE0; &#xC774;&#xAC83;&#xC740; &#xACAC;&#xACE0;&#xD55C; &#xCEF4;&#xD4E8;&#xD130; &#xB17C;&#xB9AC; &#xC601;&#xC5ED; &#xC0AC;&#xC774;&#xC5D0;&#xC11C; &#xB3C4;&#xC6C0;&#xC774; &#xB429;&#xB2C8;&#xB2E4;.</p>
+<p><code>filter</code>&#xB3C4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xC785;&#xB2C8;&#xB2E4;. <code>f</code>&#xC640; <code>p</code>&#xB97C; &#xD569;&#xC131;&#xD574;&#xC11C; &#xD544;&#xD130;&#xD55C; &#xD6C4; <code>map</code>&#xC744; &#xD1B5;&#xD574;&#xC11C; <code>f</code>&#xB97C; &#xC801;&#xC6A9;&#xD55C; &#xAC83;(<code>filter</code>&#xB294; &#xC6D0;&#xC18C;&#xB97C; &#xBC14;&#xAFB8;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xBA85;&#xC2EC;&#xD558;&#xC138;&#xC694;. &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xAC00; <code>a</code>&#xAC00; &#xBCC0;&#xD558;&#xC9C0; &#xC54A;&#xB294;&#xB2E4;&#xACE0; &#xB9D0;&#xD569;&#xB2C8;&#xB2E4;)&#xACFC; <code>f</code>&#xB97C; &#xB9E4;&#xD551;&#xD55C; &#xD6C4; <code>p</code>&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xD544;&#xD130;&#xB97C; &#xD55C; &#xAC83;&#xC740; &#xC5B8;&#xC81C;&#xB098; &#xAC19;&#xB2E4;&#xACE0; &#xB9D0;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xB450;&#xAC1C;&#xC758; &#xC608;&#xC2DC;&#xC77C; &#xBFD0;&#xC774;&#xC9C0;&#xB9CC; &#xC774;&#xB7F0; &#xC0AC;&#xACE0; &#xBC29;&#xC2DD;&#xC744; &#xBAA8;&#xB4E0; polymorphic type&#xC5D0;&#xB3C4; &#xC801;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xACE0; &#xC5B8;&#xC81C;&#xB098; &#xC62C;&#xBC14;&#xB978; &#xB2F5;&#xC744; &#xC904; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;. &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xB294; &#xB2E4;&#xC2DC; &#xC4F0;&#xAE30; &#xADDC;&#xCE59;&#xC744; &#xC120;&#xC5B8;&#xD558;&#xAC8C; &#xD574; &#xC8FC;&#xB294; &#xBA87;&#xAC00;&#xC9C0; &#xB3C4;&#xAD6C;&#xB4E4;&#xC774; &#xC788;&#xC5B4;&#xC694;. <code>compose</code> &#xD568;&#xC218;&#xB97C; &#xD1B5;&#xD574; &#xC9C1;&#xC811; &#xD560; &#xC218;&#xB3C4; &#xC788;&#xC5B4;&#xC694;. &#xACB0;&#xACFC;&#xB294; &#xC5BB;&#xAE30; &#xC27D;&#xC9C0;&#xB9CC; &#xAC00;&#xB2A5;&#xC131;&#xC740; &#xB05D;&#xC774; &#xC5C6;&#xC5B4;&#xC694;.</p>
+<h2 id="&#xC81C;&#xC57D;">&#xC81C;&#xC57D;</h2>
+<p>&#xB9C8;&#xC9C0;&#xB9C9;&#xC73C;&#xB85C; &#xB9D0;&#xD560; &#xAC83;&#xC740; &#xD0C0;&#xC785;&#xC744; &#xC5B4;&#xB5A4; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xC5D0; &#xC81C;&#xD55C;&#xD560; &#xC218; &#xC788;&#xB2E4;&#xB294; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// sort :: Ord a =&gt; [a] -&gt; [a]</span>
+</code></pre>
+<p>&#xB6B1;&#xB6B1;&#xD55C; &#xD654;&#xC0B4;&#xD45C; &#xC67C;&#xCABD;&#xC5D0; &#xC788;&#xB294; &#xAC83;&#xC740;  <code>a</code>&#xAC00; &#xBC18;&#xB4DC;&#xC2DC; <code>Ord</code>&#xB77C;&#xACE0; &#xB9D0;&#xD558;&#xACE0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xB610; &#xB2E4;&#xB978; &#xB9D0;&#xB85C; <code>a</code>&#xB294; &#xBC18;&#xB4DC;&#xC2DC; <code>Ord</code> &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xAD6C;&#xD604;&#xD574;&#xC57C;&#xD569;&#xB2C8;&#xB2E4;. <code>Ord</code>&#xB294; &#xBB34;&#xC5C7;&#xC774;&#xACE0; &#xC5B4;&#xB514;&#xC11C; &#xC654;&#xC744;&#xAE4C;&#xC694;? &#xD0C0;&#xC785;&#xC774; &#xC788;&#xB294; &#xC5B8;&#xC5B4;&#xC5D0;&#xC11C; <code>Ord</code>&#xB294; &#xC21C;&#xC11C;&#xB97C; &#xB9E4;&#xAE38;&#xC218; &#xC788;&#xB294; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4;&#xB97C; &#xC9C0;&#xCE6D;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC740; &#xC6B0;&#xB9AC;&#xC5D0;&#xAC8C; <code>a</code>&#xC640; <code>sort</code> &#xD568;&#xC218;&#xAC00; &#xBB34;&#xC5C7;&#xC744; &#xD558;&#xB294;&#xC9C0; &#xBFD0; &#xB9CC; &#xC544;&#xB2C8;&#xB77C; &#xB3C4;&#xBA54;&#xC778;&#xC744; &#xC81C;&#xC57D;&#xD558;&#xAE30;&#xB3C4; &#xD569;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xC774;&#xB7F0; &#xC778;&#xD130;&#xD398;&#xC774;&#xC2A4; &#xC120;&#xC5B8;&#xC744; <strong>&#xD0C0;&#xC785; &#xC81C;&#xC57D;(type constraints)</strong>&#xB77C;&#xACE0; &#xBD80;&#xB985;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-comment">// assertEqual :: (Eq a, Show a) =&gt; a -&gt; a -&gt; Assertion</span>
+</code></pre>
+<p>&#xC5EC;&#xAE30; <code>Eq</code>&#xC640; <code>Show</code> &#xC81C;&#xC57D;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC774;&#xB294; <code>a</code>&#xC758; &#xB3D9;&#xC77C;&#xC131;&#xC744; &#xAC80;&#xC0AC;&#xD560; &#xC218; &#xC788;&#xACE0; &#xB9CC;&#xC57D; &#xB458;&#xC774; &#xB2E4;&#xB974;&#xBA74; &#xADF8; &#xCC28;&#xC774;&#xB97C; &#xCD9C;&#xB825;&#xD560;&#xC218; &#xC788;&#xC74C;&#xC744; &#xBCF4;&#xC7A5;&#xD569;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC6B0;&#xB9AC;&#xB294; &#xC774;&#xD6C4;&#xC758; &#xC7A5;&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xC81C;&#xC57D;&#xB4E4;&#xB3C4; &#xBCF4;&#xAC8C; &#xB420; &#xAC83;&#xC774;&#xACE0; &#xC880; &#xB354; &#xD615;&#xD0DC;&#xB97C; &#xAC16;&#xCD94;&#xAC8C; &#xB420; &#xAC70;&#xC5D0;&#xC694;.</p>
+<h2 id="&#xC694;&#xC57D;">&#xC694;&#xC57D;</h2>
+<p>&#xD78C;&#xB4E4;&#xB9AC;-&#xBC00;&#xB108; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB294; &#xD568;&#xC218;&#xD615; &#xC138;&#xC0C1;&#xC5D0;&#xC11C; &#xC77C;&#xBC18;&#xC801;&#xC73C;&#xB85C; &#xC4F0;&#xC785;&#xB2C8;&#xB2E4;. &#xC77D;&#xACE0; &#xC4F0;&#xAE30; &#xC27D;&#xC9C0;&#xB9CC; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98; &#xB9CC;&#xC73C;&#xB85C; &#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC774;&#xD574;&#xD558;&#xB294; &#xAE30;&#xC220;&#xC744; &#xD1B5;&#xB2EC;&#xD558;&#xAE30;&#xC5D0;&#xB294; &#xC2DC;&#xAC04;&#xC774; &#xAC78;&#xB9BD;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xC774;&#xC81C; &#xBAA8;&#xB4E0; &#xC904;&#xB9C8;&#xB2E4; &#xD0C0;&#xC785; &#xC2DC;&#xADF8;&#xB2C8;&#xCC98;&#xB97C; &#xC801;&#xC744;&#xAC70;&#xC5D0;&#xC694;.</p>
+<p><a href="ch08-kr.md">08 &#xC7A5;: Tupperware</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch06.html#in-summary" class="navigation navigation-prev " aria-label="Previous page: In Summary">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch07-kr.html#당신은-무슨-타입인가요" class="navigation navigation-next " aria-label="Next page: 당신은 무슨 타입인가요?">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07 장: 힌들리-밀너와 나","level":"1.8","depth":1,"next":{"title":"당신은 무슨 타입인가요?","level":"1.8.1","depth":2,"anchor":"#당신은-무슨-타입인가요","path":"ch07-kr.md","ref":"ch07-kr.md#당신은-무슨-타입인가요","articles":[]},"previous":{"title":"In Summary","level":"1.7.4","depth":2,"anchor":"#in-summary","path":"ch06.md","ref":"ch06.md#in-summary","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises@git+https://github.com/MostlyAdequate/plugin-exercises.git","include-codeblock@3.1.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"cover":"images/cover.png","title":"Professor Frisby's Mostly Adequate Guide to Functional Programming","gitbook":"3.2.2"},"file":{"path":"ch07-kr.md","mtime":"2023-03-16T13:34:28.228Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2023-03-16T13:35:26.336Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

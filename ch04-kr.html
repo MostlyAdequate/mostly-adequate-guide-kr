@@ -1,0 +1,5735 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04 장: 커링 · Professor Frisby's Mostly Adequate Guide to Functional Programming</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch04-kr.html" />
+    
+    
+    <link rel="prev" href="ch03-kr.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html">
+            
+                    
+                    01 장: 우리는 무엇을 하고 있나?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#소개">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#짧은-만남">
+            
+                    
+                    짧은 만남
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html">
+            
+                    
+                    02 장: 일급 함수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#복습-시간">
+            
+                    
+                    복습 시간
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#일급-함수의-장점">
+            
+                    
+                    일급 함수의 장점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html">
+            
+                    
+                    03 장: 순수 함수와 순수한 기쁨을
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#한번-더-순수함에-대하여">
+            
+                    
+                    한번 더 순수함에 대하여
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#부수효과는-를-포함할-수-있어요">
+            
+                    
+                    부수효과는 ...를 포함할 수 있어요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#중학교-2학년-수학">
+            
+                    
+                    중학교 2학년 수학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#순수성의-예">
+            
+                    
+                    순수성의 예
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html">
+            
+                    
+                    04 장: 커링
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#cant-live-if-livin-is-without-you">
+            
+                    
+                    Can't Live If Livin' Is without You
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#말장난-조금-더--특별한-소스">
+            
+                    
+                    말장난 조금 더 / 특별한 소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    연습문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch05.html">
+            
+                <a href="ch05.html">
+            
+                    
+                    Chapter 05: Coding by Composing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="ch05.html">
+            
+                <a href="ch05.html#functional-husbandry">
+            
+                    
+                    Functional Husbandry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="ch05.html">
+            
+                <a href="ch05.html#pointfree">
+            
+                    
+                    Pointfree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="ch05.html">
+            
+                <a href="ch05.html#debugging">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="ch05.html">
+            
+                <a href="ch05.html#category-theory">
+            
+                    
+                    Category Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="ch05.html">
+            
+                <a href="ch05.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="ch05.html">
+            
+                <a href="ch05.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    Chapter 06: Example Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ch06.html">
+            
+                <a href="ch06.html#declarative-coding">
+            
+                    
+                    Declarative Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ch06.html">
+            
+                <a href="ch06.html#a-flickr-of-functional-programming">
+            
+                    
+                    A Flickr of Functional Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="ch06.html">
+            
+                <a href="ch06.html#a-principled-refactor">
+            
+                    
+                    A Principled Refactor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="ch06.html">
+            
+                <a href="ch06.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html">
+            
+                    
+                    07 장: 힌들리-밀너와 나
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#당신은-무슨-타입인가요">
+            
+                    
+                    당신은 무슨 타입인가요?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#비밀-이야기">
+            
+                    
+                    비밀 이야기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#가능성을-높이기">
+            
+                    
+                    가능성을 높이기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#공짜로-정리-얻기">
+            
+                    
+                    공짜로 정리 얻기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#제약">
+            
+                    
+                    제약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    Chapter 08: Tupperware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="ch08.html">
+            
+                <a href="ch08.html#the-mighty-container">
+            
+                    
+                    The Mighty Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ch08.html">
+            
+                <a href="ch08.html#my-first-functor">
+            
+                    
+                    My First Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ch08.html">
+            
+                <a href="ch08.html#schrödingers-maybe">
+            
+                    
+                    Schrödinger's Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ch08.html">
+            
+                <a href="ch08.html#use-cases">
+            
+                    
+                    Use Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ch08.html">
+            
+                <a href="ch08.html#releasing-the-value">
+            
+                    
+                    Releasing the Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ch08.html">
+            
+                <a href="ch08.html#pure-error-handling">
+            
+                    
+                    Pure Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ch08.html">
+            
+                <a href="ch08.html#old-mcdonald-had-effects">
+            
+                    
+                    Old McDonald Had Effects...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ch08.html">
+            
+                <a href="ch08.html#asynchronous-tasks">
+            
+                    
+                    Asynchronous Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ch08.html">
+            
+                <a href="ch08.html#a-spot-of-theory">
+            
+                    
+                    A Spot of Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ch08.html">
+            
+                <a href="ch08.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ch08.html">
+            
+                <a href="ch08.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    Chapter 09: Monadic Onions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="ch09.html">
+            
+                <a href="ch09.html#pointy-functor-factory">
+            
+                    
+                    Pointy Functor Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="ch09.html">
+            
+                <a href="ch09.html#mixing-metaphors">
+            
+                    
+                    Mixing Metaphors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="ch09.html">
+            
+                <a href="ch09.html#my-chain-hits-my-chest">
+            
+                    
+                    My Chain Hits My Chest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="ch09.html">
+            
+                <a href="ch09.html#power-trip">
+            
+                    
+                    Power Trip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="ch09.html">
+            
+                <a href="ch09.html#theory">
+            
+                    
+                    Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="ch09.html">
+            
+                <a href="ch09.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="ch09.html">
+            
+                <a href="ch09.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    Chapter 10: Applicative Functors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="ch10.html">
+            
+                <a href="ch10.html#applying-applicatives">
+            
+                    
+                    Applying Applicatives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ch10.html">
+            
+                <a href="ch10.html#ships-in-bottles">
+            
+                    
+                    Ships in Bottles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="ch10.html">
+            
+                <a href="ch10.html#coordination-motivation">
+            
+                    
+                    Coordination Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="ch10.html">
+            
+                <a href="ch10.html#bro-do-you-even-lift">
+            
+                    
+                    Bro, Do You Even Lift?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="ch10.html">
+            
+                <a href="ch10.html#operators">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="ch10.html">
+            
+                <a href="ch10.html#free-can-openers">
+            
+                    
+                    Free Can Openers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="ch10.html">
+            
+                <a href="ch10.html#laws">
+            
+                    
+                    Laws
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="ch10.html">
+            
+                <a href="ch10.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="ch10.html">
+            
+                <a href="ch10.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    Chapter 11: Transform Again, Naturally
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="ch11.html">
+            
+                <a href="ch11.html#curse-this-nest">
+            
+                    
+                    Curse This Nest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="ch11.html">
+            
+                <a href="ch11.html#a-situational-comedy">
+            
+                    
+                    A Situational Comedy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="ch11.html">
+            
+                <a href="ch11.html#all-natural">
+            
+                    
+                    All Natural
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="ch11.html">
+            
+                <a href="ch11.html#principled-type-conversions">
+            
+                    
+                    Principled Type Conversions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="ch11.html">
+            
+                <a href="ch11.html#feature-envy">
+            
+                    
+                    Feature Envy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="ch11.html">
+            
+                <a href="ch11.html#isomorphic-javascript">
+            
+                    
+                    Isomorphic JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="ch11.html">
+            
+                <a href="ch11.html#a-broader-definition">
+            
+                    
+                    A Broader Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="ch11.html">
+            
+                <a href="ch11.html#one-nesting-solution">
+            
+                    
+                    One Nesting Solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="ch11.html">
+            
+                <a href="ch11.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="ch11.html">
+            
+                <a href="ch11.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    Chapter 12: Traversing the Stone
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="ch12.html">
+            
+                <a href="ch12.html#types-n-types">
+            
+                    
+                    Types n' Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="ch12.html">
+            
+                <a href="ch12.html#type-feng-shui">
+            
+                    
+                    Type Feng Shui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="ch12.html">
+            
+                <a href="ch12.html#effect-assortment">
+            
+                    
+                    Effect Assortment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="ch12.html">
+            
+                <a href="ch12.html#waltz-of-the-types">
+            
+                    
+                    Waltz of the Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="ch12.html">
+            
+                <a href="ch12.html#no-law-and-order">
+            
+                    
+                    No Law and Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="ch12.html">
+            
+                <a href="ch12.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="ch12.html">
+            
+                <a href="ch12.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html">
+            
+                    
+                    Appendix A: Essential Functions Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#always">
+            
+                    
+                    always
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#compose">
+            
+                    
+                    compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#curry">
+            
+                    
+                    curry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#either">
+            
+                    
+                    either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#identity">
+            
+                    
+                    identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#inspect">
+            
+                    
+                    inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#left">
+            
+                    
+                    left
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#lifta">
+            
+                    
+                    liftA*
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#maybe">
+            
+                    
+                    maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#nothing">
+            
+                    
+                    nothing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#reject">
+            
+                    
+                    reject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html">
+            
+                    
+                    Appendix B: Algebraic Structures Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#compose">
+            
+                    
+                    Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#either">
+            
+                    
+                    Either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#identity">
+            
+                    
+                    Identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#io">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#list">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#map">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#maybe">
+            
+                    
+                    Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#task">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html">
+            
+                    
+                    Appendix C: Pointfree Utilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#add">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#append">
+            
+                    
+                    append
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#chain">
+            
+                    
+                    chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#concat">
+            
+                    
+                    concat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#eq">
+            
+                    
+                    eq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#filter">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#flip">
+            
+                    
+                    flip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#foreach">
+            
+                    
+                    forEach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#head">
+            
+                    
+                    head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#intercalate">
+            
+                    
+                    intercalate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#join">
+            
+                    
+                    join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#last">
+            
+                    
+                    last
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#map">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#match">
+            
+                    
+                    match
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#prop">
+            
+                    
+                    prop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#reduce">
+            
+                    
+                    reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#replace">
+            
+                    
+                    replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.18" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safehead">
+            
+                    
+                    safeHead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.19" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safelast">
+            
+                    
+                    safeLast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.20" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safeprop">
+            
+                    
+                    safeProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.21" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sequence">
+            
+                    
+                    sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.22" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sortby">
+            
+                    
+                    sortBy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.23" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#split">
+            
+                    
+                    split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.24" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#take">
+            
+                    
+                    take
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.25" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tolowercase">
+            
+                    
+                    toLowerCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.26" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tostring">
+            
+                    
+                    toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.27" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#touppercase">
+            
+                    
+                    toUpperCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.28" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#traverse">
+            
+                    
+                    traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.29" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#unsafeperformio">
+            
+                    
+                    unsafePerformIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >04 장: 커링</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="04-&#xC7A5;-&#xCEE4;&#xB9C1;">04 &#xC7A5;: &#xCEE4;&#xB9C1;</h1>
+<h2 id="cant-live-if-livin-is-without-you">Can&apos;t Live If Livin&apos; Is without You</h2>
+<p>&#xC81C; &#xC544;&#xBC84;&#xC9C0;&#xB294; &#xC0AC;&#xB78C;&#xC774; &#xADF8;&#xAC83;&#xB4E4;&#xC744; &#xC5BB;&#xAE30; &#xC804;&#xAE4C;&#xC9C0; &#xC5C6;&#xC774; &#xC0B4; &#xC218; &#xC788;&#xB294; &#xAC83;&#xB4E4;&#xC774; &#xC788;&#xB2E4;&#xACE0; &#xB9D0;&#xC500;&#xD558;&#xC2E0; &#xC801;&#xC774; &#xC788;&#xC5B4;&#xC694;. &#xC804;&#xC790;&#xB808;&#xC778;&#xC9C0;&#xB098; &#xC2A4;&#xB9C8;&#xD2B8;&#xD3F0; &#xB4F1;&#xB4F1;&#xC774; &#xADF8;&#xB807;&#xC9C0;&#xC694;. &#xC6B0;&#xB9AC; &#xC911;&#xC758; &#xC624;&#xB798;&#xB41C; &#xC0AC;&#xB78C;&#xB4E4;&#xC740; &#xC778;&#xD130;&#xB137; &#xC5C6;&#xB294; &#xC0B6;&#xC744; &#xC0AC;&#xB294; &#xAC83;&#xC744; &#xAE30;&#xC5B5;&#xD560; &#xAC83;&#xC774;&#xC5D0;&#xC694;. &#xC800;&#xC5D0;&#xAC8C;&#xB294; &#xCEE4;&#xB9C1;&#xC774; &#xC774; &#xBAA9;&#xB85D;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xCEE4;&#xB9C1;&#xC758; &#xAC1C;&#xB150;&#xC740; &#xAC04;&#xB2E8;&#xD574;&#xC694;. &#xD568;&#xC218;&#xAC00; &#xC608;&#xC0C1;&#xD558;&#xB294; &#xC778;&#xC790;&#xBCF4;&#xB2E4; &#xC801;&#xC740; &#xC778;&#xC790;&#xB85C; &#xD568;&#xC218;&#xB97C; &#xBD80;&#xB974;&#xB294; &#xAC83;&#xC774;&#xC9C0;&#xC694;. &#xADF8;&#xB9AC;&#xACE0; &#xC774; &#xB54C; &#xD568;&#xC218;&#xB294; &#xB098;&#xBA38;&#xC9C0; &#xC778;&#xC790;&#xB97C; &#xD568;&#xC218;&#xB97C; &#xBC1B;&#xB294; &#xD568;&#xC218;&#xB97C; &#xBC18;&#xD658;&#xD574;&#xC694;.</p>
+<p>&#xB2F9;&#xC2E0;&#xC740; &#xBAA8;&#xB4E0; &#xC778;&#xC790;&#xB97C; &#xD55C;&#xBC88;&#xC5D0; &#xB118;&#xACA8;&#xC8FC;&#xAC70;&#xB098; &#xB2E8;&#xC21C;&#xD788; &#xC778;&#xC790;&#xB97C; &#xD558;&#xB098;&#xC529; &#xB118;&#xACA8;&#xC8FC;&#xB294; &#xAC83; &#xC911;&#xC5D0; &#xC120;&#xD0DD;&#xD560; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> add = (x) =&gt; (y) =&gt; x + y;
+<span class="hljs-keyword">const</span> increment = add(<span class="hljs-number">1</span>);
+<span class="hljs-keyword">const</span> addTen = add(<span class="hljs-number">10</span>);
+
+increment(<span class="hljs-number">2</span>); <span class="hljs-comment">// 3</span>
+addTen(<span class="hljs-number">2</span>); <span class="hljs-comment">// 12</span>
+</code></pre>
+<p>&#xC6B0;&#xB9AC;&#xB294; &#xC778;&#xC790;&#xB97C; &#xD558;&#xB098; &#xBC1B;&#xACE0; &#xD568;&#xC218;&#xB97C; &#xBC18;&#xD658;&#xD558;&#xB294; <code>add</code>&#xB97C; &#xB9CC;&#xB4E4;&#xC5C8;&#xC5B4;&#xC694;. &#xC774;&#xAC83;&#xC744; &#xD638;&#xCD9C;&#xD574;&#xC11C; &#xBC18;&#xD658;&#xB418;&#xB294; &#xD568;&#xC218;&#xB294; &#xD074;&#xB85C;&#xC838;&#xB97C; &#xC774;&#xC6A9;&#xD574; &#xCCAB;&#xBC88;&#xC9F8; &#xC778;&#xC790;&#xB97C; &#xAE30;&#xC5B5;&#xD558;&#xC9C0;&#xC694;. &#xD558;&#xC9C0;&#xB9CC; &#xB450; &#xC778;&#xC790;&#xB97C; &#xD55C;&#xBC88;&#xC5D0; &#xBD80;&#xB974;&#xB294; &#xAC83;&#xC740; &#xC880; &#xBCF5;&#xC7A1;&#xD55C; &#xC77C;&#xC785;&#xB2C8;&#xB2E4;. &#xADF8;&#xB798;&#xC11C; &#xC6B0;&#xB9AC;&#xB294; &#xD568;&#xC218;&#xB97C; &#xC870;&#xAE08; &#xB354; &#xC27D;&#xAC8C; &#xB9CC;&#xB4E4;&#xACE0; &#xD638;&#xCD9C;&#xD560; &#xC218; &#xC788;&#xAC8C; &#xD574;&#xC8FC;&#xB294; &#xD2B9;&#xBCC4;&#xD55C; &#xB3C4;&#xC6B0;&#xBBF8; &#xD568;&#xC218;&#xC778; <code>curry</code>&#xB97C; &#xC0AC;&#xC6A9;&#xD574; &#xBCFC; &#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC7AC;&#xBBF8;&#xB97C; &#xC704;&#xD574; &#xBA87;&#xAC00;&#xC9C0; &#xCEE4;&#xB9AC;&#xB41C; &#xD568;&#xC218;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xBCFC;&#xAE4C;&#xC694;. &#xC774;&#xC81C;&#xBD80;&#xD130; &#xC6B0;&#xB9AC;&#xB294; <a href="appendix_a.html">Appendix A - Essential Function Support</a>&#xC5D0; &#xC815;&#xC758;&#xB41C; <code>curry</code>&#xB97C; &#xC18C;&#xD658;&#xD560;&#xAC83;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> match = curry((what, s) =&gt; s.match(what));
+<span class="hljs-keyword">const</span> replace = curry((what, replacement, s) =&gt; s.replace(what, replacement));
+<span class="hljs-keyword">const</span> filter = curry((f, xs) =&gt; xs.filter(f));
+<span class="hljs-keyword">const</span> map = curry((f, xs) =&gt; xs.map(f));
+</code></pre>
+<p>&#xC5EC;&#xAE30;&#xC11C; &#xC0AC;&#xC6A9;&#xD55C; &#xD328;&#xD134;&#xC740; &#xAC04;&#xB2E8;&#xD558;&#xC9C0;&#xB9CC; &#xC8FC;&#xBAA9;&#xD560; &#xC810;&#xC774; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;. &#xC800;&#xB294; &#xC758;&#xB3C4;&#xC801;&#xC73C;&#xB85C; &#xB370;&#xC774;&#xD130;(String, Array)&#xB97C; &#xB9C8;&#xC9C0;&#xB9C9; &#xC778;&#xC790;&#xC5D0; &#xB450;&#xC5C8;&#xC5B4;&#xC694;. &#xC65C; &#xC774;&#xB807;&#xAC8C; &#xD588;&#xB294;&#xC9C0;&#xB294; &#xCC28;&#xCC28; &#xBA85;&#xD655;&#xD574;&#xC9C8;&#xAC81;&#xB2C8;&#xB2E4;.</p>
+<p>(<code>/r/g</code> &#xBB38;&#xBC95;&#xC740; <strong>&#xBAA8;&#xB4E0; &apos;r&apos;</strong>&#xC744; &#xAC00;&#xB974;&#xD0A4;&#xB294; &#xC815;&#xADDC; &#xD45C;&#xD604;&#xC2DD;&#xC785;&#xB2C8;&#xB2E4;. &#xAD81;&#xAE08;&#xD558;&#xB2E4;&#xBA74; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" target="_blank">&#xC815;&#xADDC; &#xD45C;&#xD604;&#xC2DD;</a>&#xC5D0; &#xB300;&#xD55C; &#xAE00;&#xC744; &#xC77D;&#xC5B4;&#xBCF4;&#xC138;&#xC694;.)</p>
+<pre><code class="lang-js">match(<span class="hljs-regexp">/r/g</span>, <span class="hljs-string">&quot;hello world&quot;</span>); <span class="hljs-comment">// [ &apos;r&apos; ]</span>
+
+<span class="hljs-keyword">const</span> hasLetterR = match(<span class="hljs-regexp">/r/g</span>); <span class="hljs-comment">// x =&gt; x.match(/r/g)</span>
+hasLetterR(<span class="hljs-string">&quot;hello world&quot;</span>); <span class="hljs-comment">// [ &apos;r&apos; ]</span>
+hasLetterR(<span class="hljs-string">&quot;just j and s and t etc&quot;</span>); <span class="hljs-comment">// null</span>
+
+filter(hasLetterR, [<span class="hljs-string">&quot;rock and roll&quot;</span>, <span class="hljs-string">&quot;smooth jazz&quot;</span>]); <span class="hljs-comment">// [&apos;rock and roll&apos;]</span>
+
+<span class="hljs-keyword">const</span> removeStringsWithoutRs = filter(hasLetterR); <span class="hljs-comment">// xs =&gt; xs.filter(x =&gt; x.match(/r/g))</span>
+removeStringsWithoutRs([<span class="hljs-string">&quot;rock and roll&quot;</span>, <span class="hljs-string">&quot;smooth jazz&quot;</span>, <span class="hljs-string">&quot;drum circle&quot;</span>]); <span class="hljs-comment">// [&apos;rock and roll&apos;, &apos;drum circle&apos;]</span>
+
+<span class="hljs-keyword">const</span> noVowels = replace(<span class="hljs-regexp">/[aeiou]/gi</span>); <span class="hljs-comment">// (r,x) =&gt; x.replace(/[aeiou]/ig, r)</span>
+<span class="hljs-keyword">const</span> censored = noVowels(<span class="hljs-string">&quot;*&quot;</span>); <span class="hljs-comment">// x =&gt; x.replace(/[aeiou]/ig, &apos;*&apos;)</span>
+censored(<span class="hljs-string">&quot;Chocolate Rain&quot;</span>); <span class="hljs-comment">// &apos;Ch*c*l*t* R**n&apos;</span>
+</code></pre>
+<p>&#xC5EC;&#xAE30;&#xC11C; &#xD558;&#xB098;&#xB098; &#xB450;&#xAC1C;&#xC758; &#xC778;&#xC790;&#xB97C; &#xD568;&#xC218;&#xC5D0; &quot;&#xBBF8;&#xB9AC;&quot; &#xC124;&#xC815;&#xD558;&#xACE0; &#xD568;&#xC218;&#xB294; &#xC774; &#xC778;&#xC790;&#xB4E4;&#xC744; &#xAE30;&#xC5B5;&#xD558;&#xB294; &#xAC83;&#xC744; &#xBCFC; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
+<p>&#xC800;&#xB294; &#xB2F9;&#xC2E0;&#xC774; Mostly Adequate repository (<code>git clone https://github.com/MostlyAdequate/mostly-adequate-guide.git</code>)&#xB97C; &#xD074;&#xB860;&#xD558;&#xACE0; &#xC704;&#xC758; &#xCF54;&#xB4DC;&#xB97C; &#xBCF5;&#xC0AC;&#xD55C; &#xD6C4;&#xC5D0; REPL&#xC5D0;&#xC11C; &#xB3CC;&#xB824;&#xBCF4;&#xB294; &#xAC83;&#xC744; &#xCD94;&#xCC9C;&#xD574;&#xC694;. &#xCEE4;&#xB9AC;&#xB97C; &#xD574;&#xC8FC;&#xB294; &#xD568;&#xC218;&#xB294; &#xBD80;&#xB85D;&#xC5D0; &#xC815;&#xC758;&#xB41C; &#xB2E4;&#xB978; &#xAC83;&#xB4E4;&#xACFC; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xB85C; <code>support/index.js</code> &#xBAA8;&#xB4C8;&#xC5D0; &#xC788;&#xC2B5;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC544;&#xB2C8;&#xBA74; <code>npm</code>&#xC5D0; &#xBC30;&#xD3EC;&#xB41C; &#xBC84;&#xC804;&#xC744; &#xD55C;&#xBC88; &#xBCF4;&#xC138;&#xC694;.</p>
+<pre><code>npm install @mostly-adequate/support
+</code></pre><h2 id="&#xB9D0;&#xC7A5;&#xB09C;-&#xC870;&#xAE08;-&#xB354;--&#xD2B9;&#xBCC4;&#xD55C;-&#xC18C;&#xC2A4;">&#xB9D0;&#xC7A5;&#xB09C; &#xC870;&#xAE08; &#xB354; / &#xD2B9;&#xBCC4;&#xD55C; &#xC18C;&#xC2A4;</h2>
+<p>&#xCEE4;&#xB9C1;&#xC740; &#xC5EC;&#xB7EC; &#xBC29;&#xBA74;&#xC73C;&#xB85C; &#xC720;&#xC6A9;&#xD569;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; <code>hasLetterR</code>&#xACFC; <code>removeStringsWithoutRs</code>, <code>censored</code>&#xC758; &#xC608;&#xC5D0;&#xC11C; &#xAE30;&#xBCF8; &#xD568;&#xC218;&#xC5D0; &#xBA87;&#xAC00;&#xC9C0; &#xC778;&#xC790;&#xB97C; &#xC90C;&#xC73C;&#xB85C;&#xC368; &#xC0C8;&#xB85C;&#xC6B4; &#xD568;&#xC218;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xAC83;&#xC744; &#xBD24;&#xC5B4;&#xC694;.</p>
+<p>&#xB610;&#xD55C; &#xD558;&#xB098;&#xC758; &#xC778;&#xC790;&#xC5D0;&#xB9CC; &#xC791;&#xC6A9;&#xD558;&#xB294; &#xD568;&#xC218;&#xAC00; &#xBC30;&#xC5F4;&#xC5D0; &#xC791;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB3C4;&#xB85D; <code>map</code>&#xC73C;&#xB85C; &#xAC10;&#xC2F8;&#xB294; &#xAC83;&#xB3C4; &#xBCF4;&#xC558;&#xC9C0;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> getChildren = (x) =&gt; x.childNodes;
+<span class="hljs-keyword">const</span> allTheChildren = map(getChildren);
+</code></pre>
+<p>&#xBCF4;&#xD1B5; &#xD568;&#xC218;&#xAC00; &#xC608;&#xC0C1;&#xD558;&#xB294; &#xAC83;&#xBCF4;&#xB2E4; &#xB35C; &#xC778;&#xC790;&#xB97C; &#xB118;&#xACA8;&#xC8FC;&#xB294; &#xAC83;&#xC744; <strong>&#xBD80;&#xBD84; &#xC801;&#xC6A9;(partial application)</strong>&#xC774;&#xB77C;&#xACE0; &#xBD80;&#xB985;&#xB2C8;&#xB2E4;. &#xD568;&#xC218;&#xC5D0; &#xBD80;&#xBD84; &#xC801;&#xC6A9;&#xC744; &#xD558;&#xBA74; &#xBCF4;&#xC77C;&#xB7EC; &#xD50C;&#xB808;&#xC774;&#xD2B8; &#xCF54;&#xB4DC;&#xB97C; &#xB9CE;&#xC774; &#xC904;&#xC5EC;&#xC90D;&#xB2C8;&#xB2E4;. losash&#xC758; &#xCEE4;&#xB9AC;&#xB418;&#xC9C0; &#xC54A;&#xC740; <code>map</code>&#xC744; &#xC704;&#xC758; <code>allTheChildren</code>&#xC5D0; &#xC0AC;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC744; &#xC0DD;&#xAC01;&#xD574;&#xBD05;&#xC2DC;&#xB2E4;. &#xC778;&#xC790;&#xC758; &#xC21C;&#xC11C;&#xAC00; &#xB2E4;&#xB974;&#xB2E4;&#xB294; &#xAC83;&#xC744; &#xB208;&#xC5EC;&#xACA8;&#xBCF4;&#xC138;&#xC694;.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> allTheChildren = (elements) =&gt; map(elements, getChildren);
+</code></pre>
+<p>&#xC6B0;&#xB9AC;&#xB294; &#xADF8;&#xB0E5; &#xC778;&#xB77C;&#xC778;&#xC5D0;&#xC11C; <code>map(getChildren)</code>&#xC73C;&#xB85C; &#xD638;&#xCD9C;&#xD560; &#xC218; &#xC788;&#xAE30; &#xB54C;&#xBB38;&#xC5D0; &#xBCF4;&#xD1B5; &#xBC30;&#xC5F4;&#xC5D0; &#xC801;&#xC6A9;&#xB418;&#xB294; &#xD568;&#xC218;&#xB97C; &#xB530;&#xB85C; &#xC815;&#xC758;&#xD558;&#xC9C0;&#xB294; &#xC54A;&#xC2B5;&#xB2C8;&#xB2E4;. <code>sort</code>, <code>filter</code>&#xC640; &#xB2E4;&#xB978; &#xACE0;&#xCC28; &#xD568;&#xC218;&#xB4E4;&#xB3C4; &#xB9C8;&#xCC2C;&#xAC00;&#xC9C0;&#xC785;&#xB2C8;&#xB2E4;(<strong>&#xACE0;&#xCC28; &#xD568;&#xC218;</strong>&#xB294; &#xD568;&#xC218;&#xB97C; &#xBC1B;&#xAC70;&#xB098; &#xBC18;&#xD658;&#xD558;&#xB294; &#xD568;&#xC218;&#xC785;&#xB2C8;&#xB2E4;.).</p>
+<p><strong>&#xC21C;&#xC218; &#xD568;&#xC218;</strong>&#xC5D0; &#xB300;&#xD574;&#xC11C; &#xB9D0;&#xD560; &#xB54C; &#xADF8;&#xB4E4;&#xC774; 1&#xAC1C;&#xC758; &#xC785;&#xB825;&#xACFC; 1&#xAC1C;&#xC758; &#xCD9C;&#xB825;&#xC744; &#xAC00;&#xC9C0;&#xACE0; &#xC788;&#xB2E4;&#xACE0; &#xB9D0;&#xD588;&#xC9C0;&#xC694;. &#xBC14;&#xB85C; &#xCEE4;&#xB9C1;&#xC774; &#xC774;&#xAC83;&#xC744; &#xD569;&#xB2C8;&#xB2E4;. &#xD558;&#xB098;&#xC758; &#xC778;&#xC790;&#xB97C; &#xBC1B;&#xC744; &#xB54C;&#xB9C8;&#xB2E4; &#xB098;&#xBA38;&#xC9C0; &#xC778;&#xC790;&#xB97C; &#xAE30;&#xB300;&#xD558;&#xB294; &#xD568;&#xC218;&#xB97C; &#xBC18;&#xD658;&#xD569;&#xB2C8;&#xB2E4;. &#xC774;&#xAC83;&#xC774; &#xC624;&#xB798;&#xB41C; &#xC2A4;&#xD3EC;&#xCE20;&#xB294; 1&#xB300; 1&#xC758; &#xC785;&#xB825;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xCD9C;&#xB825;&#xC774; &#xB2E4;&#xB978; &#xD568;&#xC218;&#xC774;&#xC9C0;&#xB9CC; &#xC774;&#xAC83;&#xC740; &#xC21C;&#xC218;&#xD569;&#xB2C8;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xD55C;&#xBC88;&#xC5D0; &#xD55C;&#xAC1C; &#xC774;&#xC0C1;&#xC758; &#xC778;&#xC790;&#xB97C; &#xC904; &#xC218;&#xB3C4; &#xC788;&#xC9C0;&#xB9CC; &#xC774;&#xAC83;&#xC740; &#xB2E8;&#xC21C;&#xD788; &#xD3B8;&#xC758;&#xB97C; &#xC704;&#xD574; &#xC5EC;&#xBD84;&#xC758; <code>()</code>&#xB97C; &#xC81C;&#xAC70;&#xD558;&#xB294; &#xAC83;&#xC73C;&#xB85C; &#xBCFC; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
+<h2 id="&#xC694;&#xC57D;">&#xC694;&#xC57D;</h2>
+<p>&#xCEE4;&#xB9C1;&#xC740; &#xD3B8;&#xB9AC;&#xD558;&#xACE0; &#xC800;&#xB294; &#xB9E4;&#xC77C; &#xCEE4;&#xB9AC;&#xB41C; &#xD568;&#xC218;&#xC640; &#xD568;&#xAED8;&#xD558;&#xB294; &#xAC83;&#xC744; &#xC990;&#xAE30;&#xACE0; &#xC788;&#xC5B4;&#xC694;. &#xCEE4;&#xB9C1;&#xC740; &#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC744; &#xC880; &#xB35C; &#xC7A5;&#xD669;&#xD558;&#xACE0; &#xC9C0;&#xB8E8;&#xD558;&#xAC8C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC8FC;&#xB294; &#xB3C4;&#xAD6C;&#xC785;&#xB2C8;&#xB2E4;.</p>
+<p>&#xC6B0;&#xB9AC;&#xB294; &#xC778;&#xC790;&#xB97C; &#xC870;&#xAE08;&#xB9CC; &#xB118;&#xACA8;&#xC8FC;&#xBA74;&#xC11C; &#xC989;&#xC11D;&#xC5D0;&#xC11C; &#xC720;&#xC6A9;&#xD558;&#xACE0; &#xC0C8;&#xB85C;&#xC6B4; &#xD568;&#xC218;&#xB97C; &#xB9CC;&#xB4E4; &#xC218; &#xC788;&#xC5B4;&#xC694;. &#xB610; &#xD568;&#xC218;&#xAC00; &#xC5EC;&#xB7EC; &#xC778;&#xC790;&#xB97C; &#xC694;&#xAD6C;&#xD568;&#xC5D0;&#xB3C4; &#xC218;&#xD559;&#xC801;&#xC778; &#xD568;&#xC218; &#xC815;&#xC758;&#xB97C; &#xC5BB;&#xC744; &#xC218; &#xC788;&#xC5B4;&#xC694;.</p>
+<p>&#xC774;&#xC81C; &#xB610; &#xB2E4;&#xB978; &#xB3C4;&#xAD6C;&#xC778; &#xD568;&#xC131;(<code>compose</code>)&#xB97C; &#xB9CC;&#xB098;&#xBCFC;&#xAE4C;&#xC694;?</p>
+<p><a href="ch05.html">Chapter 05: Coding by Composing</a></p>
+<h2 id="&#xC5F0;&#xC2B5;&#xBB38;&#xC81C;">&#xC5F0;&#xC2B5;&#xBB38;&#xC81C;</h2>
+<h4 id="&#xC5F0;&#xC2B5;&#xBB38;&#xC81C;&#xC5D0;-&#xB300;&#xD558;&#xC5EC;">&#xC5F0;&#xC2B5;&#xBB38;&#xC81C;&#xC5D0; &#xB300;&#xD558;&#xC5EC;</h4>
+<p>Throughout the book, you might encounter an &apos;Exercises&apos; section like this one. Exercises can be
+done directly in-browser provided you&apos;re reading from <a href="https://mostly-adequate.gitbooks.io/mostly-adequate-guide" target="_blank">gitbook</a> (recommended).</p>
+<p>Note that, for all exercises of the book, you always have a handful of helper functions
+available in the global scope. Hence, anything that is defined in <a href="appendix_a.html">Appendix A</a>,
+<a href="appendix_b.html">Appendix B</a> and <a href="appendix_c.html">Appendix C</a> is available for you! And, as
+if it wasn&apos;t enough, some exercises will also define functions specific to the problem
+they present; as a matter of fact, consider them available as well.</p>
+<blockquote>
+<p>Hint: you can submit your solution by doing <code>Ctrl + Enter</code> in the embedded editor!</p>
+</blockquote>
+<h4 id="running-exercises-on-your-machine-optional">Running Exercises on Your Machine (optional)</h4>
+<p>Should you prefer to do exercises directly in files using your own editor:</p>
+<ul>
+<li>clone the repository (<code>git clone git@github.com:MostlyAdequate/mostly-adequate-guide.git</code>)</li>
+<li>go in the <em>exercises</em> section (<code>cd mostly-adequate-guide/exercises</code>)</li>
+<li>install the necessary plumbing using <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm" target="_blank">npm</a> (<code>npm install</code>)</li>
+<li>complete answers by modifying the files named *exercises_** in the corresponding chapter&apos;s folder</li>
+<li>run the correction with npm (e.g. <code>npm run ch04</code>)</li>
+</ul>
+<p>Unit tests will run against your answers and provide hints in case of mistake. By the by, the
+answers to the exercises are available in files named *answers_**.</p>
+<h4 id="lets-practice">Let&apos;s Practice!</h4>
+<p><div class="exercise">
+	<div class="header">Exercise</div>
+	<div class="alert alert-success">
+	    <b>Correct!</b>
+	</div>
+
+	<div class="alert alert-danger error-message">
+	    <b>False!</b>
+	</div>
+
+	<div class="message">
+	  
+Refactor to remove all arguments by partially applying the function.
+
+
+	</div>
+	<div class="editor" style="height: 20px">// words :: String -&gt; [String]
+const words = str =&gt; split(&apos; &apos;, str);</div>
+
+	<pre class="hidden code-solution">const words = split(&apos; &apos;);</pre>
+	<pre class="hidden code-validation">/* globals words */
+
+assert.arrayEqual(
+  words(&apos;Jingle bells Batman smells&apos;),
+  [&apos;Jingle&apos;, &apos;bells&apos;, &apos;Batman&apos;, &apos;smells&apos;],
+  &apos;The function gives incorrect results.&apos;,
+);
+
+assert(
+  split.partially,
+  &apos;The answer is incorrect; hint: split is currified!&apos;,
+);</pre>
+	
+	<pre class="hidden code-context">// NOTE We keep named function here to leverage this in the `compose` function,
+// and later on in the validations scripts.
+
+/* eslint-disable prefer-arrow-callback */
+
+
+/* ---------- Internals ---------- */
+
+function namedAs(value, fn) {
+  Object.defineProperty(fn, &apos;name&apos;, { value });
+  return fn;
+}
+
+
+// NOTE This file is loaded by gitbook&apos;s exercises plugin. When it does, there&apos;s an
+// `assert` function available in the global scope.
+
+/* eslint-disable no-undef, global-require */
+if (typeof assert !== &apos;function&apos; &amp;&amp; typeof require === &apos;function&apos;) {
+  global.assert = require(&apos;assert&apos;);
+}
+
+assert.arrayEqual = function assertArrayEqual(actual, expected, message = &apos;arrayEqual&apos;) {
+  if (actual.length !== expected.length) {
+    throw new Error(message);
+  }
+
+  for (let i = 0; i &lt; expected.length; i += 1) {
+    if (expected[i] !== actual[i]) {
+      throw new Error(message);
+    }
+  }
+};
+/* eslint-enable no-undef, global-require */
+
+
+function inspect(x) {
+  if (x &amp;&amp; typeof x.inspect === &apos;function&apos;) {
+    return x.inspect();
+  }
+
+  function inspectFn(f) {
+    return f.name ? f.name : f.toString();
+  }
+
+  function inspectTerm(t) {
+    switch (typeof t) {
+      case &apos;string&apos;:
+        return `&apos;${t}&apos;`;
+      case &apos;object&apos;: {
+        const ts = Object.keys(t).map(k =&gt; [k, inspect(t[k])]);
+        return `{${ts.map(kv =&gt; kv.join(&apos;: &apos;)).join(&apos;, &apos;)}}`;
+      }
+      default:
+        return String(t);
+    }
+  }
+
+  function inspectArgs(args) {
+    return Array.isArray(args) ? `[${args.map(inspect).join(&apos;, &apos;)}]` : inspectTerm(args);
+  }
+
+  return (typeof x === &apos;function&apos;) ? inspectFn(x) : inspectArgs(x);
+}
+
+
+/* eslint-disable no-param-reassign */
+function withSpyOn(prop, obj, fn) {
+  const orig = obj[prop];
+  let called = false;
+  obj[prop] = function spy(...args) {
+    called = true;
+    return orig.call(this, ...args);
+  };
+  fn();
+  obj[prop] = orig;
+  return called;
+}
+/* eslint-enable no-param-reassign */
+
+
+const typeMismatch = (src, got, fn) =&gt; `Type Mismatch in function &apos;${fn}&apos;
+
+        ${fn} :: ${got}
+
+      instead of
+
+        ${fn} :: ${src}`;
+
+
+const capitalize = s =&gt; `${s[0].toUpperCase()}${s.substring(1)}`;
+
+
+const ordinal = (i) =&gt; {
+  switch (i) {
+    case 1:
+      return &apos;1st&apos;;
+    case 2:
+      return &apos;2nd&apos;;
+    case 3:
+      return &apos;3rd&apos;;
+    default:
+      return `${i}th`; // NOTE won&apos;t get any much bigger ...
+  }
+};
+
+const getType = (x) =&gt; {
+  if (x === null) {
+    return &apos;Null&apos;;
+  }
+
+  if (typeof x === &apos;undefined&apos;) {
+    return &apos;()&apos;;
+  }
+
+  if (Array.isArray(x)) {
+    return `[${x[0] ? getType(x[0]) : &apos;?&apos;}]`;
+  }
+
+  if (typeof x.getType === &apos;function&apos;) {
+    return x.getType();
+  }
+
+  if (x.constructor &amp;&amp; x.constructor.name) {
+    return x.constructor.name;
+  }
+
+  return capitalize(typeof x);
+};
+
+
+/* ---------- Essential FP Functions ---------- */
+
+// NOTE A slightly pumped up version of `curry` which also keeps track of
+// whether a function was called partially or with all its arguments at once.
+// This is useful to provide insights during validation of exercises.
+function curry(fn) {
+  assert(
+    typeof fn === &apos;function&apos;,
+    typeMismatch(&apos;function -&gt; ?&apos;, [getType(fn), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;curry&apos;),
+  );
+
+  const arity = fn.length;
+
+  return namedAs(fn.name, function $curry(...args) {
+    $curry.partially = this &amp;&amp; this.partially;
+
+    if (args.length &lt; arity) {
+      return namedAs(fn.name, $curry.bind({ partially: true }, ...args));
+    }
+
+    return fn.call(this || { partially: false }, ...args);
+  });
+}
+
+
+// NOTE A slightly pumped up version of `compose` which also keeps track of the chain
+// of callees. In the end, a function created with `compose` holds a `callees` variable
+// with the list of all the callees&apos; names.
+// This is useful to provide insights during validation of exercises
+function compose(...fns) {
+  const n = fns.length;
+
+  return function $compose(...args) {
+    $compose.callees = [];
+
+    let $args = args;
+
+    for (let i = n - 1; i &gt;= 0; i -= 1) {
+      const fn = fns[i];
+
+      assert(
+        typeof fn === &apos;function&apos;,
+        `Invalid Composition: ${ordinal(n - i)} element in a composition isn&apos;t a function`,
+      );
+
+      $compose.callees.push(fn.name);
+      $args = [fn.call(null, ...$args)];
+    }
+
+    return $args[0];
+  };
+}
+
+
+/* ---------- Algebraic Data Structures ---------- */
+
+class Either {
+  static of(x) {
+    return new Right(x); // eslint-disable-line no-use-before-define
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+}
+
+
+class Left extends Either {
+  get isLeft() { // eslint-disable-line class-methods-use-this
+    return true;
+  }
+
+  get isRight() { // eslint-disable-line class-methods-use-this
+    return false;
+  }
+
+  ap() {
+    return this;
+  }
+
+  chain() {
+    return this;
+  }
+
+  inspect() {
+    return `Left(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Either ${getType(this.$value)} ?)`;
+  }
+
+  join() {
+    return this;
+  }
+
+  map() {
+    return this;
+  }
+
+  sequence(of) {
+    return of(this);
+  }
+
+  traverse(of, fn) {
+    return of(this);
+  }
+}
+
+
+class Right extends Either {
+  get isLeft() { // eslint-disable-line class-methods-use-this
+    return false;
+  }
+
+  get isRight() { // eslint-disable-line class-methods-use-this
+    return true;
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return fn(this.$value);
+  }
+
+  inspect() {
+    return `Right(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Either ? ${getType(this.$value)})`;
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  map(fn) {
+    return Either.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    fn(this.$value).map(Either.of);
+  }
+}
+
+
+class Identity {
+  static of(x) {
+    return new Identity(x);
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return `Identity(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Identity ${getType(this.$value)})`;
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  map(fn) {
+    return Identity.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return fn(this.$value).map(Identity.of);
+  }
+}
+
+class IO {
+  static of(x) {
+    return new IO(() =&gt; x);
+  }
+
+  constructor(io) {
+    assert(
+      typeof io === &apos;function&apos;,
+      &apos;invalid `io` operation given to IO constructor. Use `IO.of` if you want to lift a value in a default minimal IO context.&apos;,
+    );
+
+    this.unsafePerformIO = io;
+  }
+
+  ap(f) {
+    return this.chain(fn =&gt; f.map(fn));
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return `IO(${inspect(this.unsafePerformIO())})`;
+  }
+
+  getType() {
+    return `(IO ${getType(this.unsafePerformIO())})`;
+  }
+
+
+  join() {
+    return this.unsafePerformIO();
+  }
+
+  map(fn) {
+    return new IO(compose(fn, this.unsafePerformIO));
+  }
+}
+
+
+class Map {
+  constructor(x) {
+    assert(
+      typeof x === &apos;object&apos; &amp;&amp; x !== null,
+      &apos;tried to create `Map` with non object-like&apos;,
+    );
+
+    this.$value = x;
+  }
+
+  inspect() {
+    return `Map(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    const sample = this.$value[Object.keys(this.$value)[0]];
+
+    return `(Map String ${sample ? getType(sample) : &apos;?&apos;})`;
+  }
+
+  insert(k, v) {
+    const singleton = {};
+    singleton[k] = v;
+    return new Map(Object.assign({}, this.$value, singleton));
+  }
+
+  reduce(fn, zero) {
+    return this.reduceWithKeys((acc, _, k) =&gt; fn(acc, k), zero);
+  }
+
+  reduceWithKeys(fn, zero) {
+    return Object.keys(this.$value)
+      .reduce((acc, k) =&gt; fn(acc, this.$value[k], k), zero);
+  }
+
+  map(fn) {
+    return new Map(this.reduceWithKeys((obj, v, k) =&gt; {
+      obj[k] = fn(v); // eslint-disable-line no-param-reassign
+      return obj;
+    }, {}));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.reduceWithKeys(
+      (f, a, k) =&gt; fn(a).map(b =&gt; m =&gt; m.insert(k, b)).ap(f),
+      of(new Map({})),
+    );
+  }
+}
+
+
+class List {
+  static of(x) {
+    return new List([x]);
+  }
+
+  constructor(xs) {
+    assert(
+      Array.isArray(xs),
+      &apos;tried to create `List` from non-array&apos;,
+    );
+
+    this.$value = xs;
+  }
+
+  concat(x) {
+    return new List(this.$value.concat(x));
+  }
+
+  inspect() {
+    return `List(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    const sample = this.$value[0];
+
+    return `(List ${sample ? getType(sample) : &apos;?&apos;})`;
+  }
+
+  map(fn) {
+    return new List(this.$value.map(fn));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.$value.reduce(
+      (f, a) =&gt; fn(a).map(b =&gt; bs =&gt; bs.concat(b)).ap(f),
+      of(new List([])),
+    );
+  }
+}
+
+
+class Maybe {
+  static of(x) {
+    return new Maybe(x);
+  }
+
+  get isNothing() {
+    return this.$value === null || this.$value === undefined;
+  }
+
+  get isJust() {
+    return !this.isNothing;
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+
+  ap(f) {
+    return this.isNothing ? this : f.map(this.$value);
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return this.isNothing ? &apos;Nothing&apos; : `Just(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Maybe ${this.isJust ? getType(this.$value) : &apos;?&apos;})`;
+  }
+
+  join() {
+    return this.isNothing ? this : this.$value;
+  }
+
+  map(fn) {
+    return this.isNothing ? this : Maybe.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.isNothing ? of(this) : fn(this.$value).map(Maybe.of);
+  }
+}
+
+
+class Task {
+  constructor(fork) {
+    assert(
+      typeof fork === &apos;function&apos;,
+      &apos;invalid `fork` operation given to Task constructor. Use `Task.of` if you want to lift a value in a default minimal Task context.&apos;,
+    );
+
+    this.fork = fork;
+  }
+
+  static of(x) {
+    return new Task((_, resolve) =&gt; resolve(x));
+  }
+
+  static rejected(x) {
+    return new Task((reject, _) =&gt; reject(x));
+  }
+
+  ap(f) {
+    return this.chain(fn =&gt; f.map(fn));
+  }
+
+  chain(fn) {
+    return new Task((reject, resolve) =&gt; this.fork(reject, x =&gt; fn(x).fork(reject, resolve)));
+  }
+
+  inspect() { // eslint-disable-line class-methods-use-this
+    return &apos;Task(?)&apos;;
+  }
+
+  getType() { // eslint-disable-line class-methods-use-this
+    return &apos;(Task ? ?)&apos;;
+  }
+
+  join() {
+    return this.chain(x =&gt; x);
+  }
+
+  map(fn) {
+    return new Task((reject, resolve) =&gt; this.fork(reject, compose(resolve, fn)));
+  }
+}
+
+// In nodejs the existance of a class method named `inspect` will trigger a deprecation warning
+// when passing an instance to `console.log`:
+// `(node:3845) [DEP0079] DeprecationWarning: Custom inspection function on Objects via .inspect() is deprecated`
+// The solution is to alias the existing inspect method with the special inspect symbol exported by node
+if (typeof module !== &apos;undefined&apos; &amp;&amp; typeof this !== &apos;undefined&apos; &amp;&amp; this.module !== module) {
+  const customInspect = require(&apos;util&apos;).inspect.custom;
+  const assignCustomInspect = it =&gt; it.prototype[customInspect] = it.prototype.inspect;
+  [Left, Right, Identity, IO, Map, List, Maybe, Task].forEach(assignCustomInspect);
+}
+
+const identity = function identity(x) { return x; };
+
+const either = curry(function either(f, g, e) {
+  if (e.isLeft) {
+    return f(e.$value);
+  }
+
+  return g(e.$value);
+});
+
+const left = function left(x) { return new Left(x); };
+
+const maybe = curry(function maybe(v, f, m) {
+  if (m.isNothing) {
+    return v;
+  }
+
+  return f(m.$value);
+});
+
+const nothing = Maybe.of(null);
+
+const reject = function reject(x) { return Task.rejected(x); };
+
+const chain = curry(function chain(fn, m) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; typeof m.chain === &apos;function&apos;,
+    typeMismatch(&apos;Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m a&apos;, [getType(fn), getType(m), &apos;m a&apos;].join(&apos; -&gt; &apos;), &apos;chain&apos;),
+  );
+
+  return m.chain(fn);
+});
+
+const join = function join(m) {
+  assert(
+    typeof m.chain === &apos;function&apos;,
+    typeMismatch(&apos;Monad m =&gt; m (m a) -&gt; m a&apos;, [getType(m), &apos;m a&apos;].join(&apos; -&gt; &apos;), &apos;join&apos;),
+  );
+
+  return m.join();
+};
+
+const map = curry(function map(fn, f) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; typeof f.map === &apos;function&apos;,
+    typeMismatch(&apos;Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b&apos;, [getType(fn), getType(f), &apos;f b&apos;].join(&apos; -&gt; &apos;), &apos;map&apos;),
+  );
+
+  return f.map(fn);
+});
+
+const sequence = curry(function sequence(of, x) {
+  assert(
+    typeof of === &apos;function&apos; &amp;&amp; typeof x.sequence === &apos;function&apos;,
+    typeMismatch(&apos;(Applicative f, Traversable t) =&gt; (a -&gt; f a) -&gt; t (f a) -&gt; f (t a)&apos;, [getType(of), getType(x), &apos;f (t a)&apos;].join(&apos; -&gt; &apos;), &apos;sequence&apos;),
+  );
+
+  return x.sequence(of);
+});
+
+const traverse = curry(function traverse(of, fn, x) {
+  assert(
+    typeof of === &apos;function&apos; &amp;&amp; typeof fn === &apos;function&apos; &amp;&amp; typeof x.traverse === &apos;function&apos;,
+    typeMismatch(
+      &apos;(Applicative f, Traversable t) =&gt; (a -&gt; f a) -&gt; (a -&gt; f b) -&gt; t a -&gt; f (t b)&apos;,
+      [getType(of), getType(fn), getType(x), &apos;f (t b)&apos;].join(&apos; -&gt; &apos;),
+      &apos;traverse&apos;,
+    ),
+  );
+
+  return x.traverse(of, fn);
+});
+
+const unsafePerformIO = function unsafePerformIO(io) {
+  assert(
+    io instanceof IO,
+    typeMismatch(&apos;IO a&apos;, getType(io), &apos;unsafePerformIO&apos;),
+  );
+
+  return io.unsafePerformIO();
+};
+
+const liftA2 = curry(function liftA2(fn, a1, a2) {
+  assert(
+    typeof fn === &apos;function&apos;
+      &amp;&amp; typeof a1.map === &apos;function&apos;
+      &amp;&amp; typeof a2.ap === &apos;function&apos;,
+    typeMismatch(&apos;Applicative f =&gt; (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c&apos;, [getType(fn), getType(a1), getType(a2)].join(&apos; -&gt; &apos;), &apos;liftA2&apos;),
+  );
+
+  return a1.map(fn).ap(a2);
+});
+
+const liftA3 = curry(function liftA3(fn, a1, a2, a3) {
+  assert(
+    typeof fn === &apos;function&apos;
+      &amp;&amp; typeof a1.map === &apos;function&apos;
+      &amp;&amp; typeof a2.ap === &apos;function&apos;
+      &amp;&amp; typeof a3.ap === &apos;function&apos;,
+    typeMismatch(&apos;Applicative f =&gt; (a -&gt; b -&gt; c -&gt; d) -&gt; f a -&gt; f b -&gt; f c -&gt; f d&apos;, [getType(fn), getType(a1), getType(a2)].join(&apos; -&gt; &apos;), &apos;liftA2&apos;),
+  );
+
+  return a1.map(fn).ap(a2).ap(a3);
+});
+
+const always = curry(function always(a, b) { return a; });
+
+
+/* ---------- Pointfree Classic Utilities ---------- */
+
+const append = curry(function append(a, b) {
+  assert(
+    typeof a === &apos;string&apos; &amp;&amp; typeof b === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; String&apos;, [getType(a), getType(b), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;concat&apos;),
+  );
+
+  return b.concat(a);
+});
+
+const add = curry(function add(a, b) {
+  assert(
+    typeof a === &apos;number&apos; &amp;&amp; typeof b === &apos;number&apos;,
+    typeMismatch(&apos;Number -&gt; Number -&gt; Number&apos;, [getType(a), getType(b), &apos;Number&apos;].join(&apos; -&gt; &apos;), &apos;add&apos;),
+  );
+
+  return a + b;
+});
+
+const concat = curry(function concat(a, b) {
+  assert(
+    typeof a === &apos;string&apos; &amp;&amp; typeof b === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; String&apos;, [getType(a), getType(b), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;concat&apos;),
+  );
+
+  return a.concat(b);
+});
+
+const eq = curry(function eq(a, b) {
+  assert(
+    getType(a) === getType(b),
+    typeMismatch(&apos;a -&gt; a -&gt; Boolean&apos;, [getType(a), getType(b), &apos;Boolean&apos;].join(&apos; -&gt; &apos;), eq),
+  );
+
+  return a === b;
+});
+
+const filter = curry(function filter(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(a -&gt; Boolean) -&gt; [a] -&gt; [a]&apos;, [getType(fn), getType(xs), getType(xs)].join(&apos; -&gt; &apos;), &apos;filter&apos;),
+  );
+
+  return xs.filter(fn);
+});
+
+const flip = curry(function flip(fn, a, b) {
+  assert(
+    typeof fn === &apos;function&apos;,
+    typeMismatch(&apos;(a -&gt; b) -&gt; (b -&gt; a)&apos;, [getType(fn), &apos;(b -&gt; a)&apos;].join(&apos; -&gt; &apos;), &apos;flip&apos;),
+  );
+
+  return fn(b, a);
+});
+
+const forEach = curry(function forEach(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(a -&gt; ()) -&gt; [a] -&gt; ()&apos;, [getType(fn), getType(xs), &apos;()&apos;].join(&apos; -&gt; &apos;), &apos;forEach&apos;),
+  );
+
+  xs.forEach(fn);
+});
+
+const intercalate = curry(function intercalate(str, xs) {
+  assert(
+    typeof str === &apos;string&apos; &amp;&amp; Array.isArray(xs) &amp;&amp; (xs.length === 0 || typeof xs[0] === &apos;string&apos;),
+    typeMismatch(&apos;String -&gt; [String] -&gt; String&apos;, [getType(str), getType(xs), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;intercalate&apos;),
+  );
+
+  return xs.join(str);
+});
+
+const head = function head(xs) {
+  assert(
+    Array.isArray(xs) || typeof xs === &apos;string&apos;,
+    typeMismatch(&apos;[a] -&gt; a&apos;, [getType(xs), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;head&apos;),
+  );
+
+  return xs[0];
+};
+
+const last = function last(xs) {
+  assert(
+    Array.isArray(xs) || typeof xs === &apos;string&apos;,
+    typeMismatch(&apos;[a] -&gt; a&apos;, [getType(xs), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;last&apos;),
+  );
+
+  return xs[xs.length - 1];
+};
+
+const match = curry(function match(re, str) {
+  assert(
+    re instanceof RegExp &amp;&amp; typeof str === &apos;string&apos;,
+    typeMismatch(&apos;RegExp -&gt; String -&gt; Boolean&apos;, [getType(re), getType(str), &apos;Boolean&apos;].join(&apos; -&gt; &apos;), &apos;match&apos;),
+  );
+
+  return re.test(str);
+});
+
+const prop = curry(function prop(p, obj) {
+  assert(
+    typeof p === &apos;string&apos; &amp;&amp; typeof obj === &apos;object&apos; &amp;&amp; obj !== null,
+    typeMismatch(&apos;String -&gt; Object -&gt; a&apos;, [getType(p), getType(obj), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;prop&apos;),
+  );
+
+  return obj[p];
+});
+
+const reduce = curry(function reduce(fn, zero, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(b -&gt; a -&gt; b) -&gt; b -&gt; [a] -&gt; b&apos;, [getType(fn), getType(zero), getType(xs), &apos;b&apos;].join(&apos; -&gt; &apos;), &apos;reduce&apos;),
+  );
+
+  return xs.reduce(
+    function $reduceIterator($acc, $x) { return fn($acc, $x); },
+    zero,
+  );
+});
+
+const safeHead = namedAs(&apos;safeHead&apos;, compose(Maybe.of, head));
+
+const safeProp = curry(function safeProp(p, obj) { return Maybe.of(prop(p, obj)); });
+
+const sortBy = curry(function sortBy(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;Ord b =&gt; (a -&gt; b) -&gt; [a] -&gt; [a]&apos;, [getType(fn), getType(xs), &apos;[a]&apos;].join(&apos; -&gt; &apos;), &apos;sortBy&apos;),
+  );
+
+  return xs.sort((a, b) =&gt; {
+    if (fn(a) === fn(b)) {
+      return 0;
+    }
+
+    return fn(a) &gt; fn(b) ? 1 : -1;
+  });
+});
+
+const split = curry(function split(s, str) {
+  assert(
+    typeof s === &apos;string&apos; &amp;&amp; typeof str === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; [String]&apos;, [getType(s), getType(str), &apos;[String]&apos;].join(&apos; -&gt; &apos;), &apos;split&apos;),
+  );
+
+  return str.split(s);
+});
+
+const take = curry(function take(n, xs) {
+  assert(
+    typeof n === &apos;number&apos; &amp;&amp; (Array.isArray(xs) || typeof xs === &apos;string&apos;),
+    typeMismatch(&apos;Number -&gt; [a] -&gt; [a]&apos;, [getType(n), getType(xs), getType(xs)].join(&apos; -&gt; &apos;), &apos;take&apos;),
+  );
+
+  return xs.slice(0, n);
+});
+
+const toLowerCase = function toLowerCase(s) {
+  assert(
+    typeof s === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String&apos;, [getType(s), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;toLowerCase&apos;),
+  );
+
+  return s.toLowerCase();
+};
+
+const toUpperCase = function toUpperCase(s) {
+  assert(
+    typeof s === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String&apos;, [getType(s), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;toLowerCase&apos;),
+  );
+
+  return s.toUpperCase();
+};
+
+
+/* ---------- Chapter 4 ---------- */
+
+const keepHighest = function keepHighest(x, y) {
+  try {
+    keepHighest.calledBy = keepHighest.caller;
+  } catch (err) {
+    // NOTE node.js runs in strict mode and prohibit the usage of &apos;.caller&apos;
+    // There&apos;s a ugly hack to retrieve the caller from stack trace.
+    const [, caller] = /at (\S+)/.exec(err.stack.split(&apos;\n&apos;)[2]);
+
+    keepHighest.calledBy = namedAs(caller, () =&gt; {});
+  }
+
+  return x &gt;= y ? x : y;
+};
+
+
+/* ---------- Chapter 5 ---------- */
+
+const cars = [{
+  name: &apos;Ferrari FF&apos;,
+  horsepower: 660,
+  dollar_value: 700000,
+  in_stock: true,
+}, {
+  name: &apos;Spyker C12 Zagato&apos;,
+  horsepower: 650,
+  dollar_value: 648000,
+  in_stock: false,
+}, {
+  name: &apos;Jaguar XKR-S&apos;,
+  horsepower: 550,
+  dollar_value: 132000,
+  in_stock: true,
+}, {
+  name: &apos;Audi R8&apos;,
+  horsepower: 525,
+  dollar_value: 114200,
+  in_stock: false,
+}, {
+  name: &apos;Aston Martin One-77&apos;,
+  horsepower: 750,
+  dollar_value: 1850000,
+  in_stock: true,
+}, {
+  name: &apos;Pagani Huayra&apos;,
+  horsepower: 700,
+  dollar_value: 1300000,
+  in_stock: false,
+}];
+
+const average = function average(xs) {
+  return xs.reduce(add, 0) / xs.length;
+};
+
+
+/* ---------- Chapter 8 ---------- */
+
+const albert = {
+  id: 1,
+  active: true,
+  name: &apos;Albert&apos;,
+  address: {
+    street: {
+      number: 22,
+      name: &apos;Walnut St&apos;,
+    },
+  },
+};
+
+const gary = {
+  id: 2,
+  active: false,
+  name: &apos;Gary&apos;,
+  address: {
+    street: {
+      number: 14,
+    },
+  },
+};
+
+const theresa = {
+  id: 3,
+  active: true,
+  name: &apos;Theresa&apos;,
+};
+
+const yi = { id: 4, name: &apos;Yi&apos;, active: true };
+
+const showWelcome = namedAs(&apos;showWelcome&apos;, compose(concat(&apos;Welcome &apos;), prop(&apos;name&apos;)));
+
+const checkActive = function checkActive(user) {
+  return user.active
+    ? Either.of(user)
+    : left(&apos;Your account is not active&apos;);
+};
+
+const save = function save(user) {
+  return new IO(() =&gt; Object.assign({}, user, { saved: true }));
+};
+
+const validateUser = curry(function validateUser(validate, user) {
+  return validate(user).map(_ =&gt; user); // eslint-disable-line no-unused-vars
+});
+
+
+/* ---------- Chapter 9 ---------- */
+
+const getFile = IO.of(&apos;/home/mostly-adequate/ch09.md&apos;);
+
+const pureLog = function pureLog(str) { return new IO(() =&gt; { console.log(str); return str; }); };
+
+const addToMailingList = function addToMailingList(email) { return IO.of([email]); };
+
+const emailBlast = function emailBlast(list) { return IO.of(list.join(&apos;,&apos;)); };
+
+const validateEmail = function validateEmail(x) {
+  return /\S+@\S+\.\S+/.test(x)
+    ? Either.of(x)
+    : left(&apos;invalid email&apos;);
+};
+
+
+/* ---------- Chapter 10 ---------- */
+
+const localStorage = { player1: albert, player2: theresa };
+
+const game = curry(function game(p1, p2) { return `${p1.name} vs ${p2.name}`; });
+
+const getFromCache = function getFromCache(x) { return new IO(() =&gt; localStorage[x]); };
+
+
+/* ---------- Chapter 11 ---------- */
+
+const findUserById = function findUserById(id) {
+  switch (id) {
+    case 1:
+      return Task.of(Either.of(albert));
+
+    case 2:
+      return Task.of(Either.of(gary));
+
+    case 3:
+      return Task.of(Either.of(theresa));
+
+    default:
+      return Task.of(left(&apos;not found&apos;));
+  }
+};
+
+const eitherToTask = namedAs(&apos;eitherToTask&apos;, either(Task.rejected, Task.of));
+
+
+/* ---------- Chapter 12 ---------- */
+
+const httpGet = function httpGet(route) { return Task.of(`json for ${route}`); };
+
+const routes = new Map({
+  &apos;/&apos;: &apos;/&apos;,
+  &apos;/about&apos;: &apos;/about&apos;,
+});
+
+const validate = function validate(player) {
+  return player.name
+    ? Either.of(player)
+    : left(&apos;must have name&apos;);
+};
+
+const readdir = function readdir(dir) {
+  return Task.of([&apos;file1&apos;, &apos;file2&apos;, &apos;file3&apos;]);
+};
+
+const readfile = curry(function readfile(encoding, file) {
+  return Task.of(`content of ${file} (${encoding})`);
+});
+
+
+/* ---------- Exports ---------- */
+
+if (typeof module === &apos;object&apos;) {
+  module.exports = {
+    // Utils
+    withSpyOn,
+
+    // Essential FP helpers
+    always,
+    compose,
+    curry,
+    either,
+    identity,
+    inspect,
+    left,
+    liftA2,
+    liftA3,
+    maybe,
+    nothing,
+    reject,
+
+    // Algebraic Data Structures
+    Either,
+    IO,
+    Identity,
+    Left,
+    List,
+    Map,
+    Maybe,
+    Right,
+    Task,
+
+    // Currified version of &apos;standard&apos; functions
+    append,
+    add,
+    chain,
+    concat,
+    eq,
+    filter,
+    flip,
+    forEach,
+    head,
+    intercalate,
+    join,
+    last,
+    map,
+    match,
+    prop,
+    reduce,
+    safeHead,
+    safeProp,
+    sequence,
+    sortBy,
+    split,
+    take,
+    toLowerCase,
+    toUpperCase,
+    traverse,
+    unsafePerformIO,
+
+    // Chapter 04
+    keepHighest,
+
+    // Chapter 05
+    cars,
+    average,
+
+    // Chapter 08
+    albert,
+    gary,
+    theresa,
+    yi,
+    showWelcome,
+    checkActive,
+    save,
+    validateUser,
+
+    // Chapter 09
+    getFile,
+    pureLog,
+    addToMailingList,
+    emailBlast,
+    validateEmail,
+
+    // Chapter 10
+    localStorage,
+    getFromCache,
+    game,
+
+    // Chapter 11
+    findUserById,
+    eitherToTask,
+
+    // Chapter 12
+    httpGet,
+    routes,
+    validate,
+    readdir,
+    readfile,
+  };
+}</pre>
+	
+
+	<div class="buttons">
+	    <a href="#" class="button size-2 action-submit">Submit</a>
+	    <a href="#" class="button size-2 action-solution">Solution</a>
+	</div>
+</div></p>
+<hr>
+<p><div class="exercise">
+	<div class="header">Exercise</div>
+	<div class="alert alert-success">
+	    <b>Correct!</b>
+	</div>
+
+	<div class="alert alert-danger error-message">
+	    <b>False!</b>
+	</div>
+
+	<div class="message">
+	  
+Refactor to remove all arguments by partially applying the functions.
+
+
+	</div>
+	<div class="editor" style="height: 20px">// filterQs :: [String] -&gt; [String]
+const filterQs = xs =&gt; filter(x =&gt; x.match(/q/i), xs);</div>
+
+	<pre class="hidden code-solution">const filterQs = filter(match(/q/i));</pre>
+	<pre class="hidden code-validation">/* globals filterQs */
+
+filter.calledPartial = false;
+match.calledPartial = false;
+
+assert.arrayEqual(
+  filterQs([&apos;quick&apos;, &apos;camels&apos;, &apos;quarry&apos;, &apos;over&apos;, &apos;quails&apos;]),
+  [&apos;quick&apos;, &apos;quarry&apos;, &apos;quails&apos;],
+  &apos;The function gives incorrect results.&apos;,
+);
+
+assert(
+  filter.partially,
+  &apos;The answer is incorrect; hint: look at the arguments for `filter`.&apos;,
+);
+
+assert(
+  match.partially,
+  &apos;The answer is incorrect; hint: look at the arguments for `match`.&apos;,
+);</pre>
+	
+	<pre class="hidden code-context">// NOTE We keep named function here to leverage this in the `compose` function,
+// and later on in the validations scripts.
+
+/* eslint-disable prefer-arrow-callback */
+
+
+/* ---------- Internals ---------- */
+
+function namedAs(value, fn) {
+  Object.defineProperty(fn, &apos;name&apos;, { value });
+  return fn;
+}
+
+
+// NOTE This file is loaded by gitbook&apos;s exercises plugin. When it does, there&apos;s an
+// `assert` function available in the global scope.
+
+/* eslint-disable no-undef, global-require */
+if (typeof assert !== &apos;function&apos; &amp;&amp; typeof require === &apos;function&apos;) {
+  global.assert = require(&apos;assert&apos;);
+}
+
+assert.arrayEqual = function assertArrayEqual(actual, expected, message = &apos;arrayEqual&apos;) {
+  if (actual.length !== expected.length) {
+    throw new Error(message);
+  }
+
+  for (let i = 0; i &lt; expected.length; i += 1) {
+    if (expected[i] !== actual[i]) {
+      throw new Error(message);
+    }
+  }
+};
+/* eslint-enable no-undef, global-require */
+
+
+function inspect(x) {
+  if (x &amp;&amp; typeof x.inspect === &apos;function&apos;) {
+    return x.inspect();
+  }
+
+  function inspectFn(f) {
+    return f.name ? f.name : f.toString();
+  }
+
+  function inspectTerm(t) {
+    switch (typeof t) {
+      case &apos;string&apos;:
+        return `&apos;${t}&apos;`;
+      case &apos;object&apos;: {
+        const ts = Object.keys(t).map(k =&gt; [k, inspect(t[k])]);
+        return `{${ts.map(kv =&gt; kv.join(&apos;: &apos;)).join(&apos;, &apos;)}}`;
+      }
+      default:
+        return String(t);
+    }
+  }
+
+  function inspectArgs(args) {
+    return Array.isArray(args) ? `[${args.map(inspect).join(&apos;, &apos;)}]` : inspectTerm(args);
+  }
+
+  return (typeof x === &apos;function&apos;) ? inspectFn(x) : inspectArgs(x);
+}
+
+
+/* eslint-disable no-param-reassign */
+function withSpyOn(prop, obj, fn) {
+  const orig = obj[prop];
+  let called = false;
+  obj[prop] = function spy(...args) {
+    called = true;
+    return orig.call(this, ...args);
+  };
+  fn();
+  obj[prop] = orig;
+  return called;
+}
+/* eslint-enable no-param-reassign */
+
+
+const typeMismatch = (src, got, fn) =&gt; `Type Mismatch in function &apos;${fn}&apos;
+
+        ${fn} :: ${got}
+
+      instead of
+
+        ${fn} :: ${src}`;
+
+
+const capitalize = s =&gt; `${s[0].toUpperCase()}${s.substring(1)}`;
+
+
+const ordinal = (i) =&gt; {
+  switch (i) {
+    case 1:
+      return &apos;1st&apos;;
+    case 2:
+      return &apos;2nd&apos;;
+    case 3:
+      return &apos;3rd&apos;;
+    default:
+      return `${i}th`; // NOTE won&apos;t get any much bigger ...
+  }
+};
+
+const getType = (x) =&gt; {
+  if (x === null) {
+    return &apos;Null&apos;;
+  }
+
+  if (typeof x === &apos;undefined&apos;) {
+    return &apos;()&apos;;
+  }
+
+  if (Array.isArray(x)) {
+    return `[${x[0] ? getType(x[0]) : &apos;?&apos;}]`;
+  }
+
+  if (typeof x.getType === &apos;function&apos;) {
+    return x.getType();
+  }
+
+  if (x.constructor &amp;&amp; x.constructor.name) {
+    return x.constructor.name;
+  }
+
+  return capitalize(typeof x);
+};
+
+
+/* ---------- Essential FP Functions ---------- */
+
+// NOTE A slightly pumped up version of `curry` which also keeps track of
+// whether a function was called partially or with all its arguments at once.
+// This is useful to provide insights during validation of exercises.
+function curry(fn) {
+  assert(
+    typeof fn === &apos;function&apos;,
+    typeMismatch(&apos;function -&gt; ?&apos;, [getType(fn), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;curry&apos;),
+  );
+
+  const arity = fn.length;
+
+  return namedAs(fn.name, function $curry(...args) {
+    $curry.partially = this &amp;&amp; this.partially;
+
+    if (args.length &lt; arity) {
+      return namedAs(fn.name, $curry.bind({ partially: true }, ...args));
+    }
+
+    return fn.call(this || { partially: false }, ...args);
+  });
+}
+
+
+// NOTE A slightly pumped up version of `compose` which also keeps track of the chain
+// of callees. In the end, a function created with `compose` holds a `callees` variable
+// with the list of all the callees&apos; names.
+// This is useful to provide insights during validation of exercises
+function compose(...fns) {
+  const n = fns.length;
+
+  return function $compose(...args) {
+    $compose.callees = [];
+
+    let $args = args;
+
+    for (let i = n - 1; i &gt;= 0; i -= 1) {
+      const fn = fns[i];
+
+      assert(
+        typeof fn === &apos;function&apos;,
+        `Invalid Composition: ${ordinal(n - i)} element in a composition isn&apos;t a function`,
+      );
+
+      $compose.callees.push(fn.name);
+      $args = [fn.call(null, ...$args)];
+    }
+
+    return $args[0];
+  };
+}
+
+
+/* ---------- Algebraic Data Structures ---------- */
+
+class Either {
+  static of(x) {
+    return new Right(x); // eslint-disable-line no-use-before-define
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+}
+
+
+class Left extends Either {
+  get isLeft() { // eslint-disable-line class-methods-use-this
+    return true;
+  }
+
+  get isRight() { // eslint-disable-line class-methods-use-this
+    return false;
+  }
+
+  ap() {
+    return this;
+  }
+
+  chain() {
+    return this;
+  }
+
+  inspect() {
+    return `Left(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Either ${getType(this.$value)} ?)`;
+  }
+
+  join() {
+    return this;
+  }
+
+  map() {
+    return this;
+  }
+
+  sequence(of) {
+    return of(this);
+  }
+
+  traverse(of, fn) {
+    return of(this);
+  }
+}
+
+
+class Right extends Either {
+  get isLeft() { // eslint-disable-line class-methods-use-this
+    return false;
+  }
+
+  get isRight() { // eslint-disable-line class-methods-use-this
+    return true;
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return fn(this.$value);
+  }
+
+  inspect() {
+    return `Right(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Either ? ${getType(this.$value)})`;
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  map(fn) {
+    return Either.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    fn(this.$value).map(Either.of);
+  }
+}
+
+
+class Identity {
+  static of(x) {
+    return new Identity(x);
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return `Identity(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Identity ${getType(this.$value)})`;
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  map(fn) {
+    return Identity.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return fn(this.$value).map(Identity.of);
+  }
+}
+
+class IO {
+  static of(x) {
+    return new IO(() =&gt; x);
+  }
+
+  constructor(io) {
+    assert(
+      typeof io === &apos;function&apos;,
+      &apos;invalid `io` operation given to IO constructor. Use `IO.of` if you want to lift a value in a default minimal IO context.&apos;,
+    );
+
+    this.unsafePerformIO = io;
+  }
+
+  ap(f) {
+    return this.chain(fn =&gt; f.map(fn));
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return `IO(${inspect(this.unsafePerformIO())})`;
+  }
+
+  getType() {
+    return `(IO ${getType(this.unsafePerformIO())})`;
+  }
+
+
+  join() {
+    return this.unsafePerformIO();
+  }
+
+  map(fn) {
+    return new IO(compose(fn, this.unsafePerformIO));
+  }
+}
+
+
+class Map {
+  constructor(x) {
+    assert(
+      typeof x === &apos;object&apos; &amp;&amp; x !== null,
+      &apos;tried to create `Map` with non object-like&apos;,
+    );
+
+    this.$value = x;
+  }
+
+  inspect() {
+    return `Map(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    const sample = this.$value[Object.keys(this.$value)[0]];
+
+    return `(Map String ${sample ? getType(sample) : &apos;?&apos;})`;
+  }
+
+  insert(k, v) {
+    const singleton = {};
+    singleton[k] = v;
+    return new Map(Object.assign({}, this.$value, singleton));
+  }
+
+  reduce(fn, zero) {
+    return this.reduceWithKeys((acc, _, k) =&gt; fn(acc, k), zero);
+  }
+
+  reduceWithKeys(fn, zero) {
+    return Object.keys(this.$value)
+      .reduce((acc, k) =&gt; fn(acc, this.$value[k], k), zero);
+  }
+
+  map(fn) {
+    return new Map(this.reduceWithKeys((obj, v, k) =&gt; {
+      obj[k] = fn(v); // eslint-disable-line no-param-reassign
+      return obj;
+    }, {}));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.reduceWithKeys(
+      (f, a, k) =&gt; fn(a).map(b =&gt; m =&gt; m.insert(k, b)).ap(f),
+      of(new Map({})),
+    );
+  }
+}
+
+
+class List {
+  static of(x) {
+    return new List([x]);
+  }
+
+  constructor(xs) {
+    assert(
+      Array.isArray(xs),
+      &apos;tried to create `List` from non-array&apos;,
+    );
+
+    this.$value = xs;
+  }
+
+  concat(x) {
+    return new List(this.$value.concat(x));
+  }
+
+  inspect() {
+    return `List(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    const sample = this.$value[0];
+
+    return `(List ${sample ? getType(sample) : &apos;?&apos;})`;
+  }
+
+  map(fn) {
+    return new List(this.$value.map(fn));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.$value.reduce(
+      (f, a) =&gt; fn(a).map(b =&gt; bs =&gt; bs.concat(b)).ap(f),
+      of(new List([])),
+    );
+  }
+}
+
+
+class Maybe {
+  static of(x) {
+    return new Maybe(x);
+  }
+
+  get isNothing() {
+    return this.$value === null || this.$value === undefined;
+  }
+
+  get isJust() {
+    return !this.isNothing;
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+
+  ap(f) {
+    return this.isNothing ? this : f.map(this.$value);
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return this.isNothing ? &apos;Nothing&apos; : `Just(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Maybe ${this.isJust ? getType(this.$value) : &apos;?&apos;})`;
+  }
+
+  join() {
+    return this.isNothing ? this : this.$value;
+  }
+
+  map(fn) {
+    return this.isNothing ? this : Maybe.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.isNothing ? of(this) : fn(this.$value).map(Maybe.of);
+  }
+}
+
+
+class Task {
+  constructor(fork) {
+    assert(
+      typeof fork === &apos;function&apos;,
+      &apos;invalid `fork` operation given to Task constructor. Use `Task.of` if you want to lift a value in a default minimal Task context.&apos;,
+    );
+
+    this.fork = fork;
+  }
+
+  static of(x) {
+    return new Task((_, resolve) =&gt; resolve(x));
+  }
+
+  static rejected(x) {
+    return new Task((reject, _) =&gt; reject(x));
+  }
+
+  ap(f) {
+    return this.chain(fn =&gt; f.map(fn));
+  }
+
+  chain(fn) {
+    return new Task((reject, resolve) =&gt; this.fork(reject, x =&gt; fn(x).fork(reject, resolve)));
+  }
+
+  inspect() { // eslint-disable-line class-methods-use-this
+    return &apos;Task(?)&apos;;
+  }
+
+  getType() { // eslint-disable-line class-methods-use-this
+    return &apos;(Task ? ?)&apos;;
+  }
+
+  join() {
+    return this.chain(x =&gt; x);
+  }
+
+  map(fn) {
+    return new Task((reject, resolve) =&gt; this.fork(reject, compose(resolve, fn)));
+  }
+}
+
+// In nodejs the existance of a class method named `inspect` will trigger a deprecation warning
+// when passing an instance to `console.log`:
+// `(node:3845) [DEP0079] DeprecationWarning: Custom inspection function on Objects via .inspect() is deprecated`
+// The solution is to alias the existing inspect method with the special inspect symbol exported by node
+if (typeof module !== &apos;undefined&apos; &amp;&amp; typeof this !== &apos;undefined&apos; &amp;&amp; this.module !== module) {
+  const customInspect = require(&apos;util&apos;).inspect.custom;
+  const assignCustomInspect = it =&gt; it.prototype[customInspect] = it.prototype.inspect;
+  [Left, Right, Identity, IO, Map, List, Maybe, Task].forEach(assignCustomInspect);
+}
+
+const identity = function identity(x) { return x; };
+
+const either = curry(function either(f, g, e) {
+  if (e.isLeft) {
+    return f(e.$value);
+  }
+
+  return g(e.$value);
+});
+
+const left = function left(x) { return new Left(x); };
+
+const maybe = curry(function maybe(v, f, m) {
+  if (m.isNothing) {
+    return v;
+  }
+
+  return f(m.$value);
+});
+
+const nothing = Maybe.of(null);
+
+const reject = function reject(x) { return Task.rejected(x); };
+
+const chain = curry(function chain(fn, m) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; typeof m.chain === &apos;function&apos;,
+    typeMismatch(&apos;Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m a&apos;, [getType(fn), getType(m), &apos;m a&apos;].join(&apos; -&gt; &apos;), &apos;chain&apos;),
+  );
+
+  return m.chain(fn);
+});
+
+const join = function join(m) {
+  assert(
+    typeof m.chain === &apos;function&apos;,
+    typeMismatch(&apos;Monad m =&gt; m (m a) -&gt; m a&apos;, [getType(m), &apos;m a&apos;].join(&apos; -&gt; &apos;), &apos;join&apos;),
+  );
+
+  return m.join();
+};
+
+const map = curry(function map(fn, f) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; typeof f.map === &apos;function&apos;,
+    typeMismatch(&apos;Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b&apos;, [getType(fn), getType(f), &apos;f b&apos;].join(&apos; -&gt; &apos;), &apos;map&apos;),
+  );
+
+  return f.map(fn);
+});
+
+const sequence = curry(function sequence(of, x) {
+  assert(
+    typeof of === &apos;function&apos; &amp;&amp; typeof x.sequence === &apos;function&apos;,
+    typeMismatch(&apos;(Applicative f, Traversable t) =&gt; (a -&gt; f a) -&gt; t (f a) -&gt; f (t a)&apos;, [getType(of), getType(x), &apos;f (t a)&apos;].join(&apos; -&gt; &apos;), &apos;sequence&apos;),
+  );
+
+  return x.sequence(of);
+});
+
+const traverse = curry(function traverse(of, fn, x) {
+  assert(
+    typeof of === &apos;function&apos; &amp;&amp; typeof fn === &apos;function&apos; &amp;&amp; typeof x.traverse === &apos;function&apos;,
+    typeMismatch(
+      &apos;(Applicative f, Traversable t) =&gt; (a -&gt; f a) -&gt; (a -&gt; f b) -&gt; t a -&gt; f (t b)&apos;,
+      [getType(of), getType(fn), getType(x), &apos;f (t b)&apos;].join(&apos; -&gt; &apos;),
+      &apos;traverse&apos;,
+    ),
+  );
+
+  return x.traverse(of, fn);
+});
+
+const unsafePerformIO = function unsafePerformIO(io) {
+  assert(
+    io instanceof IO,
+    typeMismatch(&apos;IO a&apos;, getType(io), &apos;unsafePerformIO&apos;),
+  );
+
+  return io.unsafePerformIO();
+};
+
+const liftA2 = curry(function liftA2(fn, a1, a2) {
+  assert(
+    typeof fn === &apos;function&apos;
+      &amp;&amp; typeof a1.map === &apos;function&apos;
+      &amp;&amp; typeof a2.ap === &apos;function&apos;,
+    typeMismatch(&apos;Applicative f =&gt; (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c&apos;, [getType(fn), getType(a1), getType(a2)].join(&apos; -&gt; &apos;), &apos;liftA2&apos;),
+  );
+
+  return a1.map(fn).ap(a2);
+});
+
+const liftA3 = curry(function liftA3(fn, a1, a2, a3) {
+  assert(
+    typeof fn === &apos;function&apos;
+      &amp;&amp; typeof a1.map === &apos;function&apos;
+      &amp;&amp; typeof a2.ap === &apos;function&apos;
+      &amp;&amp; typeof a3.ap === &apos;function&apos;,
+    typeMismatch(&apos;Applicative f =&gt; (a -&gt; b -&gt; c -&gt; d) -&gt; f a -&gt; f b -&gt; f c -&gt; f d&apos;, [getType(fn), getType(a1), getType(a2)].join(&apos; -&gt; &apos;), &apos;liftA2&apos;),
+  );
+
+  return a1.map(fn).ap(a2).ap(a3);
+});
+
+const always = curry(function always(a, b) { return a; });
+
+
+/* ---------- Pointfree Classic Utilities ---------- */
+
+const append = curry(function append(a, b) {
+  assert(
+    typeof a === &apos;string&apos; &amp;&amp; typeof b === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; String&apos;, [getType(a), getType(b), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;concat&apos;),
+  );
+
+  return b.concat(a);
+});
+
+const add = curry(function add(a, b) {
+  assert(
+    typeof a === &apos;number&apos; &amp;&amp; typeof b === &apos;number&apos;,
+    typeMismatch(&apos;Number -&gt; Number -&gt; Number&apos;, [getType(a), getType(b), &apos;Number&apos;].join(&apos; -&gt; &apos;), &apos;add&apos;),
+  );
+
+  return a + b;
+});
+
+const concat = curry(function concat(a, b) {
+  assert(
+    typeof a === &apos;string&apos; &amp;&amp; typeof b === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; String&apos;, [getType(a), getType(b), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;concat&apos;),
+  );
+
+  return a.concat(b);
+});
+
+const eq = curry(function eq(a, b) {
+  assert(
+    getType(a) === getType(b),
+    typeMismatch(&apos;a -&gt; a -&gt; Boolean&apos;, [getType(a), getType(b), &apos;Boolean&apos;].join(&apos; -&gt; &apos;), eq),
+  );
+
+  return a === b;
+});
+
+const filter = curry(function filter(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(a -&gt; Boolean) -&gt; [a] -&gt; [a]&apos;, [getType(fn), getType(xs), getType(xs)].join(&apos; -&gt; &apos;), &apos;filter&apos;),
+  );
+
+  return xs.filter(fn);
+});
+
+const flip = curry(function flip(fn, a, b) {
+  assert(
+    typeof fn === &apos;function&apos;,
+    typeMismatch(&apos;(a -&gt; b) -&gt; (b -&gt; a)&apos;, [getType(fn), &apos;(b -&gt; a)&apos;].join(&apos; -&gt; &apos;), &apos;flip&apos;),
+  );
+
+  return fn(b, a);
+});
+
+const forEach = curry(function forEach(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(a -&gt; ()) -&gt; [a] -&gt; ()&apos;, [getType(fn), getType(xs), &apos;()&apos;].join(&apos; -&gt; &apos;), &apos;forEach&apos;),
+  );
+
+  xs.forEach(fn);
+});
+
+const intercalate = curry(function intercalate(str, xs) {
+  assert(
+    typeof str === &apos;string&apos; &amp;&amp; Array.isArray(xs) &amp;&amp; (xs.length === 0 || typeof xs[0] === &apos;string&apos;),
+    typeMismatch(&apos;String -&gt; [String] -&gt; String&apos;, [getType(str), getType(xs), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;intercalate&apos;),
+  );
+
+  return xs.join(str);
+});
+
+const head = function head(xs) {
+  assert(
+    Array.isArray(xs) || typeof xs === &apos;string&apos;,
+    typeMismatch(&apos;[a] -&gt; a&apos;, [getType(xs), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;head&apos;),
+  );
+
+  return xs[0];
+};
+
+const last = function last(xs) {
+  assert(
+    Array.isArray(xs) || typeof xs === &apos;string&apos;,
+    typeMismatch(&apos;[a] -&gt; a&apos;, [getType(xs), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;last&apos;),
+  );
+
+  return xs[xs.length - 1];
+};
+
+const match = curry(function match(re, str) {
+  assert(
+    re instanceof RegExp &amp;&amp; typeof str === &apos;string&apos;,
+    typeMismatch(&apos;RegExp -&gt; String -&gt; Boolean&apos;, [getType(re), getType(str), &apos;Boolean&apos;].join(&apos; -&gt; &apos;), &apos;match&apos;),
+  );
+
+  return re.test(str);
+});
+
+const prop = curry(function prop(p, obj) {
+  assert(
+    typeof p === &apos;string&apos; &amp;&amp; typeof obj === &apos;object&apos; &amp;&amp; obj !== null,
+    typeMismatch(&apos;String -&gt; Object -&gt; a&apos;, [getType(p), getType(obj), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;prop&apos;),
+  );
+
+  return obj[p];
+});
+
+const reduce = curry(function reduce(fn, zero, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(b -&gt; a -&gt; b) -&gt; b -&gt; [a] -&gt; b&apos;, [getType(fn), getType(zero), getType(xs), &apos;b&apos;].join(&apos; -&gt; &apos;), &apos;reduce&apos;),
+  );
+
+  return xs.reduce(
+    function $reduceIterator($acc, $x) { return fn($acc, $x); },
+    zero,
+  );
+});
+
+const safeHead = namedAs(&apos;safeHead&apos;, compose(Maybe.of, head));
+
+const safeProp = curry(function safeProp(p, obj) { return Maybe.of(prop(p, obj)); });
+
+const sortBy = curry(function sortBy(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;Ord b =&gt; (a -&gt; b) -&gt; [a] -&gt; [a]&apos;, [getType(fn), getType(xs), &apos;[a]&apos;].join(&apos; -&gt; &apos;), &apos;sortBy&apos;),
+  );
+
+  return xs.sort((a, b) =&gt; {
+    if (fn(a) === fn(b)) {
+      return 0;
+    }
+
+    return fn(a) &gt; fn(b) ? 1 : -1;
+  });
+});
+
+const split = curry(function split(s, str) {
+  assert(
+    typeof s === &apos;string&apos; &amp;&amp; typeof str === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; [String]&apos;, [getType(s), getType(str), &apos;[String]&apos;].join(&apos; -&gt; &apos;), &apos;split&apos;),
+  );
+
+  return str.split(s);
+});
+
+const take = curry(function take(n, xs) {
+  assert(
+    typeof n === &apos;number&apos; &amp;&amp; (Array.isArray(xs) || typeof xs === &apos;string&apos;),
+    typeMismatch(&apos;Number -&gt; [a] -&gt; [a]&apos;, [getType(n), getType(xs), getType(xs)].join(&apos; -&gt; &apos;), &apos;take&apos;),
+  );
+
+  return xs.slice(0, n);
+});
+
+const toLowerCase = function toLowerCase(s) {
+  assert(
+    typeof s === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String&apos;, [getType(s), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;toLowerCase&apos;),
+  );
+
+  return s.toLowerCase();
+};
+
+const toUpperCase = function toUpperCase(s) {
+  assert(
+    typeof s === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String&apos;, [getType(s), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;toLowerCase&apos;),
+  );
+
+  return s.toUpperCase();
+};
+
+
+/* ---------- Chapter 4 ---------- */
+
+const keepHighest = function keepHighest(x, y) {
+  try {
+    keepHighest.calledBy = keepHighest.caller;
+  } catch (err) {
+    // NOTE node.js runs in strict mode and prohibit the usage of &apos;.caller&apos;
+    // There&apos;s a ugly hack to retrieve the caller from stack trace.
+    const [, caller] = /at (\S+)/.exec(err.stack.split(&apos;\n&apos;)[2]);
+
+    keepHighest.calledBy = namedAs(caller, () =&gt; {});
+  }
+
+  return x &gt;= y ? x : y;
+};
+
+
+/* ---------- Chapter 5 ---------- */
+
+const cars = [{
+  name: &apos;Ferrari FF&apos;,
+  horsepower: 660,
+  dollar_value: 700000,
+  in_stock: true,
+}, {
+  name: &apos;Spyker C12 Zagato&apos;,
+  horsepower: 650,
+  dollar_value: 648000,
+  in_stock: false,
+}, {
+  name: &apos;Jaguar XKR-S&apos;,
+  horsepower: 550,
+  dollar_value: 132000,
+  in_stock: true,
+}, {
+  name: &apos;Audi R8&apos;,
+  horsepower: 525,
+  dollar_value: 114200,
+  in_stock: false,
+}, {
+  name: &apos;Aston Martin One-77&apos;,
+  horsepower: 750,
+  dollar_value: 1850000,
+  in_stock: true,
+}, {
+  name: &apos;Pagani Huayra&apos;,
+  horsepower: 700,
+  dollar_value: 1300000,
+  in_stock: false,
+}];
+
+const average = function average(xs) {
+  return xs.reduce(add, 0) / xs.length;
+};
+
+
+/* ---------- Chapter 8 ---------- */
+
+const albert = {
+  id: 1,
+  active: true,
+  name: &apos;Albert&apos;,
+  address: {
+    street: {
+      number: 22,
+      name: &apos;Walnut St&apos;,
+    },
+  },
+};
+
+const gary = {
+  id: 2,
+  active: false,
+  name: &apos;Gary&apos;,
+  address: {
+    street: {
+      number: 14,
+    },
+  },
+};
+
+const theresa = {
+  id: 3,
+  active: true,
+  name: &apos;Theresa&apos;,
+};
+
+const yi = { id: 4, name: &apos;Yi&apos;, active: true };
+
+const showWelcome = namedAs(&apos;showWelcome&apos;, compose(concat(&apos;Welcome &apos;), prop(&apos;name&apos;)));
+
+const checkActive = function checkActive(user) {
+  return user.active
+    ? Either.of(user)
+    : left(&apos;Your account is not active&apos;);
+};
+
+const save = function save(user) {
+  return new IO(() =&gt; Object.assign({}, user, { saved: true }));
+};
+
+const validateUser = curry(function validateUser(validate, user) {
+  return validate(user).map(_ =&gt; user); // eslint-disable-line no-unused-vars
+});
+
+
+/* ---------- Chapter 9 ---------- */
+
+const getFile = IO.of(&apos;/home/mostly-adequate/ch09.md&apos;);
+
+const pureLog = function pureLog(str) { return new IO(() =&gt; { console.log(str); return str; }); };
+
+const addToMailingList = function addToMailingList(email) { return IO.of([email]); };
+
+const emailBlast = function emailBlast(list) { return IO.of(list.join(&apos;,&apos;)); };
+
+const validateEmail = function validateEmail(x) {
+  return /\S+@\S+\.\S+/.test(x)
+    ? Either.of(x)
+    : left(&apos;invalid email&apos;);
+};
+
+
+/* ---------- Chapter 10 ---------- */
+
+const localStorage = { player1: albert, player2: theresa };
+
+const game = curry(function game(p1, p2) { return `${p1.name} vs ${p2.name}`; });
+
+const getFromCache = function getFromCache(x) { return new IO(() =&gt; localStorage[x]); };
+
+
+/* ---------- Chapter 11 ---------- */
+
+const findUserById = function findUserById(id) {
+  switch (id) {
+    case 1:
+      return Task.of(Either.of(albert));
+
+    case 2:
+      return Task.of(Either.of(gary));
+
+    case 3:
+      return Task.of(Either.of(theresa));
+
+    default:
+      return Task.of(left(&apos;not found&apos;));
+  }
+};
+
+const eitherToTask = namedAs(&apos;eitherToTask&apos;, either(Task.rejected, Task.of));
+
+
+/* ---------- Chapter 12 ---------- */
+
+const httpGet = function httpGet(route) { return Task.of(`json for ${route}`); };
+
+const routes = new Map({
+  &apos;/&apos;: &apos;/&apos;,
+  &apos;/about&apos;: &apos;/about&apos;,
+});
+
+const validate = function validate(player) {
+  return player.name
+    ? Either.of(player)
+    : left(&apos;must have name&apos;);
+};
+
+const readdir = function readdir(dir) {
+  return Task.of([&apos;file1&apos;, &apos;file2&apos;, &apos;file3&apos;]);
+};
+
+const readfile = curry(function readfile(encoding, file) {
+  return Task.of(`content of ${file} (${encoding})`);
+});
+
+
+/* ---------- Exports ---------- */
+
+if (typeof module === &apos;object&apos;) {
+  module.exports = {
+    // Utils
+    withSpyOn,
+
+    // Essential FP helpers
+    always,
+    compose,
+    curry,
+    either,
+    identity,
+    inspect,
+    left,
+    liftA2,
+    liftA3,
+    maybe,
+    nothing,
+    reject,
+
+    // Algebraic Data Structures
+    Either,
+    IO,
+    Identity,
+    Left,
+    List,
+    Map,
+    Maybe,
+    Right,
+    Task,
+
+    // Currified version of &apos;standard&apos; functions
+    append,
+    add,
+    chain,
+    concat,
+    eq,
+    filter,
+    flip,
+    forEach,
+    head,
+    intercalate,
+    join,
+    last,
+    map,
+    match,
+    prop,
+    reduce,
+    safeHead,
+    safeProp,
+    sequence,
+    sortBy,
+    split,
+    take,
+    toLowerCase,
+    toUpperCase,
+    traverse,
+    unsafePerformIO,
+
+    // Chapter 04
+    keepHighest,
+
+    // Chapter 05
+    cars,
+    average,
+
+    // Chapter 08
+    albert,
+    gary,
+    theresa,
+    yi,
+    showWelcome,
+    checkActive,
+    save,
+    validateUser,
+
+    // Chapter 09
+    getFile,
+    pureLog,
+    addToMailingList,
+    emailBlast,
+    validateEmail,
+
+    // Chapter 10
+    localStorage,
+    getFromCache,
+    game,
+
+    // Chapter 11
+    findUserById,
+    eitherToTask,
+
+    // Chapter 12
+    httpGet,
+    routes,
+    validate,
+    readdir,
+    readfile,
+  };
+}</pre>
+	
+
+	<div class="buttons">
+	    <a href="#" class="button size-2 action-submit">Submit</a>
+	    <a href="#" class="button size-2 action-solution">Solution</a>
+	</div>
+</div></p>
+<hr>
+<p>Considering the following function:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> keepHighest = (x, y) =&gt; (x &gt;= y ? x : y);
+</code></pre>
+<p><div class="exercise">
+	<div class="header">Exercise</div>
+	<div class="alert alert-success">
+	    <b>Correct!</b>
+	</div>
+
+	<div class="alert alert-danger error-message">
+	    <b>False!</b>
+	</div>
+
+	<div class="message">
+	  
+Refactor `max` to not reference any arguments using the helper function `keepHighest`.
+
+
+	</div>
+	<div class="editor" style="height: 20px">// max :: [Number] -&gt; Number
+const max = xs =&gt; reduce((acc, x) =&gt; (x &gt;= acc ? x : acc), -Infinity, xs);</div>
+
+	<pre class="hidden code-solution">const max = reduce(keepHighest, -Infinity);</pre>
+	<pre class="hidden code-validation">/* globals max */
+
+assert(
+  max([323, 523, 554, 123, 5234]) === 5234,
+  &apos;The function gives incorrect results.&apos;,
+);
+
+assert(
+  reduce.partially,
+  &apos;The answer is incorrect; hint: look at the arguments for `reduce`!&apos;,
+);
+
+assert(
+  keepHighest.calledBy &amp;&amp; keepHighest.calledBy.name === &apos;$reduceIterator&apos;,
+  &apos;The answer is incorrect; hint: look closely to `reduce\&apos;s` iterator and `keepHighest`!&apos;,
+);</pre>
+	
+	<pre class="hidden code-context">// NOTE We keep named function here to leverage this in the `compose` function,
+// and later on in the validations scripts.
+
+/* eslint-disable prefer-arrow-callback */
+
+
+/* ---------- Internals ---------- */
+
+function namedAs(value, fn) {
+  Object.defineProperty(fn, &apos;name&apos;, { value });
+  return fn;
+}
+
+
+// NOTE This file is loaded by gitbook&apos;s exercises plugin. When it does, there&apos;s an
+// `assert` function available in the global scope.
+
+/* eslint-disable no-undef, global-require */
+if (typeof assert !== &apos;function&apos; &amp;&amp; typeof require === &apos;function&apos;) {
+  global.assert = require(&apos;assert&apos;);
+}
+
+assert.arrayEqual = function assertArrayEqual(actual, expected, message = &apos;arrayEqual&apos;) {
+  if (actual.length !== expected.length) {
+    throw new Error(message);
+  }
+
+  for (let i = 0; i &lt; expected.length; i += 1) {
+    if (expected[i] !== actual[i]) {
+      throw new Error(message);
+    }
+  }
+};
+/* eslint-enable no-undef, global-require */
+
+
+function inspect(x) {
+  if (x &amp;&amp; typeof x.inspect === &apos;function&apos;) {
+    return x.inspect();
+  }
+
+  function inspectFn(f) {
+    return f.name ? f.name : f.toString();
+  }
+
+  function inspectTerm(t) {
+    switch (typeof t) {
+      case &apos;string&apos;:
+        return `&apos;${t}&apos;`;
+      case &apos;object&apos;: {
+        const ts = Object.keys(t).map(k =&gt; [k, inspect(t[k])]);
+        return `{${ts.map(kv =&gt; kv.join(&apos;: &apos;)).join(&apos;, &apos;)}}`;
+      }
+      default:
+        return String(t);
+    }
+  }
+
+  function inspectArgs(args) {
+    return Array.isArray(args) ? `[${args.map(inspect).join(&apos;, &apos;)}]` : inspectTerm(args);
+  }
+
+  return (typeof x === &apos;function&apos;) ? inspectFn(x) : inspectArgs(x);
+}
+
+
+/* eslint-disable no-param-reassign */
+function withSpyOn(prop, obj, fn) {
+  const orig = obj[prop];
+  let called = false;
+  obj[prop] = function spy(...args) {
+    called = true;
+    return orig.call(this, ...args);
+  };
+  fn();
+  obj[prop] = orig;
+  return called;
+}
+/* eslint-enable no-param-reassign */
+
+
+const typeMismatch = (src, got, fn) =&gt; `Type Mismatch in function &apos;${fn}&apos;
+
+        ${fn} :: ${got}
+
+      instead of
+
+        ${fn} :: ${src}`;
+
+
+const capitalize = s =&gt; `${s[0].toUpperCase()}${s.substring(1)}`;
+
+
+const ordinal = (i) =&gt; {
+  switch (i) {
+    case 1:
+      return &apos;1st&apos;;
+    case 2:
+      return &apos;2nd&apos;;
+    case 3:
+      return &apos;3rd&apos;;
+    default:
+      return `${i}th`; // NOTE won&apos;t get any much bigger ...
+  }
+};
+
+const getType = (x) =&gt; {
+  if (x === null) {
+    return &apos;Null&apos;;
+  }
+
+  if (typeof x === &apos;undefined&apos;) {
+    return &apos;()&apos;;
+  }
+
+  if (Array.isArray(x)) {
+    return `[${x[0] ? getType(x[0]) : &apos;?&apos;}]`;
+  }
+
+  if (typeof x.getType === &apos;function&apos;) {
+    return x.getType();
+  }
+
+  if (x.constructor &amp;&amp; x.constructor.name) {
+    return x.constructor.name;
+  }
+
+  return capitalize(typeof x);
+};
+
+
+/* ---------- Essential FP Functions ---------- */
+
+// NOTE A slightly pumped up version of `curry` which also keeps track of
+// whether a function was called partially or with all its arguments at once.
+// This is useful to provide insights during validation of exercises.
+function curry(fn) {
+  assert(
+    typeof fn === &apos;function&apos;,
+    typeMismatch(&apos;function -&gt; ?&apos;, [getType(fn), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;curry&apos;),
+  );
+
+  const arity = fn.length;
+
+  return namedAs(fn.name, function $curry(...args) {
+    $curry.partially = this &amp;&amp; this.partially;
+
+    if (args.length &lt; arity) {
+      return namedAs(fn.name, $curry.bind({ partially: true }, ...args));
+    }
+
+    return fn.call(this || { partially: false }, ...args);
+  });
+}
+
+
+// NOTE A slightly pumped up version of `compose` which also keeps track of the chain
+// of callees. In the end, a function created with `compose` holds a `callees` variable
+// with the list of all the callees&apos; names.
+// This is useful to provide insights during validation of exercises
+function compose(...fns) {
+  const n = fns.length;
+
+  return function $compose(...args) {
+    $compose.callees = [];
+
+    let $args = args;
+
+    for (let i = n - 1; i &gt;= 0; i -= 1) {
+      const fn = fns[i];
+
+      assert(
+        typeof fn === &apos;function&apos;,
+        `Invalid Composition: ${ordinal(n - i)} element in a composition isn&apos;t a function`,
+      );
+
+      $compose.callees.push(fn.name);
+      $args = [fn.call(null, ...$args)];
+    }
+
+    return $args[0];
+  };
+}
+
+
+/* ---------- Algebraic Data Structures ---------- */
+
+class Either {
+  static of(x) {
+    return new Right(x); // eslint-disable-line no-use-before-define
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+}
+
+
+class Left extends Either {
+  get isLeft() { // eslint-disable-line class-methods-use-this
+    return true;
+  }
+
+  get isRight() { // eslint-disable-line class-methods-use-this
+    return false;
+  }
+
+  ap() {
+    return this;
+  }
+
+  chain() {
+    return this;
+  }
+
+  inspect() {
+    return `Left(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Either ${getType(this.$value)} ?)`;
+  }
+
+  join() {
+    return this;
+  }
+
+  map() {
+    return this;
+  }
+
+  sequence(of) {
+    return of(this);
+  }
+
+  traverse(of, fn) {
+    return of(this);
+  }
+}
+
+
+class Right extends Either {
+  get isLeft() { // eslint-disable-line class-methods-use-this
+    return false;
+  }
+
+  get isRight() { // eslint-disable-line class-methods-use-this
+    return true;
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return fn(this.$value);
+  }
+
+  inspect() {
+    return `Right(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Either ? ${getType(this.$value)})`;
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  map(fn) {
+    return Either.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    fn(this.$value).map(Either.of);
+  }
+}
+
+
+class Identity {
+  static of(x) {
+    return new Identity(x);
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+
+  ap(f) {
+    return f.map(this.$value);
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return `Identity(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Identity ${getType(this.$value)})`;
+  }
+
+  join() {
+    return this.$value;
+  }
+
+  map(fn) {
+    return Identity.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return fn(this.$value).map(Identity.of);
+  }
+}
+
+class IO {
+  static of(x) {
+    return new IO(() =&gt; x);
+  }
+
+  constructor(io) {
+    assert(
+      typeof io === &apos;function&apos;,
+      &apos;invalid `io` operation given to IO constructor. Use `IO.of` if you want to lift a value in a default minimal IO context.&apos;,
+    );
+
+    this.unsafePerformIO = io;
+  }
+
+  ap(f) {
+    return this.chain(fn =&gt; f.map(fn));
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return `IO(${inspect(this.unsafePerformIO())})`;
+  }
+
+  getType() {
+    return `(IO ${getType(this.unsafePerformIO())})`;
+  }
+
+
+  join() {
+    return this.unsafePerformIO();
+  }
+
+  map(fn) {
+    return new IO(compose(fn, this.unsafePerformIO));
+  }
+}
+
+
+class Map {
+  constructor(x) {
+    assert(
+      typeof x === &apos;object&apos; &amp;&amp; x !== null,
+      &apos;tried to create `Map` with non object-like&apos;,
+    );
+
+    this.$value = x;
+  }
+
+  inspect() {
+    return `Map(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    const sample = this.$value[Object.keys(this.$value)[0]];
+
+    return `(Map String ${sample ? getType(sample) : &apos;?&apos;})`;
+  }
+
+  insert(k, v) {
+    const singleton = {};
+    singleton[k] = v;
+    return new Map(Object.assign({}, this.$value, singleton));
+  }
+
+  reduce(fn, zero) {
+    return this.reduceWithKeys((acc, _, k) =&gt; fn(acc, k), zero);
+  }
+
+  reduceWithKeys(fn, zero) {
+    return Object.keys(this.$value)
+      .reduce((acc, k) =&gt; fn(acc, this.$value[k], k), zero);
+  }
+
+  map(fn) {
+    return new Map(this.reduceWithKeys((obj, v, k) =&gt; {
+      obj[k] = fn(v); // eslint-disable-line no-param-reassign
+      return obj;
+    }, {}));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.reduceWithKeys(
+      (f, a, k) =&gt; fn(a).map(b =&gt; m =&gt; m.insert(k, b)).ap(f),
+      of(new Map({})),
+    );
+  }
+}
+
+
+class List {
+  static of(x) {
+    return new List([x]);
+  }
+
+  constructor(xs) {
+    assert(
+      Array.isArray(xs),
+      &apos;tried to create `List` from non-array&apos;,
+    );
+
+    this.$value = xs;
+  }
+
+  concat(x) {
+    return new List(this.$value.concat(x));
+  }
+
+  inspect() {
+    return `List(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    const sample = this.$value[0];
+
+    return `(List ${sample ? getType(sample) : &apos;?&apos;})`;
+  }
+
+  map(fn) {
+    return new List(this.$value.map(fn));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.$value.reduce(
+      (f, a) =&gt; fn(a).map(b =&gt; bs =&gt; bs.concat(b)).ap(f),
+      of(new List([])),
+    );
+  }
+}
+
+
+class Maybe {
+  static of(x) {
+    return new Maybe(x);
+  }
+
+  get isNothing() {
+    return this.$value === null || this.$value === undefined;
+  }
+
+  get isJust() {
+    return !this.isNothing;
+  }
+
+  constructor(x) {
+    this.$value = x;
+  }
+
+  ap(f) {
+    return this.isNothing ? this : f.map(this.$value);
+  }
+
+  chain(fn) {
+    return this.map(fn).join();
+  }
+
+  inspect() {
+    return this.isNothing ? &apos;Nothing&apos; : `Just(${inspect(this.$value)})`;
+  }
+
+  getType() {
+    return `(Maybe ${this.isJust ? getType(this.$value) : &apos;?&apos;})`;
+  }
+
+  join() {
+    return this.isNothing ? this : this.$value;
+  }
+
+  map(fn) {
+    return this.isNothing ? this : Maybe.of(fn(this.$value));
+  }
+
+  sequence(of) {
+    return this.traverse(of, x =&gt; x);
+  }
+
+  traverse(of, fn) {
+    return this.isNothing ? of(this) : fn(this.$value).map(Maybe.of);
+  }
+}
+
+
+class Task {
+  constructor(fork) {
+    assert(
+      typeof fork === &apos;function&apos;,
+      &apos;invalid `fork` operation given to Task constructor. Use `Task.of` if you want to lift a value in a default minimal Task context.&apos;,
+    );
+
+    this.fork = fork;
+  }
+
+  static of(x) {
+    return new Task((_, resolve) =&gt; resolve(x));
+  }
+
+  static rejected(x) {
+    return new Task((reject, _) =&gt; reject(x));
+  }
+
+  ap(f) {
+    return this.chain(fn =&gt; f.map(fn));
+  }
+
+  chain(fn) {
+    return new Task((reject, resolve) =&gt; this.fork(reject, x =&gt; fn(x).fork(reject, resolve)));
+  }
+
+  inspect() { // eslint-disable-line class-methods-use-this
+    return &apos;Task(?)&apos;;
+  }
+
+  getType() { // eslint-disable-line class-methods-use-this
+    return &apos;(Task ? ?)&apos;;
+  }
+
+  join() {
+    return this.chain(x =&gt; x);
+  }
+
+  map(fn) {
+    return new Task((reject, resolve) =&gt; this.fork(reject, compose(resolve, fn)));
+  }
+}
+
+// In nodejs the existance of a class method named `inspect` will trigger a deprecation warning
+// when passing an instance to `console.log`:
+// `(node:3845) [DEP0079] DeprecationWarning: Custom inspection function on Objects via .inspect() is deprecated`
+// The solution is to alias the existing inspect method with the special inspect symbol exported by node
+if (typeof module !== &apos;undefined&apos; &amp;&amp; typeof this !== &apos;undefined&apos; &amp;&amp; this.module !== module) {
+  const customInspect = require(&apos;util&apos;).inspect.custom;
+  const assignCustomInspect = it =&gt; it.prototype[customInspect] = it.prototype.inspect;
+  [Left, Right, Identity, IO, Map, List, Maybe, Task].forEach(assignCustomInspect);
+}
+
+const identity = function identity(x) { return x; };
+
+const either = curry(function either(f, g, e) {
+  if (e.isLeft) {
+    return f(e.$value);
+  }
+
+  return g(e.$value);
+});
+
+const left = function left(x) { return new Left(x); };
+
+const maybe = curry(function maybe(v, f, m) {
+  if (m.isNothing) {
+    return v;
+  }
+
+  return f(m.$value);
+});
+
+const nothing = Maybe.of(null);
+
+const reject = function reject(x) { return Task.rejected(x); };
+
+const chain = curry(function chain(fn, m) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; typeof m.chain === &apos;function&apos;,
+    typeMismatch(&apos;Monad m =&gt; (a -&gt; m b) -&gt; m a -&gt; m a&apos;, [getType(fn), getType(m), &apos;m a&apos;].join(&apos; -&gt; &apos;), &apos;chain&apos;),
+  );
+
+  return m.chain(fn);
+});
+
+const join = function join(m) {
+  assert(
+    typeof m.chain === &apos;function&apos;,
+    typeMismatch(&apos;Monad m =&gt; m (m a) -&gt; m a&apos;, [getType(m), &apos;m a&apos;].join(&apos; -&gt; &apos;), &apos;join&apos;),
+  );
+
+  return m.join();
+};
+
+const map = curry(function map(fn, f) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; typeof f.map === &apos;function&apos;,
+    typeMismatch(&apos;Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b&apos;, [getType(fn), getType(f), &apos;f b&apos;].join(&apos; -&gt; &apos;), &apos;map&apos;),
+  );
+
+  return f.map(fn);
+});
+
+const sequence = curry(function sequence(of, x) {
+  assert(
+    typeof of === &apos;function&apos; &amp;&amp; typeof x.sequence === &apos;function&apos;,
+    typeMismatch(&apos;(Applicative f, Traversable t) =&gt; (a -&gt; f a) -&gt; t (f a) -&gt; f (t a)&apos;, [getType(of), getType(x), &apos;f (t a)&apos;].join(&apos; -&gt; &apos;), &apos;sequence&apos;),
+  );
+
+  return x.sequence(of);
+});
+
+const traverse = curry(function traverse(of, fn, x) {
+  assert(
+    typeof of === &apos;function&apos; &amp;&amp; typeof fn === &apos;function&apos; &amp;&amp; typeof x.traverse === &apos;function&apos;,
+    typeMismatch(
+      &apos;(Applicative f, Traversable t) =&gt; (a -&gt; f a) -&gt; (a -&gt; f b) -&gt; t a -&gt; f (t b)&apos;,
+      [getType(of), getType(fn), getType(x), &apos;f (t b)&apos;].join(&apos; -&gt; &apos;),
+      &apos;traverse&apos;,
+    ),
+  );
+
+  return x.traverse(of, fn);
+});
+
+const unsafePerformIO = function unsafePerformIO(io) {
+  assert(
+    io instanceof IO,
+    typeMismatch(&apos;IO a&apos;, getType(io), &apos;unsafePerformIO&apos;),
+  );
+
+  return io.unsafePerformIO();
+};
+
+const liftA2 = curry(function liftA2(fn, a1, a2) {
+  assert(
+    typeof fn === &apos;function&apos;
+      &amp;&amp; typeof a1.map === &apos;function&apos;
+      &amp;&amp; typeof a2.ap === &apos;function&apos;,
+    typeMismatch(&apos;Applicative f =&gt; (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c&apos;, [getType(fn), getType(a1), getType(a2)].join(&apos; -&gt; &apos;), &apos;liftA2&apos;),
+  );
+
+  return a1.map(fn).ap(a2);
+});
+
+const liftA3 = curry(function liftA3(fn, a1, a2, a3) {
+  assert(
+    typeof fn === &apos;function&apos;
+      &amp;&amp; typeof a1.map === &apos;function&apos;
+      &amp;&amp; typeof a2.ap === &apos;function&apos;
+      &amp;&amp; typeof a3.ap === &apos;function&apos;,
+    typeMismatch(&apos;Applicative f =&gt; (a -&gt; b -&gt; c -&gt; d) -&gt; f a -&gt; f b -&gt; f c -&gt; f d&apos;, [getType(fn), getType(a1), getType(a2)].join(&apos; -&gt; &apos;), &apos;liftA2&apos;),
+  );
+
+  return a1.map(fn).ap(a2).ap(a3);
+});
+
+const always = curry(function always(a, b) { return a; });
+
+
+/* ---------- Pointfree Classic Utilities ---------- */
+
+const append = curry(function append(a, b) {
+  assert(
+    typeof a === &apos;string&apos; &amp;&amp; typeof b === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; String&apos;, [getType(a), getType(b), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;concat&apos;),
+  );
+
+  return b.concat(a);
+});
+
+const add = curry(function add(a, b) {
+  assert(
+    typeof a === &apos;number&apos; &amp;&amp; typeof b === &apos;number&apos;,
+    typeMismatch(&apos;Number -&gt; Number -&gt; Number&apos;, [getType(a), getType(b), &apos;Number&apos;].join(&apos; -&gt; &apos;), &apos;add&apos;),
+  );
+
+  return a + b;
+});
+
+const concat = curry(function concat(a, b) {
+  assert(
+    typeof a === &apos;string&apos; &amp;&amp; typeof b === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; String&apos;, [getType(a), getType(b), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;concat&apos;),
+  );
+
+  return a.concat(b);
+});
+
+const eq = curry(function eq(a, b) {
+  assert(
+    getType(a) === getType(b),
+    typeMismatch(&apos;a -&gt; a -&gt; Boolean&apos;, [getType(a), getType(b), &apos;Boolean&apos;].join(&apos; -&gt; &apos;), eq),
+  );
+
+  return a === b;
+});
+
+const filter = curry(function filter(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(a -&gt; Boolean) -&gt; [a] -&gt; [a]&apos;, [getType(fn), getType(xs), getType(xs)].join(&apos; -&gt; &apos;), &apos;filter&apos;),
+  );
+
+  return xs.filter(fn);
+});
+
+const flip = curry(function flip(fn, a, b) {
+  assert(
+    typeof fn === &apos;function&apos;,
+    typeMismatch(&apos;(a -&gt; b) -&gt; (b -&gt; a)&apos;, [getType(fn), &apos;(b -&gt; a)&apos;].join(&apos; -&gt; &apos;), &apos;flip&apos;),
+  );
+
+  return fn(b, a);
+});
+
+const forEach = curry(function forEach(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(a -&gt; ()) -&gt; [a] -&gt; ()&apos;, [getType(fn), getType(xs), &apos;()&apos;].join(&apos; -&gt; &apos;), &apos;forEach&apos;),
+  );
+
+  xs.forEach(fn);
+});
+
+const intercalate = curry(function intercalate(str, xs) {
+  assert(
+    typeof str === &apos;string&apos; &amp;&amp; Array.isArray(xs) &amp;&amp; (xs.length === 0 || typeof xs[0] === &apos;string&apos;),
+    typeMismatch(&apos;String -&gt; [String] -&gt; String&apos;, [getType(str), getType(xs), &apos;String&apos;].join(&apos; -&gt; &apos;), &apos;intercalate&apos;),
+  );
+
+  return xs.join(str);
+});
+
+const head = function head(xs) {
+  assert(
+    Array.isArray(xs) || typeof xs === &apos;string&apos;,
+    typeMismatch(&apos;[a] -&gt; a&apos;, [getType(xs), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;head&apos;),
+  );
+
+  return xs[0];
+};
+
+const last = function last(xs) {
+  assert(
+    Array.isArray(xs) || typeof xs === &apos;string&apos;,
+    typeMismatch(&apos;[a] -&gt; a&apos;, [getType(xs), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;last&apos;),
+  );
+
+  return xs[xs.length - 1];
+};
+
+const match = curry(function match(re, str) {
+  assert(
+    re instanceof RegExp &amp;&amp; typeof str === &apos;string&apos;,
+    typeMismatch(&apos;RegExp -&gt; String -&gt; Boolean&apos;, [getType(re), getType(str), &apos;Boolean&apos;].join(&apos; -&gt; &apos;), &apos;match&apos;),
+  );
+
+  return re.test(str);
+});
+
+const prop = curry(function prop(p, obj) {
+  assert(
+    typeof p === &apos;string&apos; &amp;&amp; typeof obj === &apos;object&apos; &amp;&amp; obj !== null,
+    typeMismatch(&apos;String -&gt; Object -&gt; a&apos;, [getType(p), getType(obj), &apos;a&apos;].join(&apos; -&gt; &apos;), &apos;prop&apos;),
+  );
+
+  return obj[p];
+});
+
+const reduce = curry(function reduce(fn, zero, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;(b -&gt; a -&gt; b) -&gt; b -&gt; [a] -&gt; b&apos;, [getType(fn), getType(zero), getType(xs), &apos;b&apos;].join(&apos; -&gt; &apos;), &apos;reduce&apos;),
+  );
+
+  return xs.reduce(
+    function $reduceIterator($acc, $x) { return fn($acc, $x); },
+    zero,
+  );
+});
+
+const safeHead = namedAs(&apos;safeHead&apos;, compose(Maybe.of, head));
+
+const safeProp = curry(function safeProp(p, obj) { return Maybe.of(prop(p, obj)); });
+
+const sortBy = curry(function sortBy(fn, xs) {
+  assert(
+    typeof fn === &apos;function&apos; &amp;&amp; Array.isArray(xs),
+    typeMismatch(&apos;Ord b =&gt; (a -&gt; b) -&gt; [a] -&gt; [a]&apos;, [getType(fn), getType(xs), &apos;[a]&apos;].join(&apos; -&gt; &apos;), &apos;sortBy&apos;),
+  );
+
+  return xs.sort((a, b) =&gt; {
+    if (fn(a) === fn(b)) {
+      return 0;
+    }
+
+    return fn(a) &gt; fn(b) ? 1 : -1;
+  });
+});
+
+const split = curry(function split(s, str) {
+  assert(
+    typeof s === &apos;string&apos; &amp;&amp; typeof str === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String -&gt; [String]&apos;, [getType(s), getType(str), &apos;[String]&apos;].join(&apos; -&gt; &apos;), &apos;split&apos;),
+  );
+
+  return str.split(s);
+});
+
+const take = curry(function take(n, xs) {
+  assert(
+    typeof n === &apos;number&apos; &amp;&amp; (Array.isArray(xs) || typeof xs === &apos;string&apos;),
+    typeMismatch(&apos;Number -&gt; [a] -&gt; [a]&apos;, [getType(n), getType(xs), getType(xs)].join(&apos; -&gt; &apos;), &apos;take&apos;),
+  );
+
+  return xs.slice(0, n);
+});
+
+const toLowerCase = function toLowerCase(s) {
+  assert(
+    typeof s === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String&apos;, [getType(s), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;toLowerCase&apos;),
+  );
+
+  return s.toLowerCase();
+};
+
+const toUpperCase = function toUpperCase(s) {
+  assert(
+    typeof s === &apos;string&apos;,
+    typeMismatch(&apos;String -&gt; String&apos;, [getType(s), &apos;?&apos;].join(&apos; -&gt; &apos;), &apos;toLowerCase&apos;),
+  );
+
+  return s.toUpperCase();
+};
+
+
+/* ---------- Chapter 4 ---------- */
+
+const keepHighest = function keepHighest(x, y) {
+  try {
+    keepHighest.calledBy = keepHighest.caller;
+  } catch (err) {
+    // NOTE node.js runs in strict mode and prohibit the usage of &apos;.caller&apos;
+    // There&apos;s a ugly hack to retrieve the caller from stack trace.
+    const [, caller] = /at (\S+)/.exec(err.stack.split(&apos;\n&apos;)[2]);
+
+    keepHighest.calledBy = namedAs(caller, () =&gt; {});
+  }
+
+  return x &gt;= y ? x : y;
+};
+
+
+/* ---------- Chapter 5 ---------- */
+
+const cars = [{
+  name: &apos;Ferrari FF&apos;,
+  horsepower: 660,
+  dollar_value: 700000,
+  in_stock: true,
+}, {
+  name: &apos;Spyker C12 Zagato&apos;,
+  horsepower: 650,
+  dollar_value: 648000,
+  in_stock: false,
+}, {
+  name: &apos;Jaguar XKR-S&apos;,
+  horsepower: 550,
+  dollar_value: 132000,
+  in_stock: true,
+}, {
+  name: &apos;Audi R8&apos;,
+  horsepower: 525,
+  dollar_value: 114200,
+  in_stock: false,
+}, {
+  name: &apos;Aston Martin One-77&apos;,
+  horsepower: 750,
+  dollar_value: 1850000,
+  in_stock: true,
+}, {
+  name: &apos;Pagani Huayra&apos;,
+  horsepower: 700,
+  dollar_value: 1300000,
+  in_stock: false,
+}];
+
+const average = function average(xs) {
+  return xs.reduce(add, 0) / xs.length;
+};
+
+
+/* ---------- Chapter 8 ---------- */
+
+const albert = {
+  id: 1,
+  active: true,
+  name: &apos;Albert&apos;,
+  address: {
+    street: {
+      number: 22,
+      name: &apos;Walnut St&apos;,
+    },
+  },
+};
+
+const gary = {
+  id: 2,
+  active: false,
+  name: &apos;Gary&apos;,
+  address: {
+    street: {
+      number: 14,
+    },
+  },
+};
+
+const theresa = {
+  id: 3,
+  active: true,
+  name: &apos;Theresa&apos;,
+};
+
+const yi = { id: 4, name: &apos;Yi&apos;, active: true };
+
+const showWelcome = namedAs(&apos;showWelcome&apos;, compose(concat(&apos;Welcome &apos;), prop(&apos;name&apos;)));
+
+const checkActive = function checkActive(user) {
+  return user.active
+    ? Either.of(user)
+    : left(&apos;Your account is not active&apos;);
+};
+
+const save = function save(user) {
+  return new IO(() =&gt; Object.assign({}, user, { saved: true }));
+};
+
+const validateUser = curry(function validateUser(validate, user) {
+  return validate(user).map(_ =&gt; user); // eslint-disable-line no-unused-vars
+});
+
+
+/* ---------- Chapter 9 ---------- */
+
+const getFile = IO.of(&apos;/home/mostly-adequate/ch09.md&apos;);
+
+const pureLog = function pureLog(str) { return new IO(() =&gt; { console.log(str); return str; }); };
+
+const addToMailingList = function addToMailingList(email) { return IO.of([email]); };
+
+const emailBlast = function emailBlast(list) { return IO.of(list.join(&apos;,&apos;)); };
+
+const validateEmail = function validateEmail(x) {
+  return /\S+@\S+\.\S+/.test(x)
+    ? Either.of(x)
+    : left(&apos;invalid email&apos;);
+};
+
+
+/* ---------- Chapter 10 ---------- */
+
+const localStorage = { player1: albert, player2: theresa };
+
+const game = curry(function game(p1, p2) { return `${p1.name} vs ${p2.name}`; });
+
+const getFromCache = function getFromCache(x) { return new IO(() =&gt; localStorage[x]); };
+
+
+/* ---------- Chapter 11 ---------- */
+
+const findUserById = function findUserById(id) {
+  switch (id) {
+    case 1:
+      return Task.of(Either.of(albert));
+
+    case 2:
+      return Task.of(Either.of(gary));
+
+    case 3:
+      return Task.of(Either.of(theresa));
+
+    default:
+      return Task.of(left(&apos;not found&apos;));
+  }
+};
+
+const eitherToTask = namedAs(&apos;eitherToTask&apos;, either(Task.rejected, Task.of));
+
+
+/* ---------- Chapter 12 ---------- */
+
+const httpGet = function httpGet(route) { return Task.of(`json for ${route}`); };
+
+const routes = new Map({
+  &apos;/&apos;: &apos;/&apos;,
+  &apos;/about&apos;: &apos;/about&apos;,
+});
+
+const validate = function validate(player) {
+  return player.name
+    ? Either.of(player)
+    : left(&apos;must have name&apos;);
+};
+
+const readdir = function readdir(dir) {
+  return Task.of([&apos;file1&apos;, &apos;file2&apos;, &apos;file3&apos;]);
+};
+
+const readfile = curry(function readfile(encoding, file) {
+  return Task.of(`content of ${file} (${encoding})`);
+});
+
+
+/* ---------- Exports ---------- */
+
+if (typeof module === &apos;object&apos;) {
+  module.exports = {
+    // Utils
+    withSpyOn,
+
+    // Essential FP helpers
+    always,
+    compose,
+    curry,
+    either,
+    identity,
+    inspect,
+    left,
+    liftA2,
+    liftA3,
+    maybe,
+    nothing,
+    reject,
+
+    // Algebraic Data Structures
+    Either,
+    IO,
+    Identity,
+    Left,
+    List,
+    Map,
+    Maybe,
+    Right,
+    Task,
+
+    // Currified version of &apos;standard&apos; functions
+    append,
+    add,
+    chain,
+    concat,
+    eq,
+    filter,
+    flip,
+    forEach,
+    head,
+    intercalate,
+    join,
+    last,
+    map,
+    match,
+    prop,
+    reduce,
+    safeHead,
+    safeProp,
+    sequence,
+    sortBy,
+    split,
+    take,
+    toLowerCase,
+    toUpperCase,
+    traverse,
+    unsafePerformIO,
+
+    // Chapter 04
+    keepHighest,
+
+    // Chapter 05
+    cars,
+    average,
+
+    // Chapter 08
+    albert,
+    gary,
+    theresa,
+    yi,
+    showWelcome,
+    checkActive,
+    save,
+    validateUser,
+
+    // Chapter 09
+    getFile,
+    pureLog,
+    addToMailingList,
+    emailBlast,
+    validateEmail,
+
+    // Chapter 10
+    localStorage,
+    getFromCache,
+    game,
+
+    // Chapter 11
+    findUserById,
+    eitherToTask,
+
+    // Chapter 12
+    httpGet,
+    routes,
+    validate,
+    readdir,
+    readfile,
+  };
+}</pre>
+	
+
+	<div class="buttons">
+	    <a href="#" class="button size-2 action-submit">Submit</a>
+	    <a href="#" class="button size-2 action-solution">Solution</a>
+	</div>
+</div></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ch03-kr.html#요약" class="navigation navigation-prev " aria-label="Previous page: 요약">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ch04-kr.html#cant-live-if-livin-is-without-you" class="navigation navigation-next " aria-label="Next page: Can't Live If Livin' Is without You">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04 장: 커링","level":"1.5","depth":1,"next":{"title":"Can't Live If Livin' Is without You","level":"1.5.1","depth":2,"anchor":"#cant-live-if-livin-is-without-you","path":"ch04-kr.md","ref":"ch04-kr.md#cant-live-if-livin-is-without-you","articles":[]},"previous":{"title":"요약","level":"1.4.5","depth":2,"anchor":"#요약","path":"ch03-kr.md","ref":"ch03-kr.md#요약","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises@git+https://github.com/MostlyAdequate/plugin-exercises.git","include-codeblock@3.1.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"cover":"images/cover.png","title":"Professor Frisby's Mostly Adequate Guide to Functional Programming","gitbook":"3.2.2"},"file":{"path":"ch04-kr.md","mtime":"2023-03-16T13:34:28.228Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2023-03-16T13:35:26.336Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

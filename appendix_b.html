@@ -1,0 +1,2504 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Appendix B: Algebraic Structures Support · Professor Frisby's Mostly Adequate Guide to Functional Programming</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="appendix_b.html" />
+    
+    
+    <link rel="prev" href="appendix_a.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html">
+            
+                    
+                    01 장: 우리는 무엇을 하고 있나?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#소개">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#짧은-만남">
+            
+                    
+                    짧은 만남
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html">
+            
+                    
+                    02 장: 일급 함수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#복습-시간">
+            
+                    
+                    복습 시간
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#일급-함수의-장점">
+            
+                    
+                    일급 함수의 장점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html">
+            
+                    
+                    03 장: 순수 함수와 순수한 기쁨을
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#한번-더-순수함에-대하여">
+            
+                    
+                    한번 더 순수함에 대하여
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#부수효과는-를-포함할-수-있어요">
+            
+                    
+                    부수효과는 ...를 포함할 수 있어요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#중학교-2학년-수학">
+            
+                    
+                    중학교 2학년 수학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#순수성의-예">
+            
+                    
+                    순수성의 예
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html">
+            
+                    
+                    04 장: 커링
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#cant-live-if-livin-is-without-you">
+            
+                    
+                    Can't Live If Livin' Is without You
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#말장난-조금-더--특별한-소스">
+            
+                    
+                    말장난 조금 더 / 특별한 소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    연습문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch05.html">
+            
+                <a href="ch05.html">
+            
+                    
+                    Chapter 05: Coding by Composing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="ch05.html">
+            
+                <a href="ch05.html#functional-husbandry">
+            
+                    
+                    Functional Husbandry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="ch05.html">
+            
+                <a href="ch05.html#pointfree">
+            
+                    
+                    Pointfree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="ch05.html">
+            
+                <a href="ch05.html#debugging">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="ch05.html">
+            
+                <a href="ch05.html#category-theory">
+            
+                    
+                    Category Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="ch05.html">
+            
+                <a href="ch05.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="ch05.html">
+            
+                <a href="ch05.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    Chapter 06: Example Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ch06.html">
+            
+                <a href="ch06.html#declarative-coding">
+            
+                    
+                    Declarative Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ch06.html">
+            
+                <a href="ch06.html#a-flickr-of-functional-programming">
+            
+                    
+                    A Flickr of Functional Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="ch06.html">
+            
+                <a href="ch06.html#a-principled-refactor">
+            
+                    
+                    A Principled Refactor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="ch06.html">
+            
+                <a href="ch06.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html">
+            
+                    
+                    07 장: 힌들리-밀너와 나
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#당신은-무슨-타입인가요">
+            
+                    
+                    당신은 무슨 타입인가요?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#비밀-이야기">
+            
+                    
+                    비밀 이야기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#가능성을-높이기">
+            
+                    
+                    가능성을 높이기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#공짜로-정리-얻기">
+            
+                    
+                    공짜로 정리 얻기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#제약">
+            
+                    
+                    제약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    Chapter 08: Tupperware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="ch08.html">
+            
+                <a href="ch08.html#the-mighty-container">
+            
+                    
+                    The Mighty Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ch08.html">
+            
+                <a href="ch08.html#my-first-functor">
+            
+                    
+                    My First Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ch08.html">
+            
+                <a href="ch08.html#schrödingers-maybe">
+            
+                    
+                    Schrödinger's Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ch08.html">
+            
+                <a href="ch08.html#use-cases">
+            
+                    
+                    Use Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ch08.html">
+            
+                <a href="ch08.html#releasing-the-value">
+            
+                    
+                    Releasing the Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ch08.html">
+            
+                <a href="ch08.html#pure-error-handling">
+            
+                    
+                    Pure Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ch08.html">
+            
+                <a href="ch08.html#old-mcdonald-had-effects">
+            
+                    
+                    Old McDonald Had Effects...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ch08.html">
+            
+                <a href="ch08.html#asynchronous-tasks">
+            
+                    
+                    Asynchronous Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ch08.html">
+            
+                <a href="ch08.html#a-spot-of-theory">
+            
+                    
+                    A Spot of Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ch08.html">
+            
+                <a href="ch08.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ch08.html">
+            
+                <a href="ch08.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    Chapter 09: Monadic Onions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="ch09.html">
+            
+                <a href="ch09.html#pointy-functor-factory">
+            
+                    
+                    Pointy Functor Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="ch09.html">
+            
+                <a href="ch09.html#mixing-metaphors">
+            
+                    
+                    Mixing Metaphors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="ch09.html">
+            
+                <a href="ch09.html#my-chain-hits-my-chest">
+            
+                    
+                    My Chain Hits My Chest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="ch09.html">
+            
+                <a href="ch09.html#power-trip">
+            
+                    
+                    Power Trip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="ch09.html">
+            
+                <a href="ch09.html#theory">
+            
+                    
+                    Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="ch09.html">
+            
+                <a href="ch09.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="ch09.html">
+            
+                <a href="ch09.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    Chapter 10: Applicative Functors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="ch10.html">
+            
+                <a href="ch10.html#applying-applicatives">
+            
+                    
+                    Applying Applicatives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ch10.html">
+            
+                <a href="ch10.html#ships-in-bottles">
+            
+                    
+                    Ships in Bottles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="ch10.html">
+            
+                <a href="ch10.html#coordination-motivation">
+            
+                    
+                    Coordination Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="ch10.html">
+            
+                <a href="ch10.html#bro-do-you-even-lift">
+            
+                    
+                    Bro, Do You Even Lift?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="ch10.html">
+            
+                <a href="ch10.html#operators">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="ch10.html">
+            
+                <a href="ch10.html#free-can-openers">
+            
+                    
+                    Free Can Openers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="ch10.html">
+            
+                <a href="ch10.html#laws">
+            
+                    
+                    Laws
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="ch10.html">
+            
+                <a href="ch10.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="ch10.html">
+            
+                <a href="ch10.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    Chapter 11: Transform Again, Naturally
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="ch11.html">
+            
+                <a href="ch11.html#curse-this-nest">
+            
+                    
+                    Curse This Nest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="ch11.html">
+            
+                <a href="ch11.html#a-situational-comedy">
+            
+                    
+                    A Situational Comedy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="ch11.html">
+            
+                <a href="ch11.html#all-natural">
+            
+                    
+                    All Natural
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="ch11.html">
+            
+                <a href="ch11.html#principled-type-conversions">
+            
+                    
+                    Principled Type Conversions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="ch11.html">
+            
+                <a href="ch11.html#feature-envy">
+            
+                    
+                    Feature Envy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="ch11.html">
+            
+                <a href="ch11.html#isomorphic-javascript">
+            
+                    
+                    Isomorphic JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="ch11.html">
+            
+                <a href="ch11.html#a-broader-definition">
+            
+                    
+                    A Broader Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="ch11.html">
+            
+                <a href="ch11.html#one-nesting-solution">
+            
+                    
+                    One Nesting Solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="ch11.html">
+            
+                <a href="ch11.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="ch11.html">
+            
+                <a href="ch11.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    Chapter 12: Traversing the Stone
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="ch12.html">
+            
+                <a href="ch12.html#types-n-types">
+            
+                    
+                    Types n' Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="ch12.html">
+            
+                <a href="ch12.html#type-feng-shui">
+            
+                    
+                    Type Feng Shui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="ch12.html">
+            
+                <a href="ch12.html#effect-assortment">
+            
+                    
+                    Effect Assortment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="ch12.html">
+            
+                <a href="ch12.html#waltz-of-the-types">
+            
+                    
+                    Waltz of the Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="ch12.html">
+            
+                <a href="ch12.html#no-law-and-order">
+            
+                    
+                    No Law and Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="ch12.html">
+            
+                <a href="ch12.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="ch12.html">
+            
+                <a href="ch12.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html">
+            
+                    
+                    Appendix A: Essential Functions Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#always">
+            
+                    
+                    always
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#compose">
+            
+                    
+                    compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#curry">
+            
+                    
+                    curry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#either">
+            
+                    
+                    either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#identity">
+            
+                    
+                    identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#inspect">
+            
+                    
+                    inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#left">
+            
+                    
+                    left
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#lifta">
+            
+                    
+                    liftA*
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#maybe">
+            
+                    
+                    maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#nothing">
+            
+                    
+                    nothing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#reject">
+            
+                    
+                    reject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html">
+            
+                    
+                    Appendix B: Algebraic Structures Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#compose">
+            
+                    
+                    Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#either">
+            
+                    
+                    Either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#identity">
+            
+                    
+                    Identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#io">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#list">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#map">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#maybe">
+            
+                    
+                    Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#task">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html">
+            
+                    
+                    Appendix C: Pointfree Utilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#add">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#append">
+            
+                    
+                    append
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#chain">
+            
+                    
+                    chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#concat">
+            
+                    
+                    concat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#eq">
+            
+                    
+                    eq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#filter">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#flip">
+            
+                    
+                    flip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#foreach">
+            
+                    
+                    forEach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#head">
+            
+                    
+                    head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#intercalate">
+            
+                    
+                    intercalate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#join">
+            
+                    
+                    join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#last">
+            
+                    
+                    last
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#map">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#match">
+            
+                    
+                    match
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#prop">
+            
+                    
+                    prop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#reduce">
+            
+                    
+                    reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#replace">
+            
+                    
+                    replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.18" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safehead">
+            
+                    
+                    safeHead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.19" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safelast">
+            
+                    
+                    safeLast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.20" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safeprop">
+            
+                    
+                    safeProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.21" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sequence">
+            
+                    
+                    sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.22" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sortby">
+            
+                    
+                    sortBy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.23" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#split">
+            
+                    
+                    split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.24" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#take">
+            
+                    
+                    take
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.25" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tolowercase">
+            
+                    
+                    toLowerCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.26" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tostring">
+            
+                    
+                    toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.27" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#touppercase">
+            
+                    
+                    toUpperCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.28" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#traverse">
+            
+                    
+                    traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.29" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#unsafeperformio">
+            
+                    
+                    unsafePerformIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Appendix B: Algebraic Structures Support</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="appendix-b-algebraic-structures-support">Appendix B: Algebraic Structures Support</h1>
+<p>In this appendix, you&apos;ll find some basic JavaScript implementations of various algebraic
+structures described in the book. Keep in mind that these implementations may not be the fastest or the
+most efficient implementation out there; they <em>solely serve an educational purpose</em>.</p>
+<p>In order to find structures that are more production-ready, have a peek at <a href="http://folktale.origamitower.com/" target="_blank">folktale</a>
+or <a href="https://github.com/fantasyland" target="_blank">fantasy-land</a>.</p>
+<p>Note that some methods also refer to functions defined in the <a href="appendix_a.html">Appendix A</a></p>
+<h2 id="compose">Compose</h2>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> createCompose = curry((F, G) =&gt; <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Compose</span> </span>{
+  <span class="hljs-keyword">constructor</span>(x) {
+    <span class="hljs-keyword">this</span>.$value = x;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`Compose(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  <span class="hljs-comment">// ----- Pointed (Compose F G)</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Compose(F(G(x)));
+  }
+
+  <span class="hljs-comment">// ----- Functor (Compose F G)</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Compose(<span class="hljs-keyword">this</span>.$value.map(x =&gt; x.map(fn)));
+  }
+
+  <span class="hljs-comment">// ----- Applicative (Compose F G)</span>
+  ap(f) {
+    <span class="hljs-keyword">return</span> f.map(<span class="hljs-keyword">this</span>.$value);
+  }
+});
+</code></pre>
+<h2 id="either">Either</h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Either</span> </span>{
+  <span class="hljs-keyword">constructor</span>(x) {
+    <span class="hljs-keyword">this</span>.$value = x;
+  }
+
+  <span class="hljs-comment">// ----- Pointed (Either a)</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Right(x);
+  }
+}
+</code></pre>
+<h4 id="left">Left</h4>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Left</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Either</span> </span>{
+  get isLeft() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  get isRight() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;`of` called on class Left (value) instead of Either (type)&apos;</span>);
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`Left(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  <span class="hljs-comment">// ----- Functor (Either a)</span>
+  map() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  }
+
+  <span class="hljs-comment">// ----- Applicative (Either a)</span>
+  ap() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  }
+
+  <span class="hljs-comment">// ----- Monad (Either a)</span>
+  chain() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  }
+
+  join() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>;
+  }
+
+  <span class="hljs-comment">// ----- Traversable (Either a)</span>
+  sequence(<span class="hljs-keyword">of</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">of</span>(<span class="hljs-keyword">this</span>);
+  }
+
+  traverse(<span class="hljs-keyword">of</span>, fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">of</span>(<span class="hljs-keyword">this</span>);
+  }
+}
+</code></pre>
+<h4 id="right">Right</h4>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Right</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Either</span> </span>{
+  get isLeft() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  }
+
+  get isRight() {
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
+  }
+
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">&apos;`of` called on class Right (value) instead of Either (type)&apos;</span>);
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`Right(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  <span class="hljs-comment">// ----- Functor (Either a)</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> Either.of(fn(<span class="hljs-keyword">this</span>.$value));
+  }
+
+  <span class="hljs-comment">// ----- Applicative (Either a)</span>
+  ap(f) {
+    <span class="hljs-keyword">return</span> f.map(<span class="hljs-keyword">this</span>.$value);
+  }
+
+  <span class="hljs-comment">// ----- Monad (Either a)</span>
+  chain(fn) {
+    <span class="hljs-keyword">return</span> fn(<span class="hljs-keyword">this</span>.$value);
+  }
+
+  join() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$value;
+  }
+
+  <span class="hljs-comment">// ----- Traversable (Either a)</span>
+  sequence(<span class="hljs-keyword">of</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.traverse(<span class="hljs-keyword">of</span>, identity);
+  }
+
+  traverse(<span class="hljs-keyword">of</span>, fn) {
+    <span class="hljs-keyword">return</span> fn(<span class="hljs-keyword">this</span>.$value).map(Either.of);
+  }
+}
+</code></pre>
+<h2 id="identity">Identity</h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Identity</span> </span>{
+  <span class="hljs-keyword">constructor</span>(x) {
+    <span class="hljs-keyword">this</span>.$value = x;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`Identity(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  <span class="hljs-comment">// ----- Pointed Identity</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Identity(x);
+  }
+
+  <span class="hljs-comment">// ----- Functor Identity</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> Identity.of(fn(<span class="hljs-keyword">this</span>.$value));
+  }
+
+  <span class="hljs-comment">// ----- Applicative Identity</span>
+  ap(f) {
+    <span class="hljs-keyword">return</span> f.map(<span class="hljs-keyword">this</span>.$value);
+  }
+
+  <span class="hljs-comment">// ----- Monad Identity</span>
+  chain(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.map(fn).join();
+  }
+
+  join() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$value;
+  }
+
+  <span class="hljs-comment">// ----- Traversable Identity</span>
+  sequence(<span class="hljs-keyword">of</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.traverse(<span class="hljs-keyword">of</span>, identity);
+  }
+
+  traverse(<span class="hljs-keyword">of</span>, fn) {
+    <span class="hljs-keyword">return</span> fn(<span class="hljs-keyword">this</span>.$value).map(Identity.of);
+  }
+}
+</code></pre>
+<h2 id="io">IO</h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IO</span> </span>{
+  <span class="hljs-keyword">constructor</span>(fn) {
+    <span class="hljs-keyword">this</span>.unsafePerformIO = fn;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;IO(?)&apos;</span>;
+  }
+
+  <span class="hljs-comment">// ----- Pointed IO</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> IO(() =&gt; x);
+  }
+
+  <span class="hljs-comment">// ----- Functor IO</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> IO(compose(fn, <span class="hljs-keyword">this</span>.unsafePerformIO));
+  }
+
+  <span class="hljs-comment">// ----- Applicative IO</span>
+  ap(f) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.chain(fn =&gt; f.map(fn));
+  }
+
+  <span class="hljs-comment">// ----- Monad IO</span>
+  chain(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.map(fn).join();
+  }
+
+  join() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> IO(() =&gt; <span class="hljs-keyword">this</span>.unsafePerformIO().unsafePerformIO());
+  }
+}
+</code></pre>
+<h2 id="list">List</h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">List</span> </span>{
+  <span class="hljs-keyword">constructor</span>(xs) {
+    <span class="hljs-keyword">this</span>.$value = xs;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`List(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  concat(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> List(<span class="hljs-keyword">this</span>.$value.concat(x));
+  }
+
+  <span class="hljs-comment">// ----- Pointed List</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> List([x]);
+  }
+
+  <span class="hljs-comment">// ----- Functor List</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> List(<span class="hljs-keyword">this</span>.$value.map(fn));
+  }
+
+  <span class="hljs-comment">// ----- Traversable List</span>
+  sequence(<span class="hljs-keyword">of</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.traverse(<span class="hljs-keyword">of</span>, identity);
+  }
+
+  traverse(<span class="hljs-keyword">of</span>, fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$value.reduce(
+      (f, a) =&gt; fn(a).map(b =&gt; bs =&gt; bs.concat(b)).ap(f),
+      <span class="hljs-keyword">of</span>(<span class="hljs-keyword">new</span> List([])),
+    );
+  }
+}
+</code></pre>
+<h2 id="map">Map</h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Map</span> </span>{
+  <span class="hljs-keyword">constructor</span>(x) {
+    <span class="hljs-keyword">this</span>.$value = x;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`Map(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  insert(k, v) {
+    <span class="hljs-keyword">const</span> singleton = {};
+    singleton[k] = v;
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Map</span>.of(<span class="hljs-built_in">Object</span>.assign({}, <span class="hljs-keyword">this</span>.$value, singleton));
+  }
+
+  reduceWithKeys(fn, zero) {
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Object</span>.keys(<span class="hljs-keyword">this</span>.$value)
+      .reduce((acc, k) =&gt; fn(acc, <span class="hljs-keyword">this</span>.$value[k], k), zero);
+  }
+
+  <span class="hljs-comment">// ----- Functor (Map a)</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.reduceWithKeys(
+      (m, v, k) =&gt; m.insert(k, fn(v)),
+      <span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>({}),
+    );
+  }
+
+  <span class="hljs-comment">// ----- Traversable (Map a)</span>
+  sequence(<span class="hljs-keyword">of</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.traverse(<span class="hljs-keyword">of</span>, identity);
+  }
+
+  traverse(<span class="hljs-keyword">of</span>, fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.reduceWithKeys(
+      (f, a, k) =&gt; fn(a).map(b =&gt; m =&gt; m.insert(k, b)).ap(f),
+      <span class="hljs-keyword">of</span>(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>({})),
+    );
+  }
+}
+</code></pre>
+<h2 id="maybe">Maybe</h2>
+<blockquote>
+<p>Note that <code>Maybe</code> could also be defined in a similar fashion as we did for <code>Either</code> with two 
+child classes <code>Just</code> and <code>Nothing</code>. This is simply a different flavor.</p>
+</blockquote>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Maybe</span> </span>{
+  get isNothing() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$value === <span class="hljs-literal">null</span> || <span class="hljs-keyword">this</span>.$value === <span class="hljs-literal">undefined</span>;
+  }
+
+  get isJust() {
+    <span class="hljs-keyword">return</span> !<span class="hljs-keyword">this</span>.isNothing;
+  }
+
+  <span class="hljs-keyword">constructor</span>(x) {
+    <span class="hljs-keyword">this</span>.$value = x;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isNothing ? <span class="hljs-string">&apos;Nothing&apos;</span> : <span class="hljs-string">`Just(<span class="hljs-subst">${inspect(this.$value)}</span>)`</span>;
+  }
+
+  <span class="hljs-comment">// ----- Pointed Maybe</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Maybe(x);
+  }
+
+  <span class="hljs-comment">// ----- Functor Maybe</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isNothing ? <span class="hljs-keyword">this</span> : Maybe.of(fn(<span class="hljs-keyword">this</span>.$value));
+  }
+
+  <span class="hljs-comment">// ----- Applicative Maybe</span>
+  ap(f) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isNothing ? <span class="hljs-keyword">this</span> : f.map(<span class="hljs-keyword">this</span>.$value);
+  }
+
+  <span class="hljs-comment">// ----- Monad Maybe</span>
+  chain(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.map(fn).join();
+  }
+
+  join() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isNothing ? <span class="hljs-keyword">this</span> : <span class="hljs-keyword">this</span>.$value;
+  }
+
+  <span class="hljs-comment">// ----- Traversable Maybe</span>
+  sequence(<span class="hljs-keyword">of</span>) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.traverse(<span class="hljs-keyword">of</span>, identity);
+  }
+
+  traverse(<span class="hljs-keyword">of</span>, fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.isNothing ? <span class="hljs-keyword">of</span>(<span class="hljs-keyword">this</span>) : fn(<span class="hljs-keyword">this</span>.$value).map(Maybe.of);
+  }
+}
+</code></pre>
+<h2 id="task">Task</h2>
+<pre><code class="lang-js"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+  <span class="hljs-keyword">constructor</span>(fork) {
+    <span class="hljs-keyword">this</span>.fork = fork;
+  }
+
+  [util.inspect.custom]() {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;Task(?)&apos;</span>;
+  }
+
+  <span class="hljs-keyword">static</span> rejected(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Task((reject, _) =&gt; reject(x));
+  }
+
+  <span class="hljs-comment">// ----- Pointed (Task a)</span>
+  <span class="hljs-keyword">static</span> <span class="hljs-keyword">of</span>(x) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Task((_, resolve) =&gt; resolve(x));
+  }
+
+  <span class="hljs-comment">// ----- Functor (Task a)</span>
+  map(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Task((reject, resolve) =&gt; <span class="hljs-keyword">this</span>.fork(reject, compose(resolve, fn)));
+  }
+
+  <span class="hljs-comment">// ----- Applicative (Task a)</span>
+  ap(f) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.chain(fn =&gt; f.map(fn));
+  }
+
+  <span class="hljs-comment">// ----- Monad (Task a)</span>
+  chain(fn) {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Task((reject, resolve) =&gt; <span class="hljs-keyword">this</span>.fork(reject, x =&gt; fn(x).fork(reject, resolve)));
+  }
+
+  join() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.chain(identity);
+  }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="appendix_a.html#reject" class="navigation navigation-prev " aria-label="Previous page: reject">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="appendix_b.html#compose" class="navigation navigation-next " aria-label="Next page: Compose">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Appendix B: Algebraic Structures Support","level":"1.15","depth":1,"next":{"title":"Compose","level":"1.15.1","depth":2,"anchor":"#compose","path":"appendix_b.md","ref":"appendix_b.md#compose","articles":[]},"previous":{"title":"reject","level":"1.14.11","depth":2,"anchor":"#reject","path":"appendix_a.md","ref":"appendix_a.md#reject","articles":[]},"dir":"ltr"},"config":{"plugins":["exercises@git+https://github.com/MostlyAdequate/plugin-exercises.git","include-codeblock@3.1.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"cover":"images/cover.png","title":"Professor Frisby's Mostly Adequate Guide to Functional Programming","gitbook":"3.2.2"},"file":{"path":"appendix_b.md","mtime":"2023-03-16T13:34:28.228Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2023-03-16T13:35:26.336Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+

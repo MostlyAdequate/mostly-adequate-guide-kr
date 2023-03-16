@@ -1,0 +1,2181 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Introduction · Professor Frisby's Mostly Adequate Guide to Functional Programming</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-exercises/exercises.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ch01-kr.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html">
+            
+                    
+                    01 장: 우리는 무엇을 하고 있나?
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#소개">
+            
+                    
+                    소개
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ch01-kr.html">
+            
+                <a href="ch01-kr.html#짧은-만남">
+            
+                    
+                    짧은 만남
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html">
+            
+                    
+                    02 장: 일급 함수
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#복습-시간">
+            
+                    
+                    복습 시간
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="ch02-kr.html">
+            
+                <a href="ch02-kr.html#일급-함수의-장점">
+            
+                    
+                    일급 함수의 장점
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html">
+            
+                    
+                    03 장: 순수 함수와 순수한 기쁨을
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#한번-더-순수함에-대하여">
+            
+                    
+                    한번 더 순수함에 대하여
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#부수효과는-를-포함할-수-있어요">
+            
+                    
+                    부수효과는 ...를 포함할 수 있어요
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#중학교-2학년-수학">
+            
+                    
+                    중학교 2학년 수학
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#순수성의-예">
+            
+                    
+                    순수성의 예
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="ch03-kr.html">
+            
+                <a href="ch03-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html">
+            
+                    
+                    04 장: 커링
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#cant-live-if-livin-is-without-you">
+            
+                    
+                    Can't Live If Livin' Is without You
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="ch04-kr.html">
+            
+                <a href="ch04-kr.html#말장난-조금-더--특별한-소스">
+            
+                    
+                    말장난 조금 더 / 특별한 소스
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="ch04.md-kr">
+            
+                <span>
+            
+                    
+                    연습문제
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="ch05.html">
+            
+                <a href="ch05.html">
+            
+                    
+                    Chapter 05: Coding by Composing
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="ch05.html">
+            
+                <a href="ch05.html#functional-husbandry">
+            
+                    
+                    Functional Husbandry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="ch05.html">
+            
+                <a href="ch05.html#pointfree">
+            
+                    
+                    Pointfree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="ch05.html">
+            
+                <a href="ch05.html#debugging">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="ch05.html">
+            
+                <a href="ch05.html#category-theory">
+            
+                    
+                    Category Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="ch05.html">
+            
+                <a href="ch05.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="ch05.html">
+            
+                <a href="ch05.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="ch06.html">
+            
+                <a href="ch06.html">
+            
+                    
+                    Chapter 06: Example Application
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="ch06.html">
+            
+                <a href="ch06.html#declarative-coding">
+            
+                    
+                    Declarative Coding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="ch06.html">
+            
+                <a href="ch06.html#a-flickr-of-functional-programming">
+            
+                    
+                    A Flickr of Functional Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="ch06.html">
+            
+                <a href="ch06.html#a-principled-refactor">
+            
+                    
+                    A Principled Refactor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="ch06.html">
+            
+                <a href="ch06.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html">
+            
+                    
+                    07 장: 힌들리-밀너와 나
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#당신은-무슨-타입인가요">
+            
+                    
+                    당신은 무슨 타입인가요?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#비밀-이야기">
+            
+                    
+                    비밀 이야기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#가능성을-높이기">
+            
+                    
+                    가능성을 높이기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#공짜로-정리-얻기">
+            
+                    
+                    공짜로 정리 얻기
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#제약">
+            
+                    
+                    제약
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="ch07-kr.html">
+            
+                <a href="ch07-kr.html#요약">
+            
+                    
+                    요약
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ch08.html">
+            
+                <a href="ch08.html">
+            
+                    
+                    Chapter 08: Tupperware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="ch08.html">
+            
+                <a href="ch08.html#the-mighty-container">
+            
+                    
+                    The Mighty Container
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ch08.html">
+            
+                <a href="ch08.html#my-first-functor">
+            
+                    
+                    My First Functor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ch08.html">
+            
+                <a href="ch08.html#schrödingers-maybe">
+            
+                    
+                    Schrödinger's Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ch08.html">
+            
+                <a href="ch08.html#use-cases">
+            
+                    
+                    Use Cases
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ch08.html">
+            
+                <a href="ch08.html#releasing-the-value">
+            
+                    
+                    Releasing the Value
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ch08.html">
+            
+                <a href="ch08.html#pure-error-handling">
+            
+                    
+                    Pure Error Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ch08.html">
+            
+                <a href="ch08.html#old-mcdonald-had-effects">
+            
+                    
+                    Old McDonald Had Effects...
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ch08.html">
+            
+                <a href="ch08.html#asynchronous-tasks">
+            
+                    
+                    Asynchronous Tasks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ch08.html">
+            
+                <a href="ch08.html#a-spot-of-theory">
+            
+                    
+                    A Spot of Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ch08.html">
+            
+                <a href="ch08.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ch08.html">
+            
+                <a href="ch08.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="ch09.html">
+            
+                <a href="ch09.html">
+            
+                    
+                    Chapter 09: Monadic Onions
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="ch09.html">
+            
+                <a href="ch09.html#pointy-functor-factory">
+            
+                    
+                    Pointy Functor Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="ch09.html">
+            
+                <a href="ch09.html#mixing-metaphors">
+            
+                    
+                    Mixing Metaphors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="ch09.html">
+            
+                <a href="ch09.html#my-chain-hits-my-chest">
+            
+                    
+                    My Chain Hits My Chest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="ch09.html">
+            
+                <a href="ch09.html#power-trip">
+            
+                    
+                    Power Trip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="ch09.html">
+            
+                <a href="ch09.html#theory">
+            
+                    
+                    Theory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="ch09.html">
+            
+                <a href="ch09.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="ch09.html">
+            
+                <a href="ch09.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="ch10.html">
+            
+                <a href="ch10.html">
+            
+                    
+                    Chapter 10: Applicative Functors
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="ch10.html">
+            
+                <a href="ch10.html#applying-applicatives">
+            
+                    
+                    Applying Applicatives
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="ch10.html">
+            
+                <a href="ch10.html#ships-in-bottles">
+            
+                    
+                    Ships in Bottles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="ch10.html">
+            
+                <a href="ch10.html#coordination-motivation">
+            
+                    
+                    Coordination Motivation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="ch10.html">
+            
+                <a href="ch10.html#bro-do-you-even-lift">
+            
+                    
+                    Bro, Do You Even Lift?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="ch10.html">
+            
+                <a href="ch10.html#operators">
+            
+                    
+                    Operators
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="ch10.html">
+            
+                <a href="ch10.html#free-can-openers">
+            
+                    
+                    Free Can Openers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="ch10.html">
+            
+                <a href="ch10.html#laws">
+            
+                    
+                    Laws
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="ch10.html">
+            
+                <a href="ch10.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="ch10.html">
+            
+                <a href="ch10.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="ch11.html">
+            
+                <a href="ch11.html">
+            
+                    
+                    Chapter 11: Transform Again, Naturally
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="ch11.html">
+            
+                <a href="ch11.html#curse-this-nest">
+            
+                    
+                    Curse This Nest
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="ch11.html">
+            
+                <a href="ch11.html#a-situational-comedy">
+            
+                    
+                    A Situational Comedy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="ch11.html">
+            
+                <a href="ch11.html#all-natural">
+            
+                    
+                    All Natural
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="ch11.html">
+            
+                <a href="ch11.html#principled-type-conversions">
+            
+                    
+                    Principled Type Conversions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="ch11.html">
+            
+                <a href="ch11.html#feature-envy">
+            
+                    
+                    Feature Envy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="ch11.html">
+            
+                <a href="ch11.html#isomorphic-javascript">
+            
+                    
+                    Isomorphic JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="ch11.html">
+            
+                <a href="ch11.html#a-broader-definition">
+            
+                    
+                    A Broader Definition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="ch11.html">
+            
+                <a href="ch11.html#one-nesting-solution">
+            
+                    
+                    One Nesting Solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="ch11.html">
+            
+                <a href="ch11.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="ch11.html">
+            
+                <a href="ch11.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="ch12.html">
+            
+                <a href="ch12.html">
+            
+                    
+                    Chapter 12: Traversing the Stone
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="ch12.html">
+            
+                <a href="ch12.html#types-n-types">
+            
+                    
+                    Types n' Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="ch12.html">
+            
+                <a href="ch12.html#type-feng-shui">
+            
+                    
+                    Type Feng Shui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="ch12.html">
+            
+                <a href="ch12.html#effect-assortment">
+            
+                    
+                    Effect Assortment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="ch12.html">
+            
+                <a href="ch12.html#waltz-of-the-types">
+            
+                    
+                    Waltz of the Types
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="ch12.html">
+            
+                <a href="ch12.html#no-law-and-order">
+            
+                    
+                    No Law and Order
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="ch12.html">
+            
+                <a href="ch12.html#in-summary">
+            
+                    
+                    In Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="ch12.html">
+            
+                <a href="ch12.html#exercises">
+            
+                    
+                    Exercises
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html">
+            
+                    
+                    Appendix A: Essential Functions Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#always">
+            
+                    
+                    always
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#compose">
+            
+                    
+                    compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#curry">
+            
+                    
+                    curry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#either">
+            
+                    
+                    either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#identity">
+            
+                    
+                    identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#inspect">
+            
+                    
+                    inspect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#left">
+            
+                    
+                    left
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#lifta">
+            
+                    
+                    liftA*
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#maybe">
+            
+                    
+                    maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#nothing">
+            
+                    
+                    nothing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="appendix_a.html">
+            
+                <a href="appendix_a.html#reject">
+            
+                    
+                    reject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html">
+            
+                    
+                    Appendix B: Algebraic Structures Support
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#compose">
+            
+                    
+                    Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#either">
+            
+                    
+                    Either
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#identity">
+            
+                    
+                    Identity
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#io">
+            
+                    
+                    IO
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#list">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#map">
+            
+                    
+                    Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#maybe">
+            
+                    
+                    Maybe
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="appendix_b.html">
+            
+                <a href="appendix_b.html#task">
+            
+                    
+                    Task
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html">
+            
+                    
+                    Appendix C: Pointfree Utilities
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#add">
+            
+                    
+                    add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#append">
+            
+                    
+                    append
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#chain">
+            
+                    
+                    chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#concat">
+            
+                    
+                    concat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#eq">
+            
+                    
+                    eq
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#filter">
+            
+                    
+                    filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#flip">
+            
+                    
+                    flip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.8" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#foreach">
+            
+                    
+                    forEach
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.9" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#head">
+            
+                    
+                    head
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.10" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#intercalate">
+            
+                    
+                    intercalate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.11" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#join">
+            
+                    
+                    join
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.12" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#last">
+            
+                    
+                    last
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.13" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#map">
+            
+                    
+                    map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.14" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#match">
+            
+                    
+                    match
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.15" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#prop">
+            
+                    
+                    prop
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.16" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#reduce">
+            
+                    
+                    reduce
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.17" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#replace">
+            
+                    
+                    replace
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.18" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safehead">
+            
+                    
+                    safeHead
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.19" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safelast">
+            
+                    
+                    safeLast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.20" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#safeprop">
+            
+                    
+                    safeProp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.21" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sequence">
+            
+                    
+                    sequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.22" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#sortby">
+            
+                    
+                    sortBy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.23" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#split">
+            
+                    
+                    split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.24" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#take">
+            
+                    
+                    take
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.25" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tolowercase">
+            
+                    
+                    toLowerCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.26" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#tostring">
+            
+                    
+                    toString
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.27" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#touppercase">
+            
+                    
+                    toUpperCase
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.28" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#traverse">
+            
+                    
+                    traverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.29" data-path="appendix_c.html">
+            
+                <a href="appendix_c.html#unsafeperformio">
+            
+                    
+                    unsafePerformIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Introduction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><a href="SUMMARY.md"><img src="images/cover.png" alt="cover"></a></p>
+<h2 id="&#xCC45;-&#xC18C;&#xAC1C;">&#xCC45; &#xC18C;&#xAC1C;</h2>
+<p>&#xC774; &#xCC45;&#xC740; &#xC77C;&#xBC18;&#xC801;&#xC778; &#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC5D0; &#xB300;&#xD55C; &#xCC45;&#xC774;&#xB2E4;. &#xC6B0;&#xB9AC;&#xB294; &#xC138;&#xACC4;&#xC5D0;&#xC11C; &#xAC00;&#xC7A5; &#xC720;&#xBA85;&#xD55C; &#xD568;&#xC218;&#xD615; &#xC5B8;&#xC5B4;&#xC778; &apos;&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&apos;&#xB97C; &#xC0AC;&#xC6A9;&#xD560; &#xAC83;&#xC774;&#xB2E4;. &#xD604;&#xC7AC;&#xC758; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xAD00;&#xB828; &#xBB38;&#xD654;&#xAC00; &#xC8FC;&#xB85C; &#xBA85;&#xB839;&#xD615;imperative &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC774;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xC774;&#xB7F0; &#xC120;&#xD0DD;&#xC774; &#xC870;&#xAE08;&#xC740; &#xC798;&#xBABB;&#xB41C; &#xAC83; &#xC544;&#xB2CC;&#xAC00; &#xD558;&#xACE0; &#xB290;&#xB084; &#xC9C0;&#xB3C4; &#xBAA8;&#xB974;&#xACA0;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xC740; &#xC774;&#xC720;&#xB85C;, &#xB098;&#xB294; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xD65C;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC774; FP&#xB97C; &#xBC30;&#xC6B0;&#xB294; &#xB370; &#xAC00;&#xC7A5; &#xC88B;&#xC740; &#xC120;&#xD0DD;&#xC774; &#xB420; &#xC218; &#xC788;&#xB2E4;&#xACE0; &#xBBFF;&#xB294;&#xB2E4;.</p>
+<ul>
+<li><p><strong>&#xB9E4;&#xC77C; &#xC5C5;&#xBB34;&#xC5D0; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xACE0; &#xC788;&#xB294; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38;&#xAC00; &#xB9CE;&#xB2E4;</strong></p>
+<p>&#xB530;&#xB77C;&#xC11C;, &#xC18C;&#xC218;&#xB9CC; &#xC88B;&#xC544;&#xD558;&#xB294; &#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC5B8;&#xC5B4;&#xC5D0;&#xC11C; &#xC790;&#xC798;&#xD55C; &#xD1A0;&#xC774; &#xD504;&#xB85C;&#xC81D;&#xD2B8;&#xC5D0;&#xB098; &#xC801;&#xC6A9;&#xD574; &#xBCF4;&#xB294; &#xB300;&#xC2E0;, &#xC2E4;&#xC804;&#xC5D0;&#xC11C; &#xB9E4;&#xC77C;&#xB9E4;&#xC77C; &#xC790;&#xC2E0;&#xC774; &#xBC30;&#xC6B4; &#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D; &#xC9C0;&#xC2DD;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xACE0; &#xC5F0;&#xC2B5;&#xD560; &#xC218; &#xC788;&#xB2E4;.</p>
+</li>
+<li><p><strong>&#xD504;&#xB85C;&#xADF8;&#xB7A8;&#xC744; &#xC791;&#xC131;&#xD558;&#xAE30; &#xC704;&#xD574; &#xD544;&#xC694;&#xD55C; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xB2E4;&#xB978; &#xB0B4;&#xC6A9;&#xC744; &#xB2E4;&#xC2DC; &#xBC30;&#xC6B8; &#xD544;&#xC694;&#xAC00; &#xC5C6;&#xB2E4;.</strong></p>
+<p>&#xC21C;&#xC218; &#xD568;&#xC218;&#xD615; &#xC5B8;&#xC5B4;&#xC5D0;&#xC11C;&#xB294; &#xBAA8;&#xB098;&#xB4DC;monad&#xC758; &#xB3C4;&#xC6C0; &#xC5C6;&#xC774; &#xBCC0;&#xC218;&#xC758; &#xB85C;&#xADF8;&#xB97C; &#xCC0D;&#xC5B4;&#xBCF4;&#xAC70;&#xB098;, DOM &#xB178;&#xB4DC;&#xB97C; &#xC77D;&#xC5B4;&#xBCFC; &#xC218; &#xC5C6;&#xB2E4;. &#xD558;&#xC9C0;&#xB9CC; &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC5D0;&#xC11C;&#xB294; &#xCF54;&#xB4DC; &#xAE30;&#xBC18;&#xC744; &#xB354; &#xAE54;&#xB054;&#xD558;&#xAC8C; &#xC720;&#xC9C0;&#xD558;&#xAE30; &#xC704;&#xD574;&#xC11C; &#xADF8;&#xB7F0; &#xAE30;&#xB2A5;&#xC744; &#xC0B4;&#xC9DD;&#xC0B4;&#xC9DD; &#xC0AC;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xB610;&#xD55C;, &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xAC00; &#xB2E4;&#xC591;&#xD55C; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC744; &#xC9C0;&#xC6D0;&#xD558;&#xAE30; &#xB54C;&#xBB38;&#xC5D0;, &#xC5EC;&#xB7EC;&#xBD84;&#xC774; &#xC798; &#xBAA8;&#xB974;&#xB294; &#xBD80;&#xBD84;&#xC774; &#xC788;&#xB2E4;&#xBA74; &#xCD5C;&#xD6C4;&#xC758; &#xC218;&#xB2E8;&#xC73C;&#xB85C; &#xAE30;&#xC874;&#xC758; &#xBC29;&#xC2DD;&#xC744; &#xD65C;&#xC6A9;&#xD574; &#xBB38;&#xC81C;&#xB97C; &#xD65C;&#xC6A9;&#xD560; &#xC218;&#xB3C4; &#xC788;&#xB2E4;.</p>
+</li>
+<li><p><strong>&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; &#xCD5C;&#xC0C1;&#xAE09;&#xC758; &#xD568;&#xC218;&#xD615; &#xCF54;&#xB4DC;&#xB97C; &#xC791;&#xC131;&#xD560; &#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xAE30;&#xB2A5;&#xC744; &#xC644;&#xC804;&#xD788; &#xC9C0;&#xC6D0;&#xD55C;&#xB2E4;.</strong></p>
+<p>&#xC18C;&#xC218;&#xC758; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;&#xB9CC; &#xCD94;&#xAC00;&#xD558;&#xBA74; &#xD558;&#xC2A4;&#xCF08;Haskell&#xC774;&#xB098; &#xC2A4;&#xCE7C;&#xB77C;Scala&#xC640; &#xAC19;&#xC740; &#xC5B8;&#xC5B4;&#xAC00; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xAE30;&#xB2A5;&#xC744; &#xD749;&#xB0B4;&#xB0BC; &#xC218; &#xC788;&#xB294; &#xBAA8;&#xB4E0; &#xD2B9;&#xC9D5;&#xC744; &#xD65C;&#xC6A9;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xAC1D;&#xCCB4; &#xC9C0;&#xD5A5; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xC774; &#xD604;&#xC7AC; &#xC5C5;&#xACC4;&#xB97C; &#xC9C0;&#xBC30;&#xD558;&#xACE0; &#xC788;&#xC9C0;&#xB9CC;, &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xC758; OOP&#xB294; &#xBD84;&#xBA85; &#xC57D;&#xAC04; &#xC774;&#xC0C1;&#xD558;&#xB2E4;. &#xC774;&#xB294; &#xB9C8;&#xCE58; &#xACE0;&#xC18D;&#xB3C4;&#xB85C;&#xB97C; &#xBC97;&#xC5B4;&#xB098;&#xC11C; &#xCEA0;&#xD551;&#xC744; &#xD558;&#xAC70;&#xB098;, &#xAD6C;&#xB450; &#xC704;&#xC5D0; &#xACE0;&#xBB34;&#xB367;&#xC2E0;galoshes&#xC744; &#xC2E0;&#xACE0; &#xD0ED;&#xB304;&#xC2A4;&#xB97C; &#xCD94;&#xB294; &#xAC83;&#xACFC; &#xAC19;&#xB2E4;. <code>this</code>&#xAC00; &#xBD80;&#xC9C0;&#xC911;&#xC5D0; &#xBC14;&#xB00C;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; <code>bind</code>&#xB97C; &#xC5EC;&#xAE30;&#xC800;&#xAE30;&#xC11C; &#xC0AC;&#xC6A9;&#xD574;&#xC57C; &#xD558;&#xBA70;, (&#xC544;&#xC9C1;) &#xD074;&#xB798;&#xC2A4;class&#xB3C4; &#xC5C6;&#xACE0;, <code>new</code> &#xD0A4;&#xC6CC;&#xB4DC;&#xB97C; &#xBE7C;&#xBA39;&#xC740; &#xACBD;&#xC6B0; &#xC0DD;&#xAE30;&#xB294; &#xC774;&#xC0C1;&#xD55C; &#xC791;&#xB3D9;&#xC744; &#xB9C9;&#xAE30; &#xC704;&#xD55C; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xC7A5;&#xCE58;&#xB97C; &#xB9CC;&#xB4E4;&#xC5B4;&#xC57C; &#xD558;&#xACE0;, &#xD074;&#xB85C;&#xC800;closure&#xB97C; &#xD1B5;&#xD574;&#xC11C;&#xB9CC; &#xC804;&#xC6A9;private &#xBA64;&#xBC84;&#xB97C; &#xC815;&#xC758;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC77C;&#xBC18;&#xC801;&#xC778; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBA38;&#xC5D0;&#xAC8C; &#xC774;&#xBCF4;&#xB2E4;&#xB294; FP(&#xD568;&#xC218;&#xD615; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;)&#xAC00; &#xB354; &#xC790;&#xC5F0;&#xC2A4;&#xB7EC;&#xC6CC; &#xBCF4;&#xC778;&#xB2E4;.</p>
+</li>
+</ul>
+<p>&#xC815;&#xC801; &#xD0C0;&#xC785;&#xC744; &#xC81C;&#xACF5;&#xD558;&#xB294; &#xD568;&#xC218;&#xD615; &#xC5B8;&#xC5B4;&#xAC00; &#xC758;&#xC2EC;&#xD560; &#xC5EC;&#xC9C0; &#xC5C6;&#xC774; &#xC774; &#xCC45;&#xC5D0;&#xC11C; &#xC124;&#xBA85;&#xD558;&#xB294; &#xC2A4;&#xD0C0;&#xC77C;&#xB85C; &#xCF54;&#xB529;&#xD558;&#xB294; &#xAC00;&#xC7A5; &#xC88B;&#xC740; &#xD658;&#xACBD;&#xC77C; &#xAC83;&#xC774;&#xB2E4;. &#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;&#xB294; &#xB2E8;&#xC9C0; &#xD568;&#xC218;&#xD615; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC744; &#xBC30;&#xC6B0;&#xB294; &#xC218;&#xB2E8;&#xC77C; &#xBFD0;&#xC774;&#xBA70;, &#xADF8; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC744; &#xC801;&#xC6A9;&#xD558;&#xB294; &#xAC83;&#xC740; &#xC5EC;&#xB7EC;&#xBD84;&#xC5D0;&#xAC8C; &#xB2EC;&#xB824;&#xC788;&#xB2E4;. &#xC6B4; &#xC88B;&#xAC8C;&#xB3C4;, &#xD568;&#xC218;&#xD615; &#xD328;&#xB7EC;&#xB2E4;&#xC784;&#xC5D0; &#xC811;&#xADFC;&#xD558;&#xB294; &#xACBD;&#xB85C;&#xB294; &#xC218;&#xD559;&#xC801;&#xC774;&#xBA70;, &#xB530;&#xB77C;&#xC11C; &#xC5B4;&#xB5A4; &#xC5B4;&#xB514;&#xC5D0;&#xC11C;&#xB4E0; &#xD1B5;&#xD560; &#xC218; &#xC788;&#xB2E4;. &#xC774; &#xCC45;&#xC744; &#xB2E4;&#xB8E8;&#xACE0; &#xB098;&#xBA74;, &#xC218;&#xD559;&#xCABD;&#xC73C;&#xB85C; &#xACBD;&#xB3C4;&#xB41C; &#xD658;&#xACBD;&#xC774;&#xB77C;&#xBA74; &#xC2A4;&#xC704;&#xD504;&#xD2B8;&#xC81C;&#xB4DC;swiftz, &#xC2A4;&#xCE7C;&#xB77C;&#xC81C;&#xB4DC;scalaz, &#xD558;&#xC2A4;&#xCF08;, &#xD4E8;&#xC5B4;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8;purescript &#xB4F1;&#xC744; &#xB9C9;&#xB860;&#xD558;&#xACE0; &#xD3B8;&#xC548;&#xD568;&#xC744; &#xB290;&#xB084; &#xC218; &#xC788;&#xC744; &#xAC83;&#xC774;&#xB2E4;.</p>
+<h3 id="&#xC601;&#xBB38;&#xD310;-&#xC628;&#xB77C;&#xC778;&#xC73C;&#xB85C;-&#xBCF4;&#xAE30;---&#xD55C;&#xAE00;&#xD310;&#xC740;-&#xB098;&#xC911;&#xC5D0;-&#xC81C;&#xACF5;">(&#xC601;&#xBB38;&#xD310;) &#xC628;&#xB77C;&#xC778;&#xC73C;&#xB85C; &#xBCF4;&#xAE30; - &#xD55C;&#xAE00;&#xD310;&#xC740; &#xB098;&#xC911;&#xC5D0; &#xC81C;&#xACF5;</h3>
+<p><a href="https://mostly-adequate.gitbooks.io/mostly-adequate-guide/" target="_blank">Gitbook</a>&#xC740; &#xCD5C;&#xC801;&#xC758; &#xC77D;&#xAE30; &#xD658;&#xACBD;&#xC744; &#xC81C;&#xACF5;&#xD55C;&#xB2E4;.</p>
+<ul>
+<li>&#xC0AC;&#xC774;&#xB4DC;&#xBC14; &#xBC14;&#xB85C;&#xAC00;&#xAE30;</li>
+<li>&#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xC548;&#xC5D0;&#xC11C; &#xC5F0;&#xC2B5;&#xBB38;&#xC81C; &#xD480;&#xAE30;</li>
+<li>&#xAE4A;&#xC774;&#xC788;&#xB294; &#xC5F0;&#xC2B5;&#xBB38;&#xC81C;</li>
+</ul>
+<h2 id="&#xCF54;&#xB4DC;&#xB791;-&#xB180;&#xAE30;">&#xCF54;&#xB4DC;&#xB791; &#xB180;&#xAE30;</h2>
+<p>&#xB2E4;&#xB978; &#xC774;&#xC57C;&#xAE30;&#xB97C; &#xD558;&#xB294; &#xB3D9;&#xC548; &#xD6A8;&#xC728;&#xC801;&#xC73C;&#xB85C; &#xD6C8;&#xB828;&#xD558;&#xACE0; &#xC9C0;&#xB8E8;&#xD574;&#xC9C0;&#xC9C0; &#xC54A;&#xB3C4;&#xB85D; &#xCC45;&#xC5D0; &#xB098;&#xC628; &#xC5EC;&#xB7EC;&#xAC00;&#xC9C0; &#xAC1C;&#xB150;&#xB4E4;&#xACFC; &#xB180;&#xC544;&#xBCF4;&#xB3C4;&#xB85D; &#xD558;&#xB77C;. &#xC5B4;&#xB5A4; &#xAC83;&#xB4E4;&#xC740; &#xCC98;&#xC74C;&#xC5D0;&#xB294; &#xC774;&#xD574;&#xD558;&#xAE30; &#xD798;&#xB4E4;&#xACA0;&#xC9C0;&#xB9CC; &#xCF54;&#xB4DC;&#xB791; &#xB180;&#xBA74;&#xC11C; &#xC810;&#xC810; &#xB354; &#xC774;&#xD574;&#xD558;&#xAC8C; &#xB420; &#xAC83;&#xC774;&#xB2E4;.
+&#xC774; &#xCC45;&#xC5D0; &#xB098;&#xC628; &#xBAA8;&#xB4E0; &#xD568;&#xC218;&#xC640; &#xB300;&#xC218;&#xC801; &#xC790;&#xB8CC; &#xAD6C;&#xC870;&#xB4E4;&#xC740; &#xBD80;&#xB85D;&#xC5D0; &#xB098;&#xC640;&#xC788;&#xACE0; npm &#xBAA8;&#xB4C8;&#xB85C;&#xB3C4; &#xC788;&#xB2E4;.</p>
+<pre><code class="lang-bash">$ npm i @mostly-adequate/support
+</code></pre>
+<p>&#xAC01; &#xC7A5;&#xC758; &#xC5F0;&#xC2B5;&#xBB38;&#xC81C; &#xB610;&#xD55C; &#xC2E4;&#xD589; &#xAC00;&#xB2A5;&#xD558;&#xACE0; &#xB2F9;&#xC2E0;&#xC758; &#xC5D0;&#xB514;&#xD130; &#xC548;&#xC5D0;&#xC11C; &#xD480; &#xC218; &#xC788;&#xB2E4;! &#xC608;&#xB97C;&#xB4E4;&#xC5B4;, <code>exercises/ch04</code>&#xC758; <code>exercise_*.js</code>&#xB97C; &#xD47C; &#xD6C4; &#xB2E4;&#xC74C; &#xBA85;&#xB839;&#xC5B4;&#xB97C; &#xC2E4;&#xD589;&#xC2DC;&#xCF1C;&#xB77C;.</p>
+<pre><code class="lang-bash">$ npm run ch04
+</code></pre>
+<h2 id="&#xC601;&#xBB38;&#xD310;-&#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;">(&#xC601;&#xBB38;&#xD310;) &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</h2>
+<ul>
+<li><a href="https://www.gitbook.com/download/pdf/book/mostly-adequate/mostly-adequate-guide" target="_blank">PDF &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</a></li>
+<li><a href="https://www.gitbook.com/download/epub/book/mostly-adequate/mostly-adequate-guide" target="_blank">EPUB &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</a></li>
+<li><a href="https://www.gitbook.com/download/mobi/book/mostly-adequate/mostly-adequate-guide" target="_blank">Mobi (&#xD0A8;&#xB4E4;) &#xB2E4;&#xC6B4;&#xB85C;&#xB4DC;</a></li>
+</ul>
+<h3 id="&#xC601;&#xBB38;&#xD310;-&#xC9C1;&#xC811;-&#xB9CC;&#xB4DC;&#xB294;-&#xBC29;&#xBC95;">(&#xC601;&#xBB38;&#xD310;) &#xC9C1;&#xC811; &#xB9CC;&#xB4DC;&#xB294; &#xBC29;&#xBC95;</h3>
+<pre><code>git clone https://github.com/MostlyAdequate/mostly-adequate-guide.git
+cd mostly-adequate-guide/
+npm install
+npm run setup
+npm run generate-pdf
+npm run generate-epub
+</code></pre><blockquote>
+<p>&#xC8FC;&#xC758;! ebook &#xBC84;&#xC804;&#xC744; &#xB9CC;&#xB4E4;&#xAE30; &#xC704;&#xD574;&#xC11C;&#xB294; <code>ebook-convert</code>&#xC744; &#xC124;&#xCE58;&#xD574;&#xC57C;&#xD55C;&#xB2E4;. <a href="https://toolchain.gitbook.com/ebook.html#installing-ebook-convert" target="_blank">&#xC124;&#xCE58; &#xAC00;&#xC774;&#xB4DC;</a>.</p>
+</blockquote>
+<p>&#xD55C;&#xAE00;&#xD310;&#xC744; &#xC9C1;&#xC811; &#xB9CC;&#xB4DC;&#xB294; &#xBC29;&#xBC95;&#xC740; &#xB2E4;&#xC74C;&#xACFC; &#xAC19;&#xB2E4;.</p>
+<pre><code>git clone https://github.com/MostlyAdequate/mostly-adequate-guide-kr.git
+cd mostly-adequate-guide-kr/
+npm install
+npm run setup
+npm run generate-pdf
+npm run generate-epub
+</code></pre><h1 id="&#xBAA9;&#xCC28;">&#xBAA9;&#xCC28;</h1>
+<p><a href="SUMMARY.md">SUMMARY.md</a> &#xB97C; &#xBCF4;&#xB77C;.</p>
+<h3 id="&#xAE30;&#xC5EC;&#xD558;&#xAE30;">&#xAE30;&#xC5EC;&#xD558;&#xAE30;</h3>
+<p><a href="CONTRIBUTING.md">CONTRIBUTING.md</a> &#xB97C; &#xBCF4;&#xB77C;.</p>
+<h3 id="&#xBC88;&#xC5ED;">&#xBC88;&#xC5ED;</h3>
+<p><a href="TRANSLATIONS.md">TRANSLATIONS.md</a> &#xB97C; &#xBCF4;&#xB77C;.</p>
+<h3 id="faq">FAQ</h3>
+<p><a href="FAQ.md">FAQ.md</a> &#xB97C; &#xBCF4;&#xB77C;.</p>
+<h1 id="&#xD5A5;&#xD6C4;-&#xACC4;&#xD68D;">&#xD5A5;&#xD6C4; &#xACC4;&#xD68D;</h1>
+<ul>
+<li><strong>1&#xBD80;</strong> (1-7&#xC7A5;)&#xB294; &#xAE30;&#xBCF8;&#xC801;&#xC778; &#xB0B4;&#xC6A9;&#xC5D0; &#xB300;&#xD55C; &#xC548;&#xB0B4;&#xB2E4;. &#xCD08;&#xACE0;&#xC5D0;&#xC11C; &#xC624;&#xB958;&#xB97C; &#xBC1C;&#xACAC;&#xD560; &#xB54C;&#xB9C8;&#xB2E4; &#xB0B4;&#xC6A9;&#xC744; &#xAC31;&#xC2E0;&#xD560; &#xAC83;&#xC774;&#xB2E4;. &#xB3C4;&#xC6C0;&#xC758; &#xC190;&#xAE38;&#xC744; &#xC5B8;&#xC81C;&#xB4E0; &#xD658;&#xC601;&#xD55C;&#xB2E4;!</li>
+<li><strong>2&#xBD80;</strong> (8-13&#xC7A5;)&#xB294; &#xD391;&#xD130;functor&#xB098; &#xBAA8;&#xB098;&#xB4DC;monad&#xB85C;&#xBD80;&#xD130; &#xC21C;&#xD68C;&#xAC00;&#xB2A5;traversable&#xC5D0; &#xC774;&#xB974;&#xB294; &#xC5EC;&#xB7EC; &#xD0C0;&#xC785; &#xD074;&#xB798;&#xC2A4;type class&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xB8EC;&#xB2E4;. &#xBCC0;&#xD658;&#xAE30;transformer&#xB098; &#xC21C;&#xC218;&#xD55C; &#xC801;&#xC6A9;pure application&#xC5D0; &#xB300;&#xD574; &#xB2E4;&#xB8F0; &#xC5EC;&#xC720;&#xAC00; &#xC788;&#xAE30;&#xB97C; &#xBC14;&#xB780;&#xB2E4;.</li>
+<li><strong>3&#xBD80;</strong> (14&#xC7A5; &#xC774;&#xD6C4;)&#xB294; &#xC2E4;&#xC6A9;&#xC801;&#xC778; &#xD504;&#xB85C;&#xADF8;&#xB798;&#xBC0D;&#xACFC; &#xD559;&#xC220;&#xC801;&#xC778; &#xBD88;&#xD569;&#xB9AC;&#xC131; &#xC0AC;&#xC774;&#xC758; &#xBBF8;&#xC138;&#xD55C; &#xCC28;&#xC774;&#xB97C; &#xAC00;&#xB2A0;&#xD574; &#xBCFC; &#xAC83;&#xC774;&#xB2E4;. &#xCF54;&#xBAA8;&#xB098;&#xB4DC;comonad, f-&#xB300;&#xC218;f-algebra, &#xD504;&#xB9AC; &#xBAA8;&#xB098;&#xB4DC;free monad, &#xC694;&#xB124;&#xB2E4;yoneda &#xBC0F; &#xB2E4;&#xB978; &#xCE74;&#xD14C;&#xACE0;&#xB9AC; &#xC774;&#xB860;&#xC801;&#xC778; &#xAD6C;&#xC131;&#xC694;&#xC18C;&#xB4E4;&#xC744; &#xC0B4;&#xD3B4;&#xBCFC; &#xAC83;&#xC774;&#xB2E4;.</li>
+</ul>
+<hr>
+<p align="center">
+  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+    <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png">
+  </a>
+  <br>
+  This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="ch01-kr.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 01 장: 우리는 무엇을 하고 있나?">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"01 장: 우리는 무엇을 하고 있나?","level":"1.2","depth":1,"path":"ch01-kr.md","ref":"ch01-kr.md","articles":[{"title":"소개","level":"1.2.1","depth":2,"anchor":"#소개","path":"ch01-kr.md","ref":"ch01-kr.md#소개","articles":[]},{"title":"짧은 만남","level":"1.2.2","depth":2,"anchor":"#짧은-만남","path":"ch01-kr.md","ref":"ch01-kr.md#짧은-만남","articles":[]}]},"dir":"ltr"},"config":{"plugins":["exercises@git+https://github.com/MostlyAdequate/plugin-exercises.git","include-codeblock@3.1.2"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"exercises":{},"include-codeblock":{"check":false,"edit":false,"lang":"","fixlang":false,"template":"default","theme":"chrome","unindent":false},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"cover":"images/cover.png","title":"Professor Frisby's Mostly Adequate Guide to Functional Programming","gitbook":"3.2.2"},"file":{"path":"README.md","mtime":"2023-03-16T13:34:28.228Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2023-03-16T13:35:26.336Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook-plugin-exercises/jsrepl/jsrepl.js" id="jsrepl-script"></script>
+    
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/ace.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/theme-tomorrow.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/ace/mode-javascript.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-exercises/exercises.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+
+    </body>
+</html>
+
